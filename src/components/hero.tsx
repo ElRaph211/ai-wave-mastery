@@ -1075,12 +1075,12 @@ function SiteFooter() {
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2">
               <span className="inline-block h-5 w-5 rounded-[4px] bg-cta" />
-              <span className="text-[17px] font-semibold tracking-tight text-white">GetReef AI</span>
+              <span className="text-[17px] font-semibold tracking-tight text-white">{"{{PRODUCT_NAME}}"}</span>
             </div>
             <p className="mt-6 text-[22px] md:text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-white/90">
-              AI search analytics
+              AI visibility
               <br />
-              <span className="text-white/50">for SaaS founders</span>
+              <span className="text-white/50">for solo SaaS founders</span>
             </p>
           </div>
 
