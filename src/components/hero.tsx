@@ -265,10 +265,10 @@ export function Hero() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
               <span className="h-2 w-2 rounded-full bg-cta" />
-              Watch the 2-min product tour
+              2-min walkthrough
             </div>
             <h2 className="mt-6 text-ink font-semibold tracking-[-0.03em]" style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)" }}>
-              See how founders read the wave in real time
+              What ChatGPT tells your next signup about you.
             </h2>
           </div>
           <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-hairline bg-[#0b1220] shadow-[0_30px_80px_-30px_rgba(15,45,82,0.45)] group cursor-pointer">
@@ -284,7 +284,7 @@ export function Hero() {
               </button>
             </div>
             <div className="absolute bottom-4 left-4 text-white/80 text-[13px] font-medium">
-              GetReef AI — Product tour · 2:14
+              {"{{PRODUCT_NAME}}"} — Founder walkthrough · 2:14
             </div>
           </div>
         </div>
