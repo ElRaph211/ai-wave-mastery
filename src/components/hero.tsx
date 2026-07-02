@@ -826,8 +826,8 @@ function TrackedPromptsMock() {
 
 function SuggestedPromptsMock() {
   const cards = [
-    { q: "Best CRM software with intuitive user interfaces and customizable workflows", vol: "High Volume", tone: "emerald", rotate: "-rotate-3" },
-    { q: "What are the top CRM systems that provide AI-driven insights and automation?", vol: "Medium Volume", tone: "orange", rotate: "rotate-2 translate-x-6 translate-y-6" },
+    { q: "What's the best AI visibility tracker for a solo SaaS founder under $50/mo?", vol: "High Volume", tone: "emerald", rotate: "-rotate-3" },
+    { q: "Which GEO tool actually tells you what content to ship, not just a score?", vol: "Medium Volume", tone: "orange", rotate: "rotate-2 translate-x-6 translate-y-6" },
   ];
   const toneMap: Record<string, string> = {
     emerald: "bg-emerald-100 text-emerald-700",
