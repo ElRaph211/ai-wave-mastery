@@ -467,7 +467,147 @@ function TestimonialCard({
   );
 }
 
-function BigCta() {
+function KeyFeaturesPixel() {
+  return (
+    <div className="relative overflow-hidden border-t border-hairline bg-[#4fb5ec]">
+      <img
+        src={featuresPixel}
+        alt="Pixel art Hawaiian beach with palm trees and hibiscus"
+        width={1920}
+        height={1088}
+        loading="lazy"
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
+        style={{ imageRendering: "pixelated" }}
+      />
+      {/* Bottom fade to page */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent"
+      />
+
+      <div className="relative mx-auto max-w-[1400px] px-6 pt-24 md:pt-32 pb-16">
+        <div className="text-center">
+          <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full bg-white/90 backdrop-blur border border-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.08)]">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M15 7a4 4 0 11-4 4V7a4 4 0 014-4z" />
+              <path d="M11 11L3 19l2 2 8-8" />
+            </svg>
+            Key features
+          </div>
+          <h2
+            className="mt-8 mx-auto text-white font-semibold tracking-[-0.03em] leading-[1.02] drop-shadow-[0_2px_20px_rgba(15,45,82,0.4)]"
+            style={{ fontSize: "clamp(2rem, 5vw, 4rem)", maxWidth: "22ch" }}
+          >
+            Turn AI search insights into new customers with GetReef AI.
+          </h2>
+          <p className="mt-6 mx-auto max-w-[720px] text-[17px] md:text-[18px] leading-[1.55] text-white/95 drop-shadow-[0_1px_10px_rgba(15,45,82,0.35)]">
+            Identify the prompts that matter, monitor your rankings, and act before your competitors do.
+          </p>
+        </div>
+
+        <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <FeaturePixelCard
+            title="Set up Prompts"
+            body="Prompts are the foundation of your AI search strategy. Uncover and organize the prompts that matter most for your brand's discovery."
+            mock={<TrackedPromptsMock />}
+          />
+          <FeaturePixelCard
+            title="Use Data to Pick Winners"
+            body="Leverage AI-suggested prompts and search volumes to focus on the biggest opportunities in your vertical."
+            mock={<SuggestedPromptsMock />}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function FeaturePixelCard({
+  title, body, mock,
+}: { title: string; body: string; mock: React.ReactNode }) {
+  return (
+    <div className="rounded-3xl bg-white/95 backdrop-blur border border-white/70 shadow-[0_30px_80px_-30px_rgba(15,45,82,0.45)] overflow-hidden flex flex-col">
+      <div className="p-8 md:p-10">
+        <h3 className="text-[22px] md:text-[24px] font-semibold tracking-tight text-ink">{title}</h3>
+        <p className="mt-3 text-[15px] md:text-[16px] leading-[1.6] text-neutral-500 max-w-[46ch]">{body}</p>
+      </div>
+      <div className="mt-auto px-6 md:px-8 pb-0 relative min-h-[280px]">
+        {mock}
+      </div>
+    </div>
+  );
+}
+
+function TrackedPromptsMock() {
+  const rows = [
+    { p: "Best AI-native CRM 2026", v: "84%", loc: "US", tag: "Corporate" },
+    { p: "CRM software with advanced workflow automation", v: "84%", loc: "US", tag: "Corporate" },
+    { p: "Top-rated CRM platforms with analytics", v: "84%", loc: "CA", tag: "Corporate" },
+    { p: "CRMs that support offline access", v: "78%", loc: "CA", tag: "Feature" },
+  ];
+  return (
+    <div className="relative -mb-6">
+      <div className="rounded-t-2xl border border-hairline border-b-0 bg-white overflow-hidden shadow-[0_10px_30px_-10px_rgba(15,45,82,0.2)]">
+        <div className="flex items-center justify-between px-4 py-3 border-b border-hairline">
+          <div className="flex items-center gap-2 text-[13px] font-semibold text-ink">
+            <span className="inline-flex items-center justify-center h-5 w-5 rounded border border-hairline text-[10px] text-neutral-500">◱</span>
+            Tracked Prompts
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-[11px] text-neutral-500">Add Prompt</span>
+            <span className="inline-flex items-center h-6 px-2 rounded-md bg-ink text-white text-[11px]">Bulk Import CSV</span>
+          </div>
+        </div>
+        <div className="hidden md:grid grid-cols-[1fr_60px_60px_80px] gap-3 px-4 py-2 text-[11px] uppercase tracking-wide text-neutral-400 border-b border-hairline">
+          <span>Prompt</span><span>Visibility</span><span>Location</span><span>Tags</span>
+        </div>
+        {rows.map((r, i) => (
+          <div key={i} className="grid grid-cols-[1fr_60px_60px_80px] gap-3 px-4 py-3 text-[12px] text-ink items-center border-b border-hairline last:border-b-0">
+            <span className="truncate">{r.p}</span>
+            <span className="text-neutral-600">{r.v}</span>
+            <span className="text-neutral-600">🇺🇸 {r.loc}</span>
+            <span className="inline-flex items-center h-5 px-2 rounded bg-cta/15 text-cta text-[10px] font-medium w-fit">{r.tag}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function SuggestedPromptsMock() {
+  const cards = [
+    { q: "Best CRM software with intuitive user interfaces and customizable workflows", vol: "High Volume", tone: "emerald", rotate: "-rotate-3" },
+    { q: "What are the top CRM systems that provide AI-driven insights and automation?", vol: "Medium Volume", tone: "orange", rotate: "rotate-2 translate-x-6 translate-y-6" },
+  ];
+  const toneMap: Record<string, string> = {
+    emerald: "bg-emerald-100 text-emerald-700",
+    orange: "bg-orange-100 text-orange-700",
+  };
+  return (
+    <div className="relative -mb-6 h-[280px]">
+      <div className="absolute left-2 top-2 inline-flex items-center gap-2 h-7 px-3 rounded-full bg-white border border-hairline text-[12px] text-ink shadow-sm z-10">
+        <span className="text-cta">✷</span>
+        Suggested Prompts <span className="text-neutral-400">(14)</span>
+      </div>
+      {cards.map((c, i) => (
+        <div
+          key={i}
+          className={`absolute left-8 top-14 w-[85%] rounded-2xl border border-hairline bg-white p-5 shadow-[0_20px_50px_-20px_rgba(15,45,82,0.25)] transform ${c.rotate}`}
+          style={{ zIndex: 5 - i, top: `${56 + i * 40}px` }}
+        >
+          <p className="text-[14px] font-semibold text-ink leading-[1.35]">{c.q}</p>
+          <div className="mt-3 flex items-center gap-2 flex-wrap">
+            <span className="inline-flex items-center h-6 px-2 rounded bg-neutral-100 text-neutral-500 text-[11px]">Estimated Volume</span>
+            <span className={`inline-flex items-center h-6 px-2 rounded text-[11px] font-medium ${toneMap[c.tone]}`}>{c.vol}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+
   return (
     <div className="border-t border-hairline bg-white">
       <div className="mx-auto max-w-[1400px] px-6 py-16">
