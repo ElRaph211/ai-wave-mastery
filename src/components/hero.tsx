@@ -330,6 +330,9 @@ export function Hero() {
         </div>
       </div>
 
+      {/* Key features — Hawaii pixel backdrop */}
+      <KeyFeaturesPixel />
+
       {/* Prompts — new search engines */}
       <div className="border-t border-hairline bg-white">
         <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-6 text-center">
