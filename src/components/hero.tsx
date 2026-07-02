@@ -427,9 +427,9 @@ export function Hero() {
             className="mx-auto text-ink font-semibold tracking-[-0.03em] leading-[1.05]"
             style={{ fontSize: "clamp(1.75rem, 4vw, 3.25rem)", maxWidth: "22ch" }}
           >
-            AI platforms are becoming the new search engines.
+            AI is the new distribution channel for SaaS.
             <br />
-            <span className="text-neutral-500">Track the prompts that define your brand's relevance.</span>
+            <span className="text-neutral-500">Track the prompts your next 100 signups are actually asking.</span>
           </h2>
         </div>
         <PromptsMarquee />
