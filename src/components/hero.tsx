@@ -1065,7 +1065,7 @@ function SiteFooter() {
   ];
   const cols2 = [
     { title: "Partnership", links: ["Agencies", "Creators", "Media"] },
-    { title: "Comparison", links: ["GetReef vs Ahrefs", "GetReef vs Profound", "GetReef vs Semrush"] },
+    { title: "Comparison", links: ["{{PRODUCT_NAME}} vs Peec AI", "{{PRODUCT_NAME}} vs Otterly", "{{PRODUCT_NAME}} vs Profound", "{{PRODUCT_NAME}} vs Ahrefs"] },
   ];
   return (
     <footer className="bg-[#0a0a0a] text-white">
