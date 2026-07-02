@@ -79,13 +79,13 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
-            Founding access open
+            Founding cohort open
           </div>
           <div className="hidden md:block text-neutral-400">
-            Limited beta — onboard your first 50 tracked prompts before public launch
+            First 50 founders get lifetime pricing. No enterprise sales call, no annual contract.
           </div>
           <a href="#" className="font-medium underline underline-offset-4 decoration-neutral-500 hover:decoration-white transition-colors whitespace-nowrap">
-            Book a demo →
+            Claim a spot →
           </a>
         </div>
       </div>
