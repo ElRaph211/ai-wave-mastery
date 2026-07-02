@@ -123,37 +123,28 @@ export function Hero() {
       </header>
 
 
-      {/* Hero — painterly Hawaii backdrop, Apple/Speechly discipline */}
+      {/* Hero — painterly Hawaii full-bleed poster, balanced headline + CTA stack */}
       <div className="relative overflow-hidden bg-[#e8a86c]">
-        {/* Painterly full-bleed backdrop */}
+        {/* Painterly full-bleed backdrop — pulled back to show the full composition */}
         <img
           src={heroImage}
           alt="Painterly illustration of a surfer riding a Hawaiian wave at sunset"
           width={1920}
           height={1280}
           aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
+          className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none"
         />
-        {/* Readability gradient — top for nav, bottom for headline */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/25 to-transparent"
-        />
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/30 to-transparent"
-        />
+        {/* Readability gradient — top for nav, bottom for content */}
+        <div aria-hidden="true" className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/25 to-transparent" />
+        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         {/* Bottom fade to cream so next section transitions cleanly */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#faf5ec] to-transparent"
-        />
+        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#faf5ec] to-transparent" />
 
-        <div className="relative mx-auto max-w-[1200px] px-6 pt-24 md:pt-36 pb-28 md:pb-40">
-          <div className="mx-auto max-w-[900px] text-center">
+        <div className="relative mx-auto max-w-[1200px] px-6 pt-14 md:pt-20 pb-14 md:pb-20">
+          <div className="mx-auto max-w-[860px] text-center">
             <h1
-              className="text-white font-semibold tracking-[-0.035em] leading-[1.02] drop-shadow-[0_2px_30px_rgba(0,0,0,0.4)]"
-              style={{ fontSize: "clamp(2.75rem, 7vw, 5.75rem)" }}
+              className="text-white font-semibold tracking-[-0.03em] leading-[1.04] drop-shadow-[0_2px_30px_rgba(0,0,0,0.4)]"
+              style={{ fontSize: "clamp(2.25rem, 5.5vw, 4.5rem)" }}
             >
               Your next signup is asking
               <br />
@@ -163,23 +154,23 @@ export function Hero() {
               <span className="text-white">Is it naming you?</span>
             </h1>
 
-            <p className="mt-8 mx-auto max-w-[600px] text-[17px] md:text-[19px] leading-[1.55] text-white/90 drop-shadow-[0_1px_10px_rgba(0,0,0,0.4)]">
-              {"{{PRODUCT_NAME}}"} shows you which prompts you're missing from — and hands you the exact next thing to ship.
+            <p className="mt-5 mx-auto max-w-[540px] md:max-w-[640px] text-[15px] md:text-[18px] leading-[1.55] text-white/90 drop-shadow-[0_1px_10px_rgba(0,0,0,0.4)]">
+              Track your <Chip icon={<EyeIcon />}>Visibility</Chip>, <Chip icon={<PositionIcon />}>Position</Chip>, and <Chip icon={<SmileIcon />}>Sentiment</Chip> across the AI models that matter — then fix the gaps that cost you signups.
             </p>
 
-            {/* One clear CTA — URL audit */}
-            <div className="mt-10 mx-auto max-w-[540px]">
-              <div className="flex items-center gap-2 h-14 md:h-16 pl-6 pr-2 rounded-full bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)]">
+            {/* URL audit */}
+            <div className="mt-6 mx-auto max-w-[520px]">
+              <div className="flex items-center gap-2 h-12 md:h-14 pl-5 pr-2 rounded-full bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)]">
                 <input
                   type="url"
                   placeholder="yoursaas.com"
-                  className="flex-1 min-w-0 bg-transparent border-none text-[16px] md:text-[17px] text-ink placeholder:text-neutral-400 outline-none focus:ring-0"
+                  className="flex-1 min-w-0 bg-transparent border-none text-[15px] md:text-[16px] text-ink placeholder:text-neutral-400 outline-none focus:ring-0"
                 />
-                <button className="flex-shrink-0 h-11 md:h-12 px-5 md:px-6 rounded-full bg-cta text-cta-foreground text-[14px] md:text-[15px] font-medium whitespace-nowrap hover:bg-cta/90 transition-colors">
+                <button className="flex-shrink-0 h-10 md:h-11 px-4 md:px-5 rounded-full bg-cta text-cta-foreground text-[13px] md:text-[14px] font-medium whitespace-nowrap hover:bg-cta/90 transition-colors">
                   Check my AI score
                 </button>
               </div>
-              <div className="mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] text-white/85 drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+              <div className="mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-white/85 drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
                 <span className="flex items-center gap-1.5">
                   <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12" />
@@ -195,14 +186,21 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Metric chips — moved into their own quiet row, no overlap */}
-            <div className="mt-14 flex flex-wrap items-center justify-center gap-2 md:gap-3">
-              <Chip icon={<EyeIcon />}>Visibility</Chip>
-              <Chip icon={<PositionIcon />}>Position</Chip>
-              <Chip icon={<SmileIcon />}>Sentiment</Chip>
-              <span className="text-[13px] text-white/75 ml-1 drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]">
-                tracked across every model that matters
-              </span>
+            {/* Two CTAs */}
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="#"
+                className="inline-flex items-center gap-2 h-10 md:h-11 px-5 md:px-6 rounded-full bg-cta text-cta-foreground text-[13px] md:text-[14px] font-medium shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:bg-cta/90 transition-colors"
+              >
+                Start now
+                <span aria-hidden="true">→</span>
+              </a>
+              <a
+                href="#"
+                className="inline-flex items-center gap-2 h-10 md:h-11 px-5 md:px-6 rounded-full bg-white/10 border border-white/20 text-white text-[13px] md:text-[14px] font-medium hover:bg-white/15 transition-colors"
+              >
+                Book a demo
+              </a>
             </div>
           </div>
         </div>
