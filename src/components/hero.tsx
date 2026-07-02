@@ -1,3 +1,4 @@
+import { useState } from "react";
 import heroImage from "@/assets/hero-hawaii-pixel.jpg";
 import featuresPixel from "@/assets/hero-hawaii-features.jpg";
 
@@ -55,8 +56,6 @@ export function Hero() {
         </div>
       </header>
 
-      {/* AI platforms marquee — under nav */}
-      <AiLogosMarquee />
 
       {/* Hero — pixel scene as immersive backdrop */}
       <div className="relative overflow-hidden bg-[#7cc3f0]">
@@ -354,6 +353,9 @@ export function Hero() {
       {/* Big CTA */}
       <BigCta />
 
+      {/* Pricing */}
+      <Pricing />
+
       {/* FAQ */}
       <div className="border-t border-hairline bg-white">
         <div className="mx-auto max-w-[880px] px-6 py-24">
@@ -377,6 +379,98 @@ export function Hero() {
     </section>
   );
 }
+
+function Pricing() {
+  const [yearly, setYearly] = useState(true);
+  const monthlyBase = 79;
+  const discounted = 55; // 79 * 0.7 ≈ 55.30 → 55
+  const yearlyPrice = discounted * 10; // 2 months free
+  const yearlySavings = monthlyBase * 12 - yearlyPrice;
+  const monthlySavings = monthlyBase - discounted;
+
+  const price = yearly ? yearlyPrice : discounted;
+  const suffix = yearly ? "/year" : "/month";
+  const savingsLabel = yearly
+    ? `You save €${yearlySavings}/year vs monthly at €${monthlyBase}`
+    : `You save €${monthlySavings}/month`;
+
+  return (
+    <section className="relative bg-[#eaf4ff] border-y border-hairline bg-grid">
+      <div className="mx-auto max-w-[1120px] px-6 py-24 md:py-28">
+        <div className="text-center">
+          <div className="inline-flex items-center gap-3 text-[12px] font-semibold tracking-[0.22em] text-sky-600 uppercase">
+            <span className="h-px w-8 bg-sky-500" /> Pricing
+          </div>
+          <h2 className="mt-6 text-ink font-semibold tracking-[-0.03em]" style={{ fontSize: "clamp(2rem, 4.8vw, 3.5rem)", lineHeight: 1.05 }}>
+            Simple. <em className="not-italic text-sky-500 italic font-semibold">Locked forever</em> for founding members.
+          </h2>
+        </div>
+
+        <div className="mt-14 mx-auto max-w-[560px] rounded-[24px] bg-white shadow-[0_20px_60px_-20px_rgba(15,45,82,0.18)] border border-hairline p-8 md:p-10 relative">
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+            <span className="inline-flex items-center rounded-full bg-sky-500 text-white px-4 py-1.5 text-[11px] font-bold tracking-[0.18em] uppercase">
+              Founding member · –30%
+            </span>
+          </div>
+
+          <div className="mt-4 text-center">
+            <div className="flex items-baseline justify-center gap-3">
+              <span className="text-neutral-400 line-through text-[22px] font-medium">€{yearly ? monthlyBase * 12 : monthlyBase}</span>
+              <span className="text-ink font-semibold" style={{ fontSize: "clamp(3rem, 7vw, 4.5rem)", lineHeight: 1 }}>€{price}</span>
+              <span className="text-neutral-500 text-[18px]">{suffix}</span>
+            </div>
+
+            <div className="mt-5 flex items-center justify-center gap-3">
+              <button
+                type="button"
+                onClick={() => setYearly(false)}
+                className={`text-[14px] transition-colors ${!yearly ? "text-ink font-medium" : "text-neutral-500"}`}
+              >
+                Monthly
+              </button>
+              <button
+                type="button"
+                onClick={() => setYearly(!yearly)}
+                aria-label="Toggle billing period"
+                className="relative h-6 w-11 rounded-full bg-sky-500 transition-colors"
+              >
+                <span className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform ${yearly ? "translate-x-5" : "translate-x-0.5"}`} />
+              </button>
+              <button
+                type="button"
+                onClick={() => setYearly(true)}
+                className={`text-[14px] transition-colors ${yearly ? "text-ink font-medium" : "text-neutral-500"}`}
+              >
+                Yearly <span className="text-sky-600">— 2 months free</span>
+              </button>
+            </div>
+
+            <div className="mt-5 inline-flex items-center rounded-full bg-sky-50 text-sky-700 px-4 py-1.5 text-[13px] font-semibold">
+              Pre-launch offer · {savingsLabel}
+            </div>
+          </div>
+
+          <div className="mt-8 rounded-2xl bg-sky-50/70 border border-sky-100 p-5 text-center text-[14.5px] text-ink/80 leading-relaxed">
+            Founding pricing is locked forever. After launch, this plan goes back to €{monthlyBase}/month.
+          </div>
+
+          <div className="mt-8 min-h-[140px]" aria-hidden="true" />
+
+          <button
+            type="button"
+            className="mt-2 w-full rounded-2xl bg-sky-500 hover:bg-sky-600 transition-colors text-white font-semibold py-4 text-[16px]"
+          >
+            Claim your founding spot →
+          </button>
+          <p className="mt-4 text-center text-[13px] text-neutral-500">
+            Cancel anytime from your dashboard. No calls, no emails.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 function Testimonials() {
   const items = [
