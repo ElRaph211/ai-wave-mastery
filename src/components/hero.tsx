@@ -756,14 +756,14 @@ function KeyFeaturesPixel() {
             className="mx-auto max-w-[1000px] text-center text-ink font-semibold tracking-[-0.02em] leading-[1.2]"
             style={{ fontSize: "clamp(1.5rem, 2.75vw, 2.5rem)" }}
           >
-            Metrics like brand mentions, impressions, and sentiment are hard to track — which is why{" "}
-            <span className="text-cta">GetReef AI</span> is so powerful: it shows how LLMs are framing our brand.
+            Every other GEO tool told me I was invisible.{" "}
+            <span className="text-cta">{"{{PRODUCT_NAME}}"}</span> told me exactly which three pages to ship to fix it. That's the whole difference.
           </p>
           <div className="mt-10 flex items-center justify-center gap-4">
-            <span className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-cta text-white font-semibold text-[14px]">LR</span>
+            <span className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-cta text-white font-semibold text-[14px]">R</span>
             <div className="text-left">
-              <div className="text-[15px] font-semibold text-ink">Lily Ray</div>
-              <div className="text-[13px] text-neutral-500">VP SEO Strategy, Amsive</div>
+              <div className="text-[15px] font-semibold text-ink">Raphaël</div>
+              <div className="text-[13px] text-neutral-500">Founder, {"{{PRODUCT_NAME}}"} · building in public</div>
             </div>
           </div>
         </div>
