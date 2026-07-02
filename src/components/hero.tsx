@@ -131,39 +131,66 @@ export function Hero() {
             50+ SaaS navigating the generative shift with <span className="text-ink font-semibold">GetReef.ai</span>
           </p>
 
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 border border-hairline rounded-2xl overflow-hidden bg-white">
-            {/* Brands column */}
-            <div className="relative p-8 md:p-10 border-b md:border-b-0 md:border-r border-hairline">
-              <span className="absolute -top-3 left-6 inline-flex items-center h-6 px-3 rounded-full border border-hairline bg-white text-[11px] font-medium text-ink">
-                Brands
+          <div className="mt-10 grid grid-cols-2 md:grid-cols-4 border border-hairline rounded-2xl overflow-hidden bg-white">
+            <div className="flex items-center justify-center h-24 md:h-28 border-b border-r border-hairline px-4">
+              <span className="flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
+                <span className="inline-flex items-center justify-center h-6 w-6">✕</span>
+                taap.it
               </span>
-              <div className="grid grid-cols-3 sm:grid-cols-4 gap-x-8 gap-y-8 items-center justify-items-center text-neutral-700 text-[15px] font-semibold tracking-tight">
-                <span>◐ Kaimana</span>
-                <span>Reeftide</span>
-                <span>◆ Monday</span>
-                <span>ATTIO</span>
-                <span>SQUARESPACE</span>
-                <span className="text-emerald-600">Brevo</span>
-                <span>HUGO BOSS</span>
-                <span>Salesforce</span>
-              </div>
             </div>
-
-            {/* Agencies column */}
-            <div className="relative p-8 md:p-10">
-              <span className="absolute -top-3 left-6 inline-flex items-center h-6 px-3 rounded-full border border-hairline bg-white text-[11px] font-medium text-ink">
-                Agencies
+            <div className="flex items-center justify-center h-24 md:h-28 border-b border-r border-hairline px-4">
+              <span className="flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
+                <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px]">T</span>
+                Trendtrack
               </span>
-              <div className="grid grid-cols-3 sm:grid-cols-4 gap-x-8 gap-y-8 items-center justify-items-center text-neutral-700 text-[15px] font-semibold tracking-tight">
-                <span>seer<span className="block text-[10px] font-normal text-neutral-400">interactive</span></span>
-                <span>previsible.io</span>
-                <span className="text-sky-600">PEAK ACE</span>
-                <span className="text-sky-500">Eskimoz</span>
-                <span>KINESSO</span>
-                <span>We.<span className="text-neutral-400 font-normal"> Comms</span></span>
-                <span>MINDSHARE</span>
-                <span>▲ FIRSTPAGE</span>
-              </div>
+            </div>
+            <div className="flex items-center justify-center h-24 md:h-28 border-b border-r border-hairline px-4">
+              <span className="flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
+                <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px]">A</span>
+                Arcade
+              </span>
+            </div>
+            <div className="flex items-center justify-center h-24 md:h-28 border-b border-hairline px-4">
+              <span className="flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
+                <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px]">A</span>
+                Adwize
+              </span>
+            </div>
+            <div className="flex items-center justify-center h-24 md:h-28 border-b border-r border-hairline px-4">
+              <span className="flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
+                <span className="inline-flex items-center justify-center h-6 w-6">≡</span>
+                Speechly
+              </span>
+            </div>
+            <div className="flex items-center justify-center h-24 md:h-28 border-b border-r border-hairline px-4">
+              <span className="flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
+                <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px]">P</span>
+                PeakLab
+              </span>
+            </div>
+            <div className="flex items-center justify-center h-24 md:h-28 border-b border-r border-hairline px-4">
+              <span className="flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
+                <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px]">S</span>
+                SoftSearch
+              </span>
+            </div>
+            <div className="flex items-center justify-center h-24 md:h-28 border-b border-hairline px-4">
+              <span className="text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">Uplix</span>
+            </div>
+            <div className="flex items-center justify-center h-24 md:h-28 border-r border-hairline px-4">
+              <span className="text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">Uplix</span>
+            </div>
+            <div className="flex items-center justify-center h-24 md:h-28 border-r border-hairline px-4">
+              <span className="text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">suma ai</span>
+            </div>
+            <div className="flex items-center justify-center h-24 md:h-28 border-r border-hairline px-4">
+              <span className="text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">MailTester.Ninja</span>
+            </div>
+            <div className="flex items-center justify-center h-24 md:h-28 px-4">
+              <span className="flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
+                <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px]">SD</span>
+                Skyden
+              </span>
             </div>
           </div>
         </div>
