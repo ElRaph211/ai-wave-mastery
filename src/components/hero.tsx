@@ -24,31 +24,33 @@ export function Hero() {
 
 
       {/* Nav */}
-      <header className="border-b border-hairline">
+      <header className="border-b border-hairline bg-white">
         <div className="mx-auto max-w-[1400px] px-6 h-16 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-2">
-            <span className="inline-block h-5 w-5 rounded-[4px] bg-ink" />
-            <span className="text-[17px] font-semibold tracking-tight text-ink">GetReef AI</span>
-          </a>
-          <nav className="hidden md:flex items-center gap-8 text-[14px] text-ink">
-            <a href="#" className="hover:text-ink-muted transition-colors">Product</a>
-            <a href="#" className="hover:text-ink-muted transition-colors">Pricing</a>
-            <a href="#" className="hover:text-ink-muted transition-colors">Resources</a>
-            <a href="#" className="hover:text-ink-muted transition-colors">Partnerships</a>
-            <a href="#" className="hover:text-ink-muted transition-colors">Careers</a>
-          </nav>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-10">
+            <a href="/" className="flex items-center gap-2">
+              <span className="inline-block h-5 w-5 rounded-[4px] bg-ink" />
+              <span className="text-[17px] font-semibold tracking-tight text-ink">GetReef AI</span>
+            </a>
+            <nav className="hidden md:flex items-center gap-8 text-[14px] font-medium text-ink">
+              <a href="#" className="hover:text-ink-muted transition-colors">Features</a>
+              <a href="#" className="hover:text-ink-muted transition-colors">Pricing</a>
+              <a href="#" className="hover:text-ink-muted transition-colors">How it works</a>
+              <a href="#" className="hover:text-ink-muted transition-colors">Affiliation</a>
+            </nav>
+          </div>
+          <div className="flex items-center gap-3">
             <a
               href="#"
-              className="hidden sm:inline-flex items-center h-9 px-4 rounded-lg border border-hairline text-[14px] font-medium text-ink hover:bg-neutral-50 transition-colors"
+              className="hidden sm:inline-flex items-center h-9 px-4 text-[14px] font-medium text-ink hover:text-ink-muted transition-colors"
             >
               Log in
             </a>
             <a
               href="#"
-              className="inline-flex items-center h-9 px-4 rounded-lg bg-ink text-white text-[14px] font-medium hover:bg-neutral-800 transition-colors"
+              className="inline-flex items-center gap-2 h-10 px-5 rounded-full bg-cta text-cta-foreground text-[14px] font-medium hover:bg-cta/90 transition-colors shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
             >
-              Sign up
+              Book a demo
+              <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>
