@@ -195,9 +195,6 @@ export function FounderChatPill() {
     </a>
   );
 }
-    </section>
-  );
-}
 
 function Chip({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) {
   return (
