@@ -813,7 +813,7 @@ function ActOnInsightsMock() {
 
 function BigCta() {
   return (
-    <div className="border-t border-hairline bg-white bg-grid">
+    <div className="border-t border-hairline bg-white">
       <div className="mx-auto max-w-[1400px] px-6 py-16">
         <div className="relative overflow-hidden rounded-3xl bg-[#0b1220] px-8 md:px-16 py-20 md:py-28">
           {/* Subtle grid + glow */}
