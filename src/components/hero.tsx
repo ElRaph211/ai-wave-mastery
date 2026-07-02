@@ -121,46 +121,78 @@ export function Hero() {
             <StatusPill state="done" label="Report ready" value="April Wavetrack" />
           </div>
 
-          {/* Bottom-right founder chat pill */}
-          <a
-            href="#"
-            className="hidden sm:flex items-center gap-3 absolute bottom-5 right-5 md:bottom-8 md:right-8 bg-[#0b1220] text-white pl-2 pr-2 py-2 rounded-full shadow-[0_10px_30px_-10px_rgba(0,0,0,0.45)] hover:bg-[#0f172a] transition-colors"
-          >
-            <span className="relative inline-flex">
-              <span className="flex items-center justify-center h-10 w-10 rounded-full bg-sky-400 text-white font-semibold text-[15px]">
-                R
-              </span>
-              <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-emerald-400 ring-2 ring-[#0b1220]" />
-            </span>
-            <span className="flex flex-col leading-tight pr-1">
-              <span className="text-[14px] font-semibold">Raphaël</span>
-              <span className="text-[12px] text-neutral-400">Founder · Book a demo</span>
-            </span>
-            <span className="inline-flex items-center h-8 px-3 rounded-full bg-white text-ink text-[12px] font-semibold">
-              Chat now
-            </span>
-          </a>
         </div>
       </div>
 
-      {/* Logo strip */}
-      <div className="border-t border-hairline">
-        <div className="mx-auto max-w-[1400px] px-6 py-10">
-          <p className="text-center text-[12px] uppercase tracking-[0.18em] text-neutral-400 mb-6">
-            Trusted by teams shipping on the AI-search shoreline
+      {/* Unified SaaS trust block */}
+      <div className="border-t border-hairline bg-white">
+        <div className="mx-auto max-w-[1400px] px-6 py-16">
+          <p className="text-center text-[14px] text-neutral-500">
+            Trusted by <span className="text-ink font-semibold">2,000+ marketing teams</span>
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-neutral-400 text-[15px] font-semibold tracking-tight">
-            <span>ATTIO</span>
-            <span>◆ Monday</span>
-            <span>Salesforce</span>
-            <span>▲ Zero</span>
-            <span>Pipedrive</span>
-            <span>◇ Northwind</span>
-            <span>Kaimana</span>
+
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 border border-hairline rounded-2xl overflow-hidden bg-white">
+            {/* Brands column */}
+            <div className="relative p-8 md:p-10 border-b md:border-b-0 md:border-r border-hairline">
+              <span className="absolute -top-3 left-6 inline-flex items-center h-6 px-3 rounded-full border border-hairline bg-white text-[11px] font-medium text-ink">
+                Brands
+              </span>
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-x-8 gap-y-8 items-center justify-items-center text-neutral-700 text-[15px] font-semibold tracking-tight">
+                <span>◐ Kaimana</span>
+                <span>Reeftide</span>
+                <span>◆ Monday</span>
+                <span>ATTIO</span>
+                <span>SQUARESPACE</span>
+                <span className="text-emerald-600">Brevo</span>
+                <span>HUGO BOSS</span>
+                <span>Salesforce</span>
+              </div>
+            </div>
+
+            {/* Agencies column */}
+            <div className="relative p-8 md:p-10">
+              <span className="absolute -top-3 left-6 inline-flex items-center h-6 px-3 rounded-full border border-hairline bg-white text-[11px] font-medium text-ink">
+                Agencies
+              </span>
+              <div className="grid grid-cols-3 sm:grid-cols-4 gap-x-8 gap-y-8 items-center justify-items-center text-neutral-700 text-[15px] font-semibold tracking-tight">
+                <span>seer<span className="block text-[10px] font-normal text-neutral-400">interactive</span></span>
+                <span>previsible.io</span>
+                <span className="text-sky-600">PEAK ACE</span>
+                <span className="text-sky-500">Eskimoz</span>
+                <span>KINESSO</span>
+                <span>We.<span className="text-neutral-400 font-normal"> Comms</span></span>
+                <span>MINDSHARE</span>
+                <span>▲ FIRSTPAGE</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+/* Fixed founder chat pill — persistent bottom-right of the site */
+export function FounderChatPill() {
+  return (
+    <a
+      href="#"
+      className="fixed z-50 bottom-5 right-5 md:bottom-6 md:right-6 flex items-center gap-3 bg-[#0b1220] text-white pl-2 pr-2 py-2 rounded-full shadow-[0_12px_36px_-10px_rgba(0,0,0,0.5)] hover:bg-[#0f172a] transition-colors"
+    >
+      <span className="relative inline-flex shrink-0">
+        <span className="flex items-center justify-center h-10 w-10 rounded-full bg-sky-400 text-white font-semibold text-[15px]">
+          R
+        </span>
+        <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-emerald-400 ring-2 ring-[#0b1220]" />
+      </span>
+      <span className="hidden sm:flex flex-col leading-tight pr-1 min-w-0">
+        <span className="text-[14px] font-semibold truncate">Raphaël</span>
+        <span className="text-[12px] text-neutral-400 truncate">Founder · Book a demo</span>
+      </span>
+      <span className="hidden sm:inline-flex items-center h-8 px-3 shrink-0 rounded-full bg-white text-ink text-[12px] font-semibold">
+        Chat now
+      </span>
+    </a>
   );
 }
 
