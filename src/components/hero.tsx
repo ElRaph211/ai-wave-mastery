@@ -147,9 +147,11 @@ export function Hero() {
               className="text-white font-semibold tracking-[-0.035em] leading-[0.98] drop-shadow-[0_2px_20px_rgba(15,45,82,0.35)]"
               style={{ fontSize: "clamp(2.5rem, 6.5vw, 5.5rem)" }}
             >
-              AI search analytics
+              AI search analytics for SaaS
               <br />
-              <span className="text-white/80">for surf-ready brands</span>
+              <span className="text-white/95">which rank first on </span>
+              <RotatingPlatform />
+
             </h1>
 
             <p className="mt-6 mx-auto max-w-[600px] text-[16px] md:text-[17px] leading-[1.6] text-white/95 drop-shadow-[0_1px_10px_rgba(15,45,82,0.35)]">
