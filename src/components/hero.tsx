@@ -56,18 +56,9 @@ export function Hero() {
 
       {/* Hero content */}
       <div className="mx-auto max-w-[1400px] px-6 pt-20 pb-10 text-center">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75 animate-ping" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
-          </span>
-          We are hiring
-        </div>
-
         {/* Headline */}
         <h1
-          className="mt-8 mx-auto text-ink font-semibold tracking-[-0.035em] leading-[0.98]"
+          className="mx-auto text-ink font-semibold tracking-[-0.035em] leading-[0.98]"
           style={{ fontSize: "clamp(2.75rem, 7.5vw, 6.5rem)", maxWidth: "18ch" }}
         >
           AI search analytics
@@ -84,21 +75,32 @@ export function Hero() {
           <Chip icon={<SmileIcon />}>Sentiment</Chip>.
         </p>
 
-        {/* CTAs */}
-        <div className="mt-10 flex items-center justify-center gap-3">
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 h-11 px-5 rounded-lg border border-hairline bg-white text-[14px] font-medium text-ink hover:bg-neutral-50 transition-colors"
-          >
-            <span className="inline-block h-2 w-2 rounded-sm bg-neutral-300" />
-            Talk to Sales
-          </a>
-          <a
-            href="#"
-            className="inline-flex items-center h-11 px-6 rounded-lg bg-ink text-white text-[14px] font-medium hover:bg-neutral-800 transition-colors"
-          >
-            Start Free Trial
-          </a>
+        {/* URL audit input */}
+        <div className="mt-10 mx-auto max-w-[560px]">
+          <div className="flex items-center gap-2 h-14 md:h-16 pl-6 pr-2 rounded-full border border-hairline bg-white shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
+            <input
+              type="url"
+              placeholder="Enter your website URL"
+              className="flex-1 min-w-0 bg-transparent border-none text-[16px] md:text-[17px] text-ink placeholder:text-neutral-400 outline-none focus:ring-0"
+            />
+            <button className="flex-shrink-0 h-11 md:h-12 px-5 md:px-6 rounded-full bg-cta text-cta-foreground text-[14px] md:text-[15px] font-medium whitespace-nowrap hover:bg-cta/90 transition-colors">
+              Run AI visibility audit
+            </button>
+          </div>
+          <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-[13px] md:text-[14px] text-neutral-500">
+            <span className="flex items-center gap-2">
+              <svg className="w-4 h-4 text-cta" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              See results in 30 seconds
+            </span>
+            <span className="flex items-center gap-2">
+              <svg className="w-4 h-4 text-cta" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              No credit card required
+            </span>
+          </div>
         </div>
       </div>
 
