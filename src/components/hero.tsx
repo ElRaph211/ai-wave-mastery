@@ -607,7 +607,7 @@ function SuggestedPromptsMock() {
   );
 }
 
-
+function BigCta() {
   return (
     <div className="border-t border-hairline bg-white">
       <div className="mx-auto max-w-[1400px] px-6 py-16">
