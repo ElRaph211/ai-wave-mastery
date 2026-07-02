@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import heroImage from "@/assets/hero-hawaii-pixel.jpg";
-import featuresPixel from "@/assets/hero-hawaii-features.jpg";
+import heroImage from "@/assets/hero-hawaii-painterly.jpg";
+import featuresPixel from "@/assets/features-hawaii-painterly.jpg";
 
 const AI_PLATFORMS = [
   {
@@ -123,48 +123,53 @@ export function Hero() {
       </header>
 
 
-      {/* Hero — pixel scene as immersive backdrop */}
-      <div className="relative overflow-hidden bg-[#7cc3f0]">
-        {/* Pixel background — vivid, no animation */}
+      {/* Hero — painterly Hawaii backdrop, Apple/Speechly discipline */}
+      <div className="relative overflow-hidden bg-[#e8a86c]">
+        {/* Painterly full-bleed backdrop */}
         <img
           src={heroImage}
-          alt="Pixel art of a surfer riding a Hawaiian wave at sunrise"
+          alt="Painterly illustration of a surfer riding a Hawaiian wave at sunset"
           width={1920}
-          height={1088}
+          height={1280}
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
-          style={{ imageRendering: "pixelated" }}
         />
-        {/* Bottom fade so page transitions cleanly */}
+        {/* Readability gradient — top for nav, bottom for headline */}
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent"
+          className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/25 to-transparent"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/70 via-black/30 to-transparent"
+        />
+        {/* Bottom fade to cream so next section transitions cleanly */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#faf5ec] to-transparent"
         />
 
-        <div className="relative mx-auto max-w-[1400px] px-6 pt-14 md:pt-18 pb-20 md:pb-28">
-          <div className="mx-auto max-w-[860px] text-center">
+        <div className="relative mx-auto max-w-[1200px] px-6 pt-24 md:pt-36 pb-28 md:pb-40">
+          <div className="mx-auto max-w-[900px] text-center">
             <h1
-              className="text-white font-semibold tracking-[-0.035em] leading-[0.98] drop-shadow-[0_2px_20px_rgba(15,45,82,0.35)]"
-              style={{ fontSize: "clamp(2.5rem, 6.5vw, 5rem)" }}
+              className="text-white font-semibold tracking-[-0.035em] leading-[1.02] drop-shadow-[0_2px_30px_rgba(0,0,0,0.4)]"
+              style={{ fontSize: "clamp(2.75rem, 7vw, 5.75rem)" }}
             >
               Your next signup is asking
               <br />
               <RotatingPlatform />
-              <span className="text-white/95"> which SaaS to buy.</span>
+              <span className="text-white"> which SaaS to buy.</span>
               <br />
-              <span className="text-white/95">Is it naming you?</span>
+              <span className="text-white">Is it naming you?</span>
             </h1>
 
-            <p className="mt-5 mx-auto max-w-[620px] text-[16px] md:text-[17px] leading-[1.6] text-white/95 drop-shadow-[0_1px_10px_rgba(15,45,82,0.35)]">
-              Every day, buyers ask AI for the best tool in your category — and get an answer you never see. {"{{PRODUCT_NAME}}"} shows you which prompts you're missing from, what to ship to fix it, and tracks{" "}
-              <Chip icon={<EyeIcon />}>Visibility</Chip>,{" "}
-              <Chip icon={<PositionIcon />}>Position</Chip>, and{" "}
-              <Chip icon={<SmileIcon />}>Sentiment</Chip> across every model that matters.
+            <p className="mt-8 mx-auto max-w-[600px] text-[17px] md:text-[19px] leading-[1.55] text-white/90 drop-shadow-[0_1px_10px_rgba(0,0,0,0.4)]">
+              {"{{PRODUCT_NAME}}"} shows you which prompts you're missing from — and hands you the exact next thing to ship.
             </p>
 
-            {/* URL audit input */}
-            <div className="mt-7 mx-auto max-w-[560px]">
-              <div className="flex items-center gap-2 h-14 md:h-16 pl-6 pr-2 rounded-full border border-hairline bg-white shadow-[0_10px_30px_-10px_rgba(15,45,82,0.35)]">
+            {/* One clear CTA — URL audit */}
+            <div className="mt-10 mx-auto max-w-[540px]">
+              <div className="flex items-center gap-2 h-14 md:h-16 pl-6 pr-2 rounded-full bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)]">
                 <input
                   type="url"
                   placeholder="yoursaas.com"
@@ -174,41 +179,31 @@ export function Hero() {
                   Check my AI score
                 </button>
               </div>
-
-              {/* CTA frame — readable against the pixel background */}
-              <div className="mt-4 rounded-2xl border border-white/20 bg-white/[0.08] backdrop-blur-md p-4 shadow-[0_20px_50px_-12px_rgba(15,45,82,0.35)]">
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-5 text-[12px] text-white/90 drop-shadow-[0_1px_8px_rgba(15,45,82,0.4)]">
-                  <span className="flex items-center gap-2">
-                    <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    Score in under 30 seconds
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                    No credit card, no sales call
-                  </span>
-                </div>
-                <div className="mt-3 flex flex-col sm:flex-row items-center justify-center gap-2.5">
-                  <a
-                    href="#"
-                    className="inline-flex items-center justify-center gap-2 h-10 px-5 rounded-full bg-cta text-cta-foreground text-[13px] font-medium hover:bg-cta/90 transition-colors shadow-[0_10px_30px_-10px_rgba(15,45,82,0.5)]"
-                  >
-                    Start now
-                    <span aria-hidden="true">→</span>
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center justify-center gap-2 h-10 px-5 rounded-full bg-white/10 backdrop-blur border border-white/60 text-white text-[13px] font-medium hover:bg-white/20 transition-colors"
-                  >
-                    Book a demo
-                  </a>
-                </div>
+              <div className="mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-[13px] text-white/85 drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+                <span className="flex items-center gap-1.5">
+                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Score in under 30 seconds
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  No credit card, no sales call
+                </span>
               </div>
             </div>
 
+            {/* Metric chips — moved into their own quiet row, no overlap */}
+            <div className="mt-14 flex flex-wrap items-center justify-center gap-2 md:gap-3">
+              <Chip icon={<EyeIcon />}>Visibility</Chip>
+              <Chip icon={<PositionIcon />}>Position</Chip>
+              <Chip icon={<SmileIcon />}>Sentiment</Chip>
+              <span className="text-[13px] text-white/75 ml-1 drop-shadow-[0_1px_6px_rgba(0,0,0,0.4)]">
+                tracked across every model that matters
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -305,7 +300,7 @@ export function Hero() {
 
 
       {/* AI Search Metrics section */}
-      <div className="border-t border-hairline bg-[#f5f5f4]">
+      <div className="border-t border-hairline bg-[#faf5ec]">
         <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-16 text-center">
           <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -483,7 +478,7 @@ function Pricing() {
     : `You save €${monthlySavings}/month`;
 
   return (
-    <section className="relative bg-[#eaf4ff] border-y border-hairline bg-grid">
+    <section className="relative bg-[#faf5ec] border-y border-hairline bg-grid">
       <div className="mx-auto max-w-[1120px] px-6 py-24 md:py-28">
         <div className="text-center">
           <div className="inline-flex items-center gap-3 text-[12px] font-semibold tracking-[0.22em] text-sky-600 uppercase">
@@ -604,7 +599,7 @@ function Testimonials() {
   const offsets1 = ["mt-0", "mt-3", "mt-6"];
   const offsets2 = ["mt-6", "mt-0", "mt-3"];
   return (
-    <div className="relative border-t border-hairline bg-[#f5f5f4] overflow-hidden">
+    <div className="relative border-t border-hairline bg-[#faf5ec] overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-6 relative">
         <div className="text-center">
           <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
@@ -637,8 +632,8 @@ function TestimonialRow({
   const loop = [...items, ...items, ...items];
   return (
     <div className="relative overflow-hidden">
-      <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-[#f5f5f4] to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-[#f5f5f4] to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-[#faf5ec] to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-[#faf5ec] to-transparent z-10 pointer-events-none" />
       <div
         className="flex items-start gap-6 whitespace-nowrap hover:[animation-play-state:paused]"
         style={{
@@ -680,21 +675,25 @@ function TestimonialCard({
 
 function KeyFeaturesPixel() {
   return (
-    <div className="relative overflow-hidden border-t border-hairline bg-[#4fb5ec]">
+    <div className="relative overflow-hidden border-t border-hairline bg-[#e8895a]">
       <img
         src={featuresPixel}
-        alt="Pixel art Hawaiian beach with palm trees and hibiscus"
-        width={1920}
-        height={1088}
+        alt="Painterly Hawaiian sunset with cliff, waterfall and hibiscus"
+        width={1024}
+        height={1408}
         loading="lazy"
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
-        style={{ imageRendering: "pixelated" }}
       />
-      {/* Bottom fade to page */}
+      {/* Warm dark overlay so white type stays crisp */}
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent"
+        className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/45 to-black/60"
+      />
+      {/* Bottom fade to cream page */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#faf5ec] to-transparent"
       />
 
       <div className="relative mx-auto max-w-[1400px] px-6 pt-24 md:pt-32 pb-16">
