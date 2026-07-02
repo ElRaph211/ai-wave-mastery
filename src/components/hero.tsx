@@ -328,7 +328,129 @@ export function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Prompts — new search engines */}
+      <div className="border-t border-hairline bg-white">
+        <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-6 text-center">
+          <h2
+            className="mx-auto text-ink font-semibold tracking-[-0.03em] leading-[1.05]"
+            style={{ fontSize: "clamp(1.75rem, 4vw, 3.25rem)", maxWidth: "22ch" }}
+          >
+            AI platforms are becoming the new search engines.
+            <br />
+            <span className="text-neutral-500">Track the prompts that define your brand's relevance.</span>
+          </h2>
+        </div>
+        <PromptsMarquee />
+      </div>
+
+      {/* FAQ */}
+      <div className="border-t border-hairline bg-white">
+        <div className="mx-auto max-w-[880px] px-6 py-24">
+          <div className="text-center">
+            <h2 className="text-ink font-semibold tracking-[-0.03em]" style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}>
+              FAQs
+            </h2>
+            <p className="mt-4 text-[17px] md:text-[19px] leading-[1.5] text-neutral-500">
+              Get answers to the most common questions
+              <br className="hidden md:block" /> about AI search and GetReef AI.
+            </p>
+          </div>
+          <div className="mt-14">
+            <FaqList />
+          </div>
+        </div>
+      </div>
     </section>
+  );
+}
+
+function PromptsMarquee() {
+  const rows: { text: string; icon: string; color: string }[][] = [
+    [
+      { text: "How does AI visibility differ on desktop versus mobile?", icon: "✷", color: "text-neutral-400" },
+      { text: "How easy is it to set up a CRM for the first time?", icon: "◍", color: "text-ink" },
+      { text: "What training or tutorials are included with Attio?", icon: "❄", color: "text-sky-500" },
+      { text: "How does HubSpot compare to Salesforce?", icon: "∞", color: "text-neutral-500" },
+    ],
+    [
+      { text: "Do CRMs replace spreadsheets or manual tracking?", icon: "◍", color: "text-ink" },
+      { text: "What core features should a CRM include?", icon: "◍", color: "text-ink" },
+      { text: "How do CRMs handle customer service or support workflows?", icon: "▲", color: "text-blue-500" },
+      { text: "What integrations are available in Attio?", icon: "❄", color: "text-sky-500" },
+    ],
+    [
+      { text: "Do CRMs offer API access for custom integrations?", icon: "❄", color: "text-sky-500" },
+      { text: "How easy is CRM data migration from another system?", icon: "✷", color: "text-orange-500" },
+      { text: "What security certifications do CRMs typically have?", icon: "◍", color: "text-ink" },
+      { text: "How do CRMs handle GDPR compliance?", icon: "✷", color: "text-orange-500" },
+    ],
+  ];
+  return (
+    <div className="space-y-4 pb-24 pt-6">
+      {rows.map((row, idx) => {
+        const items = [...row, ...row, ...row];
+        const duration = 45 + idx * 8;
+        const reverse = idx % 2 === 1;
+        return (
+          <div key={idx} className="relative overflow-hidden">
+            <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+            <div
+              className="flex items-center gap-4 whitespace-nowrap hover:[animation-play-state:paused]"
+              style={{
+                animation: `marquee ${duration}s linear infinite`,
+                animationDirection: reverse ? "reverse" : "normal",
+              }}
+            >
+              {items.map((item, i) => (
+                <span
+                  key={i}
+                  className="inline-flex items-center gap-3 h-12 px-5 rounded-full border border-hairline bg-white text-[14px] md:text-[15px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.03)]"
+                >
+                  <span className={`text-[16px] ${item.color}`}>{item.icon}</span>
+                  {item.text}
+                </span>
+              ))}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function FaqList() {
+  const faqs = [
+    { q: "How do I get started with GetReef AI?", a: "Enter your website URL for a free instant AI visibility audit. From there, connect the prompts that matter to your brand and we'll start tracking them across ChatGPT, Claude, Gemini and Perplexity within minutes." },
+    { q: "Can I segment visibility by model, region, or audience?", a: "Yes — every prompt can be broken down by AI platform, geography, persona and buying stage so you can see exactly where you show up and where you don't." },
+    { q: "How often is the data refreshed?", a: "Core prompts refresh daily. High-priority prompts can be set to hourly polling, and you'll get alerts the moment your position or sentiment shifts." },
+    { q: "What are brand visibility vs. source visibility metrics?", a: "Brand visibility measures how often your brand is mentioned in AI answers. Source visibility measures how often your own pages are cited as the source behind those answers — both matter, and we track them separately." },
+    { q: "How do source citations work behind the scenes?", a: "We parse every AI response for cited URLs, resolve them to domains, and attribute them to your brand or your competitors so you can see who's feeding the model." },
+    { q: "How do I integrate GetReef AI into my BI/reporting tools?", a: "Push metrics into Notion, Slack, Looker, or your warehouse via our API and native integrations. Weekly digests land in your inbox out of the box." },
+  ];
+  return (
+    <div className="divide-y divide-hairline border-t border-b border-hairline">
+      {faqs.map((f, i) => (
+        <FaqItem key={i} q={f.q} a={f.a} defaultOpen={i === 0} />
+      ))}
+    </div>
+  );
+}
+
+function FaqItem({ q, a, defaultOpen }: { q: string; a: string; defaultOpen?: boolean }) {
+  return (
+    <details className="group py-6" open={defaultOpen}>
+      <summary className="flex items-center justify-between gap-6 cursor-pointer list-none">
+        <span className="text-[16px] md:text-[18px] font-medium text-ink">{q}</span>
+        <span className="flex-shrink-0 inline-flex items-center justify-center h-8 w-8 rounded-full border border-hairline text-ink transition-transform group-open:rotate-180">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </span>
+      </summary>
+      <p className="mt-4 pr-14 text-[15px] md:text-[16px] leading-[1.65] text-neutral-500">{a}</p>
+    </details>
   );
 }
 
