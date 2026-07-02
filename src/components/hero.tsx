@@ -55,8 +55,6 @@ export function Hero() {
         </div>
       </header>
 
-      {/* AI platforms marquee — under nav */}
-      <AiLogosMarquee />
 
       {/* Hero — pixel scene as immersive backdrop */}
       <div className="relative overflow-hidden bg-[#7cc3f0]">
