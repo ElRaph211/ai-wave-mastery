@@ -645,6 +645,143 @@ function SuggestedPromptsMock() {
   );
 }
 
+function AddBrandsMock() {
+  const brands = [
+    { name: "Monday", url: "monday.com", extra: "+3", state: "start", color: "bg-pink-100", initial: "M", initialBg: "bg-pink-500" },
+    { name: "Pipedrive", url: "pipedrive.com", extra: "+2", state: "tracking", color: "bg-emerald-50", initial: "P", initialBg: "bg-emerald-600" },
+  ];
+  return (
+    <div className="relative -mb-6 h-[280px]">
+      <div className="absolute left-2 top-2 inline-flex items-center gap-2 h-7 px-3 rounded-full bg-white border border-hairline text-[12px] text-ink shadow-sm z-10">
+        <span className="text-neutral-500">◫</span>
+        Brands <span className="text-neutral-400">(5)</span>
+      </div>
+      {brands.map((b, i) => (
+        <div
+          key={i}
+          className={`absolute left-6 w-[85%] rounded-2xl border border-hairline ${b.color} p-4 shadow-[0_20px_50px_-20px_rgba(15,45,82,0.25)] ${i === 0 ? "-rotate-2" : "rotate-2 translate-x-8"}`}
+          style={{ top: `${56 + i * 80}px`, zIndex: 5 - i }}
+        >
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-3 min-w-0">
+              <span className={`inline-flex items-center justify-center h-9 w-9 rounded-lg ${b.initialBg} text-white text-[13px] font-semibold flex-shrink-0`}>{b.initial}</span>
+              <div className="min-w-0">
+                <div className="text-[14px] font-semibold text-ink truncate">
+                  {b.name} <span className="text-neutral-400 font-normal">{b.extra}</span>
+                </div>
+                <div className="text-[12px] text-neutral-500 truncate">{b.url}</div>
+              </div>
+            </div>
+            {b.state === "start" ? (
+              <span className="inline-flex items-center gap-1 h-7 px-3 rounded-full bg-ink text-white text-[11px] font-medium whitespace-nowrap">+ Start Tracking</span>
+            ) : (
+              <span className="inline-flex items-center gap-1 h-7 px-3 rounded-full bg-white text-ink text-[11px] font-medium border border-hairline whitespace-nowrap">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                Actively Tracking
+              </span>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ChooseModelsMock() {
+  const models = [
+    { name: "ChatGPT", on: true, icon: "◉" },
+    { name: "AI Overviews", on: true, icon: "G" },
+    { name: "Claude", on: true, icon: "✷" },
+    { name: "DeepSeek R1", on: false, icon: "🐋" },
+    { name: "Perplexity", on: false, icon: "❋" },
+    { name: "Gemini", on: false, icon: "✦" },
+  ];
+  return (
+    <div className="relative -mb-6">
+      <div className="rounded-t-2xl border border-hairline border-b-0 bg-white overflow-hidden shadow-[0_10px_30px_-10px_rgba(15,45,82,0.2)]">
+        <div className="flex items-center justify-between px-4 py-3 border-b border-hairline">
+          <div className="flex items-center gap-2 text-[13px] font-semibold text-ink">
+            <span className="inline-flex items-center justify-center h-5 w-5 rounded border border-hairline text-[10px] text-neutral-500">◧</span>
+            Models
+          </div>
+          <div className="flex items-center gap-2 text-[11px] text-neutral-500">
+            Set Frequency
+            <span className="inline-flex items-center h-6 px-2 rounded border border-hairline bg-white text-ink text-[11px]">Daily ▾</span>
+          </div>
+        </div>
+        {models.map((m, i) => (
+          <div key={i} className="flex items-center justify-between px-4 py-2.5 border-b border-hairline last:border-b-0">
+            <div className="flex items-center gap-3">
+              <span className={`inline-flex items-center justify-center h-4 w-4 rounded ${m.on ? "bg-cta text-white" : "border border-hairline"}`}>
+                {m.on && <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>}
+              </span>
+              <span className="text-[13px] font-medium text-ink">{m.name}</span>
+            </div>
+            <span className="text-neutral-400 text-[13px]">{m.icon}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function KeySourcesMock() {
+  const rows = [
+    { d: "reddit.com", t: "UGC", tc: "bg-blue-100 text-blue-700", u: "32%", c: "3.2" },
+    { d: "attio.com", t: "You", tc: "bg-emerald-100 text-emerald-700", u: "43%", c: "5.2" },
+    { d: "wikipedia.org", t: "Reference", tc: "bg-violet-100 text-violet-700", u: "31%", c: "1.4" },
+    { d: "hubspot.com", t: "Competitor", tc: "bg-rose-100 text-rose-700", u: "39%", c: "1.1" },
+  ];
+  return (
+    <div className="relative -mb-6">
+      <div className="rounded-t-2xl border border-hairline border-b-0 bg-white overflow-hidden shadow-[0_10px_30px_-10px_rgba(15,45,82,0.2)]">
+        <div className="flex items-center justify-between px-4 py-3 border-b border-hairline">
+          <div className="inline-flex items-center h-7 px-3 rounded border border-hairline text-[12px] text-neutral-500">🔍 Search Sources</div>
+          <span className="inline-flex items-center h-7 px-3 rounded border border-hairline text-[12px] text-ink">All Types ▾</span>
+        </div>
+        <div className="grid grid-cols-[1fr_80px_60px_70px] gap-3 px-4 py-2 text-[10px] uppercase tracking-wide text-neutral-400 border-b border-hairline">
+          <span>Domain</span><span>Type</span><span>Used</span><span>Avg. Cit.</span>
+        </div>
+        {rows.map((r, i) => (
+          <div key={i} className="grid grid-cols-[1fr_80px_60px_70px] gap-3 px-4 py-2.5 text-[12px] items-center border-b border-hairline last:border-b-0">
+            <span className="text-ink font-medium truncate">{r.d}</span>
+            <span className={`inline-flex items-center h-5 px-2 rounded text-[10px] font-medium w-fit ${r.tc}`}>{r.t}</span>
+            <span className="text-neutral-600">{r.u}</span>
+            <span className="text-neutral-600">{r.c}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ActOnInsightsMock() {
+  const insights = [
+    { t: "LinkedIn is a common source", s: "Consider joining the conversation", dark: false },
+    { t: "Join r/CRM subreddit discussions", s: "Discussions show frequently in sources.", dark: true },
+    { t: "Articles from NYT regularly show up in citations", s: "Consider placing a story via digital PR", dark: false },
+  ];
+  return (
+    <div className="relative -mb-6 space-y-3 pt-2">
+      {insights.map((it, i) => (
+        <div
+          key={i}
+          className={`flex items-center justify-between gap-3 rounded-2xl px-4 py-3 ${
+            it.dark ? "bg-ink text-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.4)]" : "bg-white border border-hairline"
+          }`}
+        >
+          <div className="min-w-0">
+            <div className={`text-[13px] font-semibold truncate ${it.dark ? "text-white" : "text-ink"}`}>{it.t}</div>
+            <div className={`text-[11px] truncate ${it.dark ? "text-white/60" : "text-neutral-500"}`}>{it.s}</div>
+          </div>
+          <span className={`inline-flex items-center justify-center h-7 w-7 rounded-lg flex-shrink-0 ${it.dark ? "bg-white/10 text-white" : "border border-hairline text-ink"}`}>→</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+
 function BigCta() {
   return (
     <div className="border-t border-hairline bg-white">
