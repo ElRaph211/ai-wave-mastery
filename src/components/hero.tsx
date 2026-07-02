@@ -96,7 +96,7 @@ export function Hero() {
         <div className="relative mx-auto max-w-[1400px] px-6 h-16 flex items-center justify-between">
           <a href="/" className="flex items-center gap-2">
             <span className="inline-block h-5 w-5 rounded-[4px] bg-ink" />
-            <span className="text-[17px] font-semibold tracking-tight text-ink">GetReef AI</span>
+            <span className="text-[17px] font-semibold tracking-tight text-ink">{"{{PRODUCT_NAME}}"}</span>
           </a>
           <nav className="hidden md:flex items-center gap-8 text-[14px] font-medium text-ink absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <a href="#" className="hover:text-ink-muted transition-colors">Features</a>
