@@ -462,3 +462,28 @@ function LogoMarquee() {
     </div>
   );
 }
+
+function AiLogosMarquee() {
+  const logos = [
+    "ChatGPT", "Claude", "Gemini", "Perplexity", "Copilot",
+    "Mistral", "Grok", "Llama", "DeepSeek", "You.com", "Poe", "Bing Chat",
+  ];
+  const items = [...logos, ...logos];
+  return (
+    <div className="relative overflow-hidden border-b border-hairline bg-white">
+      <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+      <div className="flex items-center gap-10 md:gap-14 animate-[marquee_35s_linear_infinite] hover:[animation-play-state:paused] whitespace-nowrap py-3">
+        {items.map((name, i) => (
+          <span key={i} className="inline-flex items-center gap-2 text-neutral-500 text-[13px] md:text-[14px] font-medium tracking-tight">
+            <span className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-neutral-100 text-ink text-[10px] font-semibold">
+              {name[0]}
+            </span>
+            {name}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
