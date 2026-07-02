@@ -452,8 +452,8 @@ export function Hero() {
               FAQs
             </h2>
             <p className="mt-4 text-[17px] md:text-[19px] leading-[1.5] text-neutral-500">
-              Get answers to the most common questions
-              <br className="hidden md:block" /> about AI search and GetReef AI.
+              What founders ask us before they claim a founding spot in
+              <br className="hidden md:block" /> {"{{PRODUCT_NAME}}"}.
             </p>
           </div>
           <div className="mt-14">
