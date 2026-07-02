@@ -54,9 +54,12 @@ export function Hero() {
         </div>
       </header>
 
+      {/* AI platforms marquee — under nav */}
+      <AiLogosMarquee />
+
       {/* Hero — pixel scene as immersive backdrop */}
       <div className="relative overflow-hidden bg-[#7cc3f0]">
-        {/* Pixel background */}
+        {/* Pixel background — vivid, no animation */}
         <img
           src={heroImage}
           alt="Pixel art of a surfer riding a Hawaiian wave at sunrise"
@@ -64,12 +67,7 @@ export function Hero() {
           height={1088}
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
-          style={{ imageRendering: "pixelated", animation: "drift-slow 12s ease-in-out infinite" }}
-        />
-        {/* Soft left wash to keep copy legible */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-r from-[#7cc3f0]/85 via-[#7cc3f0]/40 to-transparent"
+          style={{ imageRendering: "pixelated" }}
         />
         {/* Bottom fade so page transitions cleanly */}
         <div
@@ -77,19 +75,18 @@ export function Hero() {
           className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent"
         />
 
-        <div className="relative mx-auto max-w-[1400px] px-6 pt-20 md:pt-28 pb-32 md:pb-40 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-10 items-start">
-          {/* Left column — copy + CTA */}
-          <div>
+        <div className="relative mx-auto max-w-[1400px] px-6 pt-20 md:pt-28 pb-32 md:pb-40">
+          <div className="max-w-[720px]">
             <h1
               className="text-white font-semibold tracking-[-0.035em] leading-[0.98] drop-shadow-[0_2px_20px_rgba(15,45,82,0.35)]"
               style={{ fontSize: "clamp(2.5rem, 6.5vw, 5.5rem)", maxWidth: "16ch" }}
             >
               AI search analytics
               <br />
-              <span className="text-white/75">for surf-ready brands</span>
+              <span className="text-white/80">for surf-ready brands</span>
             </h1>
 
-            <p className="mt-6 max-w-[600px] text-[16px] md:text-[17px] leading-[1.6] text-white/90">
+            <p className="mt-6 max-w-[600px] text-[16px] md:text-[17px] leading-[1.6] text-white/95 drop-shadow-[0_1px_10px_rgba(15,45,82,0.35)]">
               Track, analyze, and improve brand performance on AI search platforms through
               key metrics like{" "}
               <Chip icon={<EyeIcon />}>Visibility</Chip>,{" "}
@@ -109,7 +106,7 @@ export function Hero() {
                   Run AI visibility audit
                 </button>
               </div>
-              <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 text-[13px] md:text-[14px] text-white/90">
+              <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 text-[13px] md:text-[14px] text-white drop-shadow-[0_1px_8px_rgba(15,45,82,0.4)]">
                 <span className="flex items-center gap-2">
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12" />
@@ -125,15 +122,9 @@ export function Hero() {
               </div>
             </div>
           </div>
-
-          {/* Right column — floating status pills over the scene */}
-          <div className="hidden lg:flex flex-col gap-3 mt-4" style={{ animation: "float-surf 8s ease-in-out infinite" }}>
-            <StatusPill state="running" label="Prompt tracking" value="chatgpt-5" />
-            <StatusPill state="done" label="Analysis complete" value="Share of Voice ↑ 5.2%" />
-            <StatusPill state="done" label="Report ready" value="April Wavetrack" />
-          </div>
         </div>
       </div>
+
 
       {/* Social proof */}
       <div className="mx-auto max-w-[800px] px-6 pt-20 pb-16 text-center">
