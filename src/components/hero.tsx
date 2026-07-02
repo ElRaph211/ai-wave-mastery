@@ -478,7 +478,7 @@ function Pricing() {
     : `You save €${monthlySavings}/month`;
 
   return (
-    <section className="relative bg-[#eaf4ff] border-y border-hairline bg-grid">
+    <section className="relative bg-[#faf5ec] border-y border-hairline bg-grid">
       <div className="mx-auto max-w-[1120px] px-6 py-24 md:py-28">
         <div className="text-center">
           <div className="inline-flex items-center gap-3 text-[12px] font-semibold tracking-[0.22em] text-sky-600 uppercase">
@@ -599,7 +599,7 @@ function Testimonials() {
   const offsets1 = ["mt-0", "mt-3", "mt-6"];
   const offsets2 = ["mt-6", "mt-0", "mt-3"];
   return (
-    <div className="relative border-t border-hairline bg-[#f5f5f4] overflow-hidden">
+    <div className="relative border-t border-hairline bg-[#faf5ec] overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-6 relative">
         <div className="text-center">
           <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
@@ -632,8 +632,8 @@ function TestimonialRow({
   const loop = [...items, ...items, ...items];
   return (
     <div className="relative overflow-hidden">
-      <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-[#f5f5f4] to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-[#f5f5f4] to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-[#faf5ec] to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-[#faf5ec] to-transparent z-10 pointer-events-none" />
       <div
         className="flex items-start gap-6 whitespace-nowrap hover:[animation-play-state:paused]"
         style={{
