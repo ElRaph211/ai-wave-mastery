@@ -1018,16 +1018,19 @@ function BigCta() {
               className="text-white font-semibold tracking-[-0.035em] leading-[1.02]"
               style={{ fontSize: "clamp(2.25rem, 5.5vw, 4.5rem)" }}
             >
-              Find out what <span className="text-cta">AI says</span>
+              Stop guessing <span className="text-cta">what AI says</span>
               <br />
-              <span className="text-white/70">about your brand</span>
+              <span className="text-white/70">about your SaaS.</span>
             </h2>
+            <p className="mt-6 text-white/70 text-[16px] md:text-[17px] leading-[1.6] max-w-[520px]">
+              A score is where every other tool stops. That's where {"{{PRODUCT_NAME}}"} starts.
+            </p>
             <div className="mt-10 flex flex-wrap items-center gap-3">
               <a
                 href="#"
                 className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-white text-ink text-[15px] font-semibold hover:bg-white/90 transition-colors"
               >
-                Start free trial
+                Run my free AI audit
                 <span aria-hidden="true">→</span>
               </a>
               <a
@@ -1035,7 +1038,7 @@ function BigCta() {
                 className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-cta text-cta-foreground text-[15px] font-semibold hover:bg-cta/90 transition-colors"
               >
                 <span className="h-2 w-2 rounded-sm bg-white/90" />
-                Talk to Sales
+                Book a founder demo
               </a>
             </div>
           </div>
