@@ -25,19 +25,17 @@ export function Hero() {
 
       {/* Nav */}
       <header className="border-b border-hairline bg-white">
-        <div className="mx-auto max-w-[1400px] px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-10">
-            <a href="/" className="flex items-center gap-2">
-              <span className="inline-block h-5 w-5 rounded-[4px] bg-ink" />
-              <span className="text-[17px] font-semibold tracking-tight text-ink">GetReef AI</span>
-            </a>
-            <nav className="hidden md:flex items-center gap-8 text-[14px] font-medium text-ink">
-              <a href="#" className="hover:text-ink-muted transition-colors">Features</a>
-              <a href="#" className="hover:text-ink-muted transition-colors">Pricing</a>
-              <a href="#" className="hover:text-ink-muted transition-colors">How it works</a>
-              <a href="#" className="hover:text-ink-muted transition-colors">Affiliation</a>
-            </nav>
-          </div>
+        <div className="relative mx-auto max-w-[1400px] px-6 h-16 flex items-center justify-between">
+          <a href="/" className="flex items-center gap-2">
+            <span className="inline-block h-5 w-5 rounded-[4px] bg-ink" />
+            <span className="text-[17px] font-semibold tracking-tight text-ink">GetReef AI</span>
+          </a>
+          <nav className="hidden md:flex items-center gap-8 text-[14px] font-medium text-ink absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <a href="#" className="hover:text-ink-muted transition-colors">Features</a>
+            <a href="#" className="hover:text-ink-muted transition-colors">Pricing</a>
+            <a href="#" className="hover:text-ink-muted transition-colors">How it works</a>
+            <a href="#" className="hover:text-ink-muted transition-colors">Affiliation</a>
+          </nav>
           <div className="flex items-center gap-3">
             <a
               href="#"
