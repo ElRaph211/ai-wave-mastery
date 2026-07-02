@@ -1274,9 +1274,9 @@ export function FounderChatPill() {
   );
 }
 
-function Chip({ icon, children }: { icon: React.ReactNode; children: React.ReactNode }) {
+function Chip({ icon, children, className }: { icon: React.ReactNode; children: React.ReactNode; className?: string }) {
   return (
-    <span className="inline-flex items-center gap-1.5 h-7 px-2.5 mx-0.5 -translate-y-[1px] rounded-md border border-hairline bg-white text-[14px] text-ink align-middle">
+    <span className={`inline-flex items-center gap-1 h-6 px-2 mx-0.5 -translate-y-[1px] rounded-md border border-hairline bg-white text-[13px] text-ink align-middle ${className || ""}`}>
       {icon}
       {children}
     </span>
