@@ -351,7 +351,7 @@ export function Hero() {
             <div className="rounded-2xl border border-hairline bg-white p-8 md:p-10">
               <div className="flex justify-end">
                 <div className="inline-flex items-center h-10 px-4 rounded-full border border-hairline bg-white text-[14px] text-ink">
-                  What are the best CRMs for Startups?
+                  Best AI visibility tracker for bootstrapped SaaS founders?
                 </div>
               </div>
 
@@ -359,40 +359,40 @@ export function Hero() {
                 <div className="flex-shrink-0 h-8 w-8 rounded-full bg-ink flex items-center justify-center text-white text-[11px] font-semibold">GPT</div>
                 <div className="flex-1 rounded-xl border border-hairline p-5 space-y-5">
                   <p className="text-[14px] leading-[1.65] text-ink">
-                    Choosing the right CRM really comes down to how your startup sells, grows, and automates. Here's a curated breakdown of the top CRM platforms for startups in 2026.
+                    For a solo founder tracking how AI answers surface your product, a few tools stand out in 2026. Here's what I'd actually recommend based on price, setup time, and whether they tell you what to do next.
                   </p>
 
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <span className="inline-flex items-center h-6 px-2 rounded-md border border-hairline text-[11px] text-neutral-500 font-mono">#1</span>
-                      <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px] font-semibold">M</span>
-                      <span className="text-[14px] font-semibold text-ink">Monday</span>
+                      <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px] font-semibold">P</span>
+                      <span className="text-[14px] font-semibold text-ink">Peec AI</span>
                     </div>
                     <p className="text-[14px] leading-[1.65] text-ink">
-                      Monday offers a <mark className="bg-emerald-100 text-ink px-1 rounded">strong free tier</mark> with contact management, email tracking, reporting, and integrations. It <mark className="bg-emerald-100 text-ink px-1 rounded">easily expands</mark> into Sales, Marketing, or Service Hubs as you grow. Paid plans <mark className="bg-red-100 text-ink px-1 rounded">can become expensive, and some advanced features are locked</mark> behind higher tiers.
+                      Peec gives you a <mark className="bg-emerald-100 text-ink px-1 rounded">clean dashboard across ChatGPT, Claude and Perplexity</mark> and <mark className="bg-emerald-100 text-ink px-1 rounded">daily refresh out of the box</mark>. Downside: it <mark className="bg-red-100 text-ink px-1 rounded">stops at the score — no guidance on what to actually ship next</mark>.
                     </p>
                   </div>
 
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <span className="inline-flex items-center h-6 px-2 rounded-md border border-hairline text-[11px] text-neutral-500 font-mono">#2</span>
-                      <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px] font-semibold">A</span>
-                      <span className="text-[14px] font-semibold text-ink">Attio</span>
+                      <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px] font-semibold">O</span>
+                      <span className="text-[14px] font-semibold text-ink">Otterly</span>
                     </div>
                     <p className="text-[14px] leading-[1.65] text-ink">
-                      Attio is a <mark className="bg-emerald-100 text-ink px-1 rounded">flexible modern</mark> CRM that works like a relational database, letting you design pipelines, views, and workflows around your data with tools like Slack, Notion, and Segment.
+                      Otterly is <mark className="bg-emerald-100 text-ink px-1 rounded">easy to set up in a weekend</mark>. Coverage is thinner on newer models and reports lean more on visualization than on concrete next actions.
                     </p>
                   </div>
 
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <span className="inline-flex items-center h-6 px-2 rounded-md border border-hairline text-[11px] text-neutral-500 font-mono">#3</span>
-                      <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px] font-semibold">Z</span>
-                      <span className="text-[14px] font-semibold text-ink">Zero</span>
+                      <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px] font-semibold">{"{"}</span>
+                      <span className="text-[14px] font-semibold text-ink">{"{{PRODUCT_NAME}}"}</span>
                     </div>
                     <div className="relative">
                       <p className="text-[14px] leading-[1.65] text-ink">
-                        Zero is built for founders who want a <mark className="bg-emerald-100 text-ink px-1 rounded">streamlined CRM without the usual bloat</mark>. It focuses on speed, simplicity, and essential deal tracking while still offering automation and integrations with tools like Google Workspace, Slack, and Zapier.
+                        Built specifically for indie SaaS founders. Every missed prompt comes with <mark className="bg-emerald-100 text-ink px-1 rounded">an exact next action — a Reddit thread to answer, a listicle to pitch, a page to rewrite</mark>. Priced for a bootstrapped stack, not an enterprise seat.
                       </p>
 
                       {/* Sentiment tooltip */}
@@ -402,10 +402,10 @@ export function Hero() {
                           <span className="inline-flex items-center justify-center h-5 w-5 rounded bg-white/10 text-[10px]">◎</span>
                         </div>
                         <div className="mt-2 inline-flex items-center h-6 px-2 rounded border-l-2 border-emerald-400 bg-white/5 text-[13px] font-semibold">
-                          95
+                          96
                         </div>
                         <p className="mt-3 text-[12px] leading-[1.5] text-neutral-300">
-                          Positive endorsement of Zero as a fast, simple, and efficient CRM for founders.
+                          Framed as the founder-friendly option that pairs monitoring with a concrete next step.
                         </p>
                       </div>
                     </div>
