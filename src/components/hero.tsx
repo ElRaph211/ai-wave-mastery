@@ -346,3 +346,40 @@ function SmileIcon() {
     </svg>
   );
 }
+
+function LogoMarquee() {
+  const logos = [
+    { name: "taap.it", icon: "✕", box: false },
+    { name: "Trendtrack", icon: "T", box: true },
+    { name: "Arcade", icon: "A", box: true },
+    { name: "Adwize", icon: "A", box: true },
+    { name: "Speechly", icon: "≡", box: false },
+    { name: "PeakLab", icon: "P", box: true },
+    { name: "SoftSearch", icon: "S", box: true },
+    { name: "Uplix", icon: null, box: false },
+    { name: "suma ai", icon: null, box: false },
+    { name: "MailTester.Ninja", icon: null, box: false },
+    { name: "Skyden", icon: "SD", box: true },
+  ];
+
+  const items = [...logos, ...logos];
+
+  return (
+    <div className="relative overflow-hidden">
+      <div className="absolute left-0 top-0 bottom-0 w-12 md:w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-12 md:w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+      <div className="flex items-center gap-12 md:gap-16 animate-[marquee_30s_linear_infinite] hover:[animation-play-state:paused] whitespace-nowrap py-6">
+        {items.map((logo, i) => (
+          <span key={i} className="inline-flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
+            {logo.icon ? (
+              <span className={`inline-flex items-center justify-center h-6 w-6 text-[10px] ${logo.box ? "rounded-md bg-ink text-white" : ""}`}>
+                {logo.icon}
+              </span>
+            ) : null}
+            {logo.name}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
