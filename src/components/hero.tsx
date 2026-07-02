@@ -1151,21 +1151,21 @@ function PromptsMarquee() {
   const rows: { text: string; icon: string; color: string }[][] = [
     [
       { text: "How does AI visibility differ on desktop versus mobile?", icon: "✷", color: "text-neutral-400" },
-      { text: "How easy is it to set up a CRM for the first time?", icon: "◍", color: "text-ink" },
-      { text: "What training or tutorials are included with Attio?", icon: "❄", color: "text-sky-500" },
-      { text: "How does HubSpot compare to Salesforce?", icon: "∞", color: "text-neutral-500" },
+      { text: "Which GEO tracker is cheapest for a solo SaaS founder?", icon: "◍", color: "text-ink" },
+      { text: "Best AI visibility tool under $50/month?", icon: "❄", color: "text-sky-500" },
+      { text: "How often should I refresh my ChatGPT prompt tracking?", icon: "∞", color: "text-neutral-500" },
     ],
     [
-      { text: "Do CRMs replace spreadsheets or manual tracking?", icon: "◍", color: "text-ink" },
-      { text: "What core features should a CRM include?", icon: "◍", color: "text-ink" },
-      { text: "How do CRMs handle customer service or support workflows?", icon: "▲", color: "text-blue-500" },
-      { text: "What integrations are available in Attio?", icon: "❄", color: "text-sky-500" },
+      { text: "Which SaaS gets recommended most in ChatGPT for project management?", icon: "◍", color: "text-ink" },
+      { text: "How do I get my SaaS cited by Perplexity?", icon: "◍", color: "text-ink" },
+      { text: "Does building in public help AI visibility?", icon: "▲", color: "text-blue-500" },
+      { text: "Best Reddit threads to answer for GEO in 2026", icon: "❄", color: "text-sky-500" },
     ],
     [
-      { text: "Do CRMs offer API access for custom integrations?", icon: "❄", color: "text-sky-500" },
-      { text: "How easy is CRM data migration from another system?", icon: "✷", color: "text-orange-500" },
-      { text: "What security certifications do CRMs typically have?", icon: "◍", color: "text-ink" },
-      { text: "How do CRMs handle GDPR compliance?", icon: "✷", color: "text-orange-500" },
+      { text: "How does Claude decide which SaaS to recommend?", icon: "❄", color: "text-sky-500" },
+      { text: "Fastest way to rank in Gemini AI Overviews?", icon: "✷", color: "text-orange-500" },
+      { text: "What content format do LLMs cite most?", icon: "◍", color: "text-ink" },
+      { text: "Is GEO the new SEO for indie SaaS?", icon: "✷", color: "text-orange-500" },
     ],
   ];
   return (
