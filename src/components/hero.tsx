@@ -1277,17 +1277,22 @@ export function FounderChatPill() {
   return (
     <a
       href="#"
-      className="fixed z-50 bottom-5 right-5 md:bottom-6 md:right-6 flex items-center gap-3 bg-[#0b1220] text-white pl-2 pr-2 py-2 rounded-full shadow-[0_12px_36px_-10px_rgba(0,0,0,0.5)] hover:bg-[#0f172a] transition-colors"
+      className="fixed z-50 bottom-5 right-5 md:bottom-6 md:right-6 flex items-center gap-3 bg-[#0b1220] text-white pl-2 pr-2 py-2 rounded-full shadow-[0_12px_36px_-10px_rgba(0,0,0,0.5)] hover:bg-[#111a2e] transition-colors"
     >
-      <span className="relative inline-flex shrink-0">
-        <span className="flex items-center justify-center h-10 w-10 rounded-full bg-sky-400 text-white font-semibold text-[15px]">
-          R
-        </span>
-        <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-emerald-400 ring-2 ring-[#0b1220]" />
-      </span>
+      <img
+        src={founderPhoto}
+        alt="Raphaël, founder"
+        width={40}
+        height={40}
+        loading="lazy"
+        className="h-10 w-10 rounded-full object-cover shrink-0"
+      />
       <span className="hidden sm:flex flex-col leading-tight pr-1 min-w-0">
-        <span className="text-[14px] font-semibold truncate">Raphaël</span>
-        <span className="text-[12px] text-neutral-400 truncate">Solo founder · Reply in ~1h</span>
+        <span className="flex items-center gap-1.5">
+          <span className="text-[14px] font-semibold truncate">Raphaël</span>
+          <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_0_2px_rgba(16,185,129,0.25)]" aria-label="online" />
+        </span>
+        <span className="text-[12px] text-neutral-400 truncate">Founder</span>
       </span>
       <span className="hidden sm:inline-flex items-center h-8 px-3 shrink-0 rounded-full bg-white text-ink text-[12px] font-semibold">
         Chat now
@@ -1295,6 +1300,7 @@ export function FounderChatPill() {
     </a>
   );
 }
+
 
 function Chip({ icon, children, className }: { icon: React.ReactNode; children: React.ReactNode; className?: string }) {
   return (
