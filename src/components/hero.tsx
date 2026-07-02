@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import heroImage from "@/assets/hero-hawaii-painterly.jpg";
 import featuresPixel from "@/assets/features-hawaii-painterly.jpg";
+import founderPhoto from "@/assets/founder-raphael.jpg";
 
 const AI_PLATFORMS = [
   {
