@@ -141,11 +141,11 @@ export function Hero() {
           className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent"
         />
 
-        <div className="relative mx-auto max-w-[1400px] px-6 pt-20 md:pt-28 pb-32 md:pb-40">
+        <div className="relative mx-auto max-w-[1400px] px-6 pt-14 md:pt-18 pb-20 md:pb-28">
           <div className="mx-auto max-w-[860px] text-center">
             <h1
               className="text-white font-semibold tracking-[-0.035em] leading-[0.98] drop-shadow-[0_2px_20px_rgba(15,45,82,0.35)]"
-              style={{ fontSize: "clamp(2.5rem, 6.5vw, 5.5rem)" }}
+              style={{ fontSize: "clamp(2.5rem, 6.5vw, 5rem)" }}
             >
               AI search analytics for SaaS
               <br />
@@ -154,7 +154,7 @@ export function Hero() {
 
             </h1>
 
-            <p className="mt-6 mx-auto max-w-[600px] text-[16px] md:text-[17px] leading-[1.6] text-white/95 drop-shadow-[0_1px_10px_rgba(15,45,82,0.35)]">
+            <p className="mt-5 mx-auto max-w-[600px] text-[16px] md:text-[17px] leading-[1.6] text-white/95 drop-shadow-[0_1px_10px_rgba(15,45,82,0.35)]">
               Track, analyze, and improve brand performance on AI search platforms through
               key metrics like{" "}
               <Chip icon={<EyeIcon />}>Visibility</Chip>,{" "}
@@ -163,7 +163,7 @@ export function Hero() {
             </p>
 
             {/* URL audit input */}
-            <div className="mt-8 mx-auto max-w-[560px]">
+            <div className="mt-7 mx-auto max-w-[560px]">
               <div className="flex items-center gap-2 h-14 md:h-16 pl-6 pr-2 rounded-full border border-hairline bg-white shadow-[0_10px_30px_-10px_rgba(15,45,82,0.35)]">
                 <input
                   type="url"
@@ -174,34 +174,38 @@ export function Hero() {
                   Run AI visibility audit
                 </button>
               </div>
-              <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-[13px] md:text-[14px] text-white drop-shadow-[0_1px_8px_rgba(15,45,82,0.4)]">
-                <span className="flex items-center gap-2">
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  See results in 30 seconds
-                </span>
-                <span className="flex items-center gap-2">
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  No credit card required
-                </span>
-              </div>
-              <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-cta text-cta-foreground text-[15px] font-medium hover:bg-cta/90 transition-colors shadow-[0_10px_30px_-10px_rgba(15,45,82,0.5)]"
-                >
-                  Start now
-                  <span aria-hidden="true">→</span>
-                </a>
-                <a
-                  href="#"
-                  className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-white/10 backdrop-blur border border-white/60 text-white text-[15px] font-medium hover:bg-white/20 transition-colors"
-                >
-                  Book a demo
-                </a>
+
+              {/* CTA frame — readable against the pixel background */}
+              <div className="mt-5 rounded-2xl border border-white/20 bg-white/[0.08] backdrop-blur-md p-5 shadow-[0_20px_50px_-12px_rgba(15,45,82,0.35)]">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-[13px] text-white/90 drop-shadow-[0_1px_8px_rgba(15,45,82,0.4)]">
+                  <span className="flex items-center gap-2">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    See results in 30 seconds
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    No credit card required
+                  </span>
+                </div>
+                <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <a
+                    href="#"
+                    className="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full bg-cta text-cta-foreground text-[14px] font-medium hover:bg-cta/90 transition-colors shadow-[0_10px_30px_-10px_rgba(15,45,82,0.5)]"
+                  >
+                    Start now
+                    <span aria-hidden="true">→</span>
+                  </a>
+                  <a
+                    href="#"
+                    className="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full bg-white/10 backdrop-blur border border-white/60 text-white text-[14px] font-medium hover:bg-white/20 transition-colors"
+                  >
+                    Book a demo
+                  </a>
+                </div>
               </div>
             </div>
 
