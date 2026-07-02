@@ -539,7 +539,7 @@ function Pricing() {
           </div>
 
           <div className="mt-8 rounded-2xl bg-sky-50/70 border border-sky-100 p-5 text-center text-[14.5px] text-ink/80 leading-relaxed">
-            Founding pricing is locked forever. After launch, this plan goes back to €{monthlyBase}/month.
+            One SaaS, tracked across every model that matters. Founding price is locked for life — after launch, this plan goes back to €{monthlyBase}/month.
           </div>
 
           <div className="mt-8 min-h-[140px]" aria-hidden="true" />
@@ -551,7 +551,7 @@ function Pricing() {
             Claim your founding spot →
           </button>
           <p className="mt-4 text-center text-[13px] text-neutral-500">
-            Cancel anytime from your dashboard. No calls, no emails.
+            Cancel from the dashboard in one click. No calls, no annual contract.
           </p>
         </div>
       </div>
