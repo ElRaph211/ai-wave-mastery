@@ -344,6 +344,12 @@ export function Hero() {
         <PromptsMarquee />
       </div>
 
+      {/* Testimonials */}
+      <Testimonials />
+
+      {/* Big CTA */}
+      <BigCta />
+
       {/* FAQ */}
       <div className="border-t border-hairline bg-white">
         <div className="mx-auto max-w-[880px] px-6 py-24">
@@ -361,7 +367,250 @@ export function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <SiteFooter />
     </section>
+  );
+}
+
+function Testimonials() {
+  const items = [
+    {
+      quote: "GetReef gave us key insights on AI visibility, helping our SaaS stay at the forefront of discovery in the age of generative search. As ChatGPT, Claude, and Perplexity drive traffic and signups, GetReef measures the growth.",
+      name: "Crystal Carter",
+      role: "Head of SEO Comms",
+      company: "WIX",
+    },
+    {
+      quote: "GetReef avoids the issues we see with other SEO/AEO platforms, where there's often an overload of features and information that isn't of primary importance. It keeps things simple — set up your prompts, see your AI visibility, and act on top citations.",
+      name: "Ethan Smith",
+      role: "CEO",
+      company: "GRAPHITE",
+    },
+    {
+      quote: "GetReef helps us identify what's being cited, adjust our strategy in real-time, and stay ahead of a rapidly evolving search landscape. For our team, the clarity and simplicity of the platform is invaluable when making strategic content decisions.",
+      name: "Thomas Smeaton",
+      role: "SEO Manager",
+      company: "SQUARESPACE",
+    },
+    {
+      quote: "GetReef allows us to pinpoint the exact types of content that are surfaced in specific LLMs. With that visibility, we've been able to prioritize our content strategy and drive a 5x year-over-year increase in traffic and demo requests from LLMs.",
+      name: "Jon Gitlin",
+      role: "SEO Strategist",
+      company: "MERGE",
+    },
+    {
+      quote: "GetReef gave us a data-informed view of our LLMO strategy at Glide — virtually overnight. With its insights, our blog posts started ranking for targeted ChatGPT and Perplexity prompts within 24 hours. I'm really impressed with the platform and the support from the team.",
+      name: "Sepy Bazzazi",
+      role: "Head of Marketing",
+      company: "Glide",
+    },
+    {
+      quote: "As search marketers, our decisions should always be driven by data. GetReef provides exactly the critical insights we need to stay competitive in the ever-evolving world of search.",
+      name: "Artur Kosch",
+      role: "General Manager",
+      company: "KKP",
+    },
+  ];
+  return (
+    <div className="border-t border-hairline bg-[#f5f5f4]">
+      <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-24">
+        <div className="text-center">
+          <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2" />
+            </svg>
+            Testimonials
+          </div>
+          <h2
+            className="mt-8 mx-auto text-ink font-semibold tracking-[-0.03em] leading-[1.05]"
+            style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)", maxWidth: "20ch" }}
+          >
+            Check what the best marketers say about{" "}
+            <span className="text-cta">GetReef AI</span>.
+          </h2>
+        </div>
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {items.map((t, i) => (
+            <TestimonialCard key={i} {...t} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function TestimonialCard({
+  quote, name, role, company,
+}: { quote: string; name: string; role: string; company: string }) {
+  return (
+    <div className="rounded-2xl bg-white border border-hairline p-7 flex flex-col shadow-[0_1px_2px_rgba(0,0,0,0.03)] transition hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(15,45,82,0.2)]">
+      <p className="text-[15px] leading-[1.65] text-neutral-600 flex-1">{quote}</p>
+      <div className="mt-6 flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3 min-w-0">
+          <span className="inline-flex items-center justify-center h-11 w-11 rounded-full bg-cta text-white text-[13px] font-semibold flex-shrink-0">
+            {name.split(" ").map((w) => w[0]).slice(0, 2).join("")}
+          </span>
+          <div className="min-w-0">
+            <div className="text-[15px] font-semibold text-ink truncate">{name}</div>
+            <div className="text-[13px] text-neutral-500 truncate">{role}</div>
+          </div>
+        </div>
+        <span className="text-[13px] font-bold tracking-[0.12em] text-neutral-400">{company}</span>
+      </div>
+    </div>
+  );
+}
+
+function BigCta() {
+  return (
+    <div className="border-t border-hairline bg-white">
+      <div className="mx-auto max-w-[1400px] px-6 py-16">
+        <div className="relative overflow-hidden rounded-3xl bg-[#0b1220] px-8 md:px-16 py-20 md:py-28">
+          {/* Subtle grid + glow */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 opacity-[0.08]"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)",
+              backgroundSize: "28px 28px",
+            }}
+          />
+          <div
+            aria-hidden="true"
+            className="absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full"
+            style={{ background: "radial-gradient(circle, rgba(56,189,248,0.35), transparent 65%)" }}
+          />
+          <div className="relative max-w-[640px]">
+            <h2
+              className="text-white font-semibold tracking-[-0.035em] leading-[1.02]"
+              style={{ fontSize: "clamp(2.25rem, 5.5vw, 4.5rem)" }}
+            >
+              Find out what <span className="text-cta">AI says</span>
+              <br />
+              <span className="text-white/70">about your brand</span>
+            </h2>
+            <div className="mt-10 flex flex-wrap items-center gap-3">
+              <a
+                href="#"
+                className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-white text-ink text-[15px] font-semibold hover:bg-white/90 transition-colors"
+              >
+                Start free trial
+                <span aria-hidden="true">→</span>
+              </a>
+              <a
+                href="#"
+                className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-cta text-cta-foreground text-[15px] font-semibold hover:bg-cta/90 transition-colors"
+              >
+                <span className="h-2 w-2 rounded-sm bg-white/90" />
+                Talk to Sales
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function SiteFooter() {
+  const cols = [
+    {
+      title: "Company",
+      links: ["Home", "Careers", "FAQ"],
+    },
+    {
+      title: "Product",
+      links: ["Docs", "Blog", "Pricing", "Changelog"],
+    },
+    {
+      title: "Features",
+      links: ["ChatGPT visibility tracker", "Gemini visibility tracker", "AI Mode visibility tracker"],
+    },
+  ];
+  const cols2 = [
+    { title: "Partnership", links: ["Agencies", "Creators", "Media"] },
+    { title: "Comparison", links: ["GetReef vs Ahrefs", "GetReef vs Profound", "GetReef vs Semrush"] },
+  ];
+  return (
+    <footer className="bg-[#0a0a0a] text-white">
+      <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
+          {/* Brand */}
+          <div className="col-span-2 md:col-span-1">
+            <div className="flex items-center gap-2">
+              <span className="inline-block h-5 w-5 rounded-[4px] bg-cta" />
+              <span className="text-[17px] font-semibold tracking-tight text-white">GetReef AI</span>
+            </div>
+            <p className="mt-6 text-[22px] md:text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-white/90">
+              AI search analytics
+              <br />
+              <span className="text-white/50">for SaaS founders</span>
+            </p>
+          </div>
+
+          {cols.map((c) => (
+            <FooterCol key={c.title} title={c.title} links={c.links} />
+          ))}
+        </div>
+
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
+          <div className="hidden md:block" />
+          {cols2.map((c) => (
+            <FooterCol key={c.title} title={c.title} links={c.links} />
+          ))}
+          <div>
+            <h4 className="text-[15px] font-semibold text-white">Follow Us</h4>
+            <ul className="mt-5 space-y-4">
+              <li>
+                <a href="#" className="flex items-center gap-3 text-[15px] text-white/60 hover:text-cta transition-colors">
+                  <span className="inline-flex items-center justify-center h-6 w-6 rounded bg-white/10 text-white text-[12px]">𝕏</span>
+                  x.com
+                </a>
+              </li>
+              <li>
+                <a href="#" className="flex items-center gap-3 text-[15px] text-white/60 hover:text-cta transition-colors">
+                  <span className="inline-flex items-center justify-center h-6 w-6 rounded bg-white/10 text-white text-[11px] font-bold">in</span>
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-20 border-t border-white/10 pt-8 text-[14px] text-white/60">
+          GetReef AI is a top-rated AI search monitoring tool — <span className="text-cta font-medium">4.9/5</span> on G2 and regularly recommended on Reddit.
+        </div>
+        <div className="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[13px] text-white/50">
+          <div>© {new Date().getFullYear()} GetReef AI. All rights reserved.</div>
+          <div className="flex flex-wrap items-center gap-6">
+            <a href="#" className="hover:text-white transition-colors">Cookie Settings</a>
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition-colors">Terms of Services</a>
+            <a href="#" className="hover:text-white transition-colors">Imprint</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function FooterCol({ title, links }: { title: string; links: string[] }) {
+  return (
+    <div>
+      <h4 className="text-[15px] font-semibold text-white">{title}</h4>
+      <ul className="mt-5 space-y-4">
+        {links.map((l) => (
+          <li key={l}>
+            <a href="#" className="text-[15px] text-white/60 hover:text-cta transition-colors">
+              {l}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
