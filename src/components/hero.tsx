@@ -1268,7 +1268,7 @@ export function FounderChatPill() {
       </span>
       <span className="hidden sm:flex flex-col leading-tight pr-1 min-w-0">
         <span className="text-[14px] font-semibold truncate">Raphaël</span>
-        <span className="text-[12px] text-neutral-400 truncate">Founder · Book a demo</span>
+        <span className="text-[12px] text-neutral-400 truncate">Solo founder · Reply in ~1h</span>
       </span>
       <span className="hidden sm:inline-flex items-center h-8 px-3 shrink-0 rounded-full bg-white text-ink text-[12px] font-semibold">
         Chat now
