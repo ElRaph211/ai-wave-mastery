@@ -675,21 +675,25 @@ function TestimonialCard({
 
 function KeyFeaturesPixel() {
   return (
-    <div className="relative overflow-hidden border-t border-hairline bg-[#4fb5ec]">
+    <div className="relative overflow-hidden border-t border-hairline bg-[#e8895a]">
       <img
         src={featuresPixel}
-        alt="Pixel art Hawaiian beach with palm trees and hibiscus"
-        width={1920}
-        height={1088}
+        alt="Painterly Hawaiian sunset with cliff, waterfall and hibiscus"
+        width={1024}
+        height={1408}
         loading="lazy"
         aria-hidden="true"
         className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
-        style={{ imageRendering: "pixelated" }}
       />
-      {/* Bottom fade to page */}
+      {/* Warm dark overlay so white type stays crisp */}
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent"
+        className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/45 to-black/60"
+      />
+      {/* Bottom fade to cream page */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#faf5ec] to-transparent"
       />
 
       <div className="relative mx-auto max-w-[1400px] px-6 pt-24 md:pt-32 pb-16">
