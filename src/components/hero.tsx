@@ -523,30 +523,30 @@ function Pricing() {
               <span className="text-neutral-500 text-[18px]">{suffix}</span>
             </div>
 
-            <div className="mt-5 flex items-center justify-center gap-3">
-              <button
-                type="button"
-                onClick={() => setYearly(false)}
-                className={`text-[14px] transition-colors ${!yearly ? "text-ink font-medium" : "text-neutral-500"}`}
-              >
-                Monthly
-              </button>
-              <button
-                type="button"
-                onClick={() => setYearly(!yearly)}
-                aria-label="Toggle billing period"
-                className="relative h-6 w-11 rounded-full bg-sky-500 transition-colors"
-              >
-                <span className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform ${yearly ? "translate-x-5" : "translate-x-0.5"}`} />
-              </button>
-              <button
-                type="button"
-                onClick={() => setYearly(true)}
-                className={`text-[14px] transition-colors ${yearly ? "text-ink font-medium" : "text-neutral-500"}`}
-              >
-                Yearly <span className="text-sky-600">— 2 months free</span>
-              </button>
+            <div className="mt-5 flex items-center justify-center">
+              <div className="relative inline-flex items-center p-1 rounded-full bg-neutral-100 border border-hairline">
+                <span
+                  aria-hidden="true"
+                  className={`absolute top-1 bottom-1 w-[calc(50%-4px)] rounded-full bg-ink shadow-sm transition-transform duration-200 ease-out ${yearly ? "translate-x-full" : "translate-x-0"}`}
+                  style={{ left: 4 }}
+                />
+                <button
+                  type="button"
+                  onClick={() => setYearly(false)}
+                  className={`relative z-10 h-9 px-5 rounded-full text-[13px] font-medium transition-colors ${!yearly ? "text-white" : "text-neutral-600 hover:text-ink"}`}
+                >
+                  Monthly
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setYearly(true)}
+                  className={`relative z-10 h-9 px-5 rounded-full text-[13px] font-medium transition-colors ${yearly ? "text-white" : "text-neutral-600 hover:text-ink"}`}
+                >
+                  Yearly <span className={yearly ? "text-emerald-300" : "text-emerald-600"}>· 2 months free</span>
+                </button>
+              </div>
             </div>
+
 
             <div className="mt-5 inline-flex items-center rounded-full bg-sky-50 text-sky-700 px-4 py-1.5 text-[13px] font-semibold">
               Pre-launch offer · {savingsLabel}
