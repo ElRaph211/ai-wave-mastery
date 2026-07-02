@@ -173,7 +173,7 @@ export function Hero() {
 
 
       {/* Video sales letter placeholder */}
-      <div className="border-t border-hairline bg-white">
+      <div className="border-t border-hairline bg-white bg-grid">
         <div className="mx-auto max-w-[960px] px-6 py-20">
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
@@ -204,7 +204,7 @@ export function Hero() {
       </div>
 
       {/* Unified SaaS trust block */}
-      <div className="border-t border-hairline bg-white">
+      <div className="border-t border-hairline bg-white bg-grid">
         <div className="mx-auto max-w-[1400px] px-6 py-16">
           <p className="text-center text-[14px] text-neutral-500">
             50+ SaaS navigating the generative shift with <span className="text-ink font-semibold">GetReef.ai</span>
@@ -334,7 +334,7 @@ export function Hero() {
       <KeyFeaturesPixel />
 
       {/* Prompts — new search engines */}
-      <div className="border-t border-hairline bg-white">
+      <div className="border-t border-hairline bg-white bg-grid">
         <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-6 text-center">
           <h2
             className="mx-auto text-ink font-semibold tracking-[-0.03em] leading-[1.05]"
@@ -355,7 +355,7 @@ export function Hero() {
       <BigCta />
 
       {/* FAQ */}
-      <div className="border-t border-hairline bg-white">
+      <div className="border-t border-hairline bg-white bg-grid">
         <div className="mx-auto max-w-[880px] px-6 py-24">
           <div className="text-center">
             <h2 className="text-ink font-semibold tracking-[-0.03em]" style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}>
@@ -813,7 +813,7 @@ function ActOnInsightsMock() {
 
 function BigCta() {
   return (
-    <div className="border-t border-hairline bg-white">
+    <div className="border-t border-hairline bg-white bg-grid">
       <div className="mx-auto max-w-[1400px] px-6 py-16">
         <div className="relative overflow-hidden rounded-3xl bg-[#0b1220] px-8 md:px-16 py-20 md:py-28">
           {/* Subtle grid + glow */}
