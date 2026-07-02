@@ -294,7 +294,7 @@ export function Hero() {
       <div className="border-t border-hairline bg-white">
         <div className="mx-auto max-w-[1400px] px-6 py-16">
           <p className="text-center text-[14px] text-neutral-500">
-            50+ SaaS navigating the generative shift with <span className="text-ink font-semibold">GetReef.ai</span>
+            Founding SaaS shipping with {"{{PRODUCT_NAME}}"} instead of guessing at AI rankings
           </p>
 
           <div className="mt-10">
