@@ -968,9 +968,9 @@ function KeySourcesMock() {
 
 function ActOnInsightsMock() {
   const insights = [
-    { t: "LinkedIn is a common source", s: "Consider joining the conversation", dark: false },
-    { t: "Join r/CRM subreddit discussions", s: "Discussions show frequently in sources.", dark: true },
-    { t: "Articles from NYT regularly show up in citations", s: "Consider placing a story via digital PR", dark: false },
+    { t: "r/SaaS thread ranks for your top query", s: "Reply with a founder story in the next 48h.", dark: false },
+    { t: "Indie Hackers milestone post gets cited daily", s: "Post your MRR update this week — high citation odds.", dark: true },
+    { t: "A comparison listicle is missing you", s: "Email the author with a 3-line pitch — template inside.", dark: false },
   ];
   return (
     <div className="relative -mb-6 space-y-3 pt-2">
