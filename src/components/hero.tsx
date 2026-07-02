@@ -3,15 +3,25 @@ import heroImage from "@/assets/hero-hawaii-pixel.jpg";
 export function Hero() {
   return (
     <section className="relative bg-white">
-      {/* Top banner */}
-      <div className="w-full border-b border-hairline">
-        <div className="mx-auto max-w-[1400px] px-6 h-11 flex items-center justify-center gap-2 text-[13px] text-ink">
-          <span>🌊 Hawaii Launch Week —</span>
-          <a href="#" className="font-medium underline underline-offset-2">
-            see how your brand rides ChatGPT ↗
+      {/* Pre-sale banner — dark, founding access style */}
+      <div className="w-full bg-[#0b1220] text-white">
+        <div className="mx-auto max-w-[1400px] px-6 h-11 flex items-center justify-between gap-4 text-[13px]">
+          <div className="flex items-center gap-2 font-medium">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+            </span>
+            Founding access open
+          </div>
+          <div className="hidden md:block text-neutral-400">
+            Limited beta — onboard your first 50 tracked prompts before public launch
+          </div>
+          <a href="#" className="font-medium underline underline-offset-4 decoration-neutral-500 hover:decoration-white transition-colors whitespace-nowrap">
+            Book a demo →
           </a>
         </div>
       </div>
+
 
       {/* Nav */}
       <header className="border-b border-hairline">
