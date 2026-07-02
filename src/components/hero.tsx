@@ -182,13 +182,13 @@ export function Hero() {
                     <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    See results in 30 seconds
+                    Score in under 30 seconds
                   </span>
                   <span className="flex items-center gap-2">
                     <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    No credit card required
+                    No credit card, no sales call
                   </span>
                 </div>
                 <div className="mt-3 flex flex-col sm:flex-row items-center justify-center gap-2.5">
