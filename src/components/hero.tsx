@@ -517,6 +517,44 @@ function KeyFeaturesPixel() {
             body="Leverage AI-suggested prompts and search volumes to focus on the biggest opportunities in your vertical."
             mock={<SuggestedPromptsMock />}
           />
+          <FeaturePixelCard
+            title="Add Brands"
+            body="See how you rank against the players that matter in your market."
+            mock={<AddBrandsMock />}
+          />
+          <FeaturePixelCard
+            title="Choose AI Models"
+            body="Track rankings across the models that drive the most traffic and visibility."
+            mock={<ChooseModelsMock />}
+          />
+          <FeaturePixelCard
+            title="Find Key Sources"
+            body="Spot the citations shaping your visibility and refine your generative search strategy."
+            mock={<KeySourcesMock />}
+          />
+          <FeaturePixelCard
+            title="Act on Insights"
+            body="Use recommendations to capture high-impact opportunities and boost your ranking."
+            mock={<ActOnInsightsMock />}
+          />
+        </div>
+
+        {/* Featured quote */}
+        <div className="mt-16 rounded-3xl bg-white/95 backdrop-blur border border-white/70 shadow-[0_30px_80px_-30px_rgba(15,45,82,0.45)] px-8 md:px-20 py-16 md:py-24">
+          <p
+            className="mx-auto max-w-[1000px] text-center text-ink font-semibold tracking-[-0.02em] leading-[1.2]"
+            style={{ fontSize: "clamp(1.5rem, 2.75vw, 2.5rem)" }}
+          >
+            Metrics like brand mentions, impressions, and sentiment are hard to track — which is why{" "}
+            <span className="text-cta">GetReef AI</span> is so powerful: it shows how LLMs are framing our brand.
+          </p>
+          <div className="mt-10 flex items-center justify-center gap-4">
+            <span className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-cta text-white font-semibold text-[14px]">LR</span>
+            <div className="text-left">
+              <div className="text-[15px] font-semibold text-ink">Lily Ray</div>
+              <div className="text-[13px] text-neutral-500">VP SEO Strategy, Amsive</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
