@@ -238,21 +238,21 @@ export function Hero() {
               ))}
             </div>
             <p className="text-[16px] md:text-[18px] font-semibold text-ink">
-              Loved by SaaS founders who'd rather scoop than guess
+              Built with founders in the beta cohort — not for enterprise SEO teams
             </p>
           </div>
           <div className="grid grid-cols-3 gap-6 md:gap-16 text-center">
             <div>
-              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">50+</div>
-              <div className="text-[13px] md:text-[14px] text-neutral-500">SaaS tracked</div>
+              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">6</div>
+              <div className="text-[13px] md:text-[14px] text-neutral-500">AI models tracked</div>
             </div>
             <div>
-              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">12,000</div>
-              <div className="text-[13px] md:text-[14px] text-neutral-500">live signals</div>
+              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">24h</div>
+              <div className="text-[13px] md:text-[14px] text-neutral-500">to your first signal</div>
             </div>
             <div>
-              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">8</div>
-              <div className="text-[13px] md:text-[14px] text-neutral-500">verticals</div>
+              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">50</div>
+              <div className="text-[13px] md:text-[14px] text-neutral-500">founding spots</div>
             </div>
           </div>
         </div>
