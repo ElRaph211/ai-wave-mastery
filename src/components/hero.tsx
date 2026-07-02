@@ -858,8 +858,8 @@ function SuggestedPromptsMock() {
 
 function AddBrandsMock() {
   const brands = [
-    { name: "Monday", url: "monday.com", extra: "+3", state: "start", color: "bg-pink-100", initial: "M", initialBg: "bg-pink-500" },
-    { name: "Pipedrive", url: "pipedrive.com", extra: "+2", state: "tracking", color: "bg-emerald-50", initial: "P", initialBg: "bg-emerald-600" },
+    { name: "Peec AI", url: "peec.ai", extra: "+3", state: "start", color: "bg-pink-100", initial: "P", initialBg: "bg-pink-500" },
+    { name: "Otterly", url: "otterly.ai", extra: "+2", state: "tracking", color: "bg-emerald-50", initial: "O", initialBg: "bg-emerald-600" },
   ];
   return (
     <div className="relative -mb-6 h-[280px]">
