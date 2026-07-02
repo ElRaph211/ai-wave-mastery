@@ -25,19 +25,17 @@ export function Hero() {
 
       {/* Nav */}
       <header className="border-b border-hairline bg-white">
-        <div className="mx-auto max-w-[1400px] px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-10">
-            <a href="/" className="flex items-center gap-2">
-              <span className="inline-block h-5 w-5 rounded-[4px] bg-ink" />
-              <span className="text-[17px] font-semibold tracking-tight text-ink">GetReef AI</span>
-            </a>
-            <nav className="hidden md:flex items-center gap-8 text-[14px] font-medium text-ink">
-              <a href="#" className="hover:text-ink-muted transition-colors">Features</a>
-              <a href="#" className="hover:text-ink-muted transition-colors">Pricing</a>
-              <a href="#" className="hover:text-ink-muted transition-colors">How it works</a>
-              <a href="#" className="hover:text-ink-muted transition-colors">Affiliation</a>
-            </nav>
-          </div>
+        <div className="relative mx-auto max-w-[1400px] px-6 h-16 flex items-center justify-between">
+          <a href="/" className="flex items-center gap-2">
+            <span className="inline-block h-5 w-5 rounded-[4px] bg-ink" />
+            <span className="text-[17px] font-semibold tracking-tight text-ink">GetReef AI</span>
+          </a>
+          <nav className="hidden md:flex items-center gap-8 text-[14px] font-medium text-ink absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <a href="#" className="hover:text-ink-muted transition-colors">Features</a>
+            <a href="#" className="hover:text-ink-muted transition-colors">Pricing</a>
+            <a href="#" className="hover:text-ink-muted transition-colors">How it works</a>
+            <a href="#" className="hover:text-ink-muted transition-colors">Affiliation</a>
+          </nav>
           <div className="flex items-center gap-3">
             <a
               href="#"
@@ -133,67 +131,8 @@ export function Hero() {
             50+ SaaS navigating the generative shift with <span className="text-ink font-semibold">GetReef.ai</span>
           </p>
 
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-4 border border-hairline rounded-2xl overflow-hidden bg-white">
-            <div className="flex items-center justify-center h-24 md:h-28 border-b border-r border-hairline px-4">
-              <span className="flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
-                <span className="inline-flex items-center justify-center h-6 w-6">✕</span>
-                taap.it
-              </span>
-            </div>
-            <div className="flex items-center justify-center h-24 md:h-28 border-b border-r border-hairline px-4">
-              <span className="flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
-                <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px]">T</span>
-                Trendtrack
-              </span>
-            </div>
-            <div className="flex items-center justify-center h-24 md:h-28 border-b border-r border-hairline px-4">
-              <span className="flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
-                <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px]">A</span>
-                Arcade
-              </span>
-            </div>
-            <div className="flex items-center justify-center h-24 md:h-28 border-b border-hairline px-4">
-              <span className="flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
-                <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px]">A</span>
-                Adwize
-              </span>
-            </div>
-            <div className="flex items-center justify-center h-24 md:h-28 border-b border-r border-hairline px-4">
-              <span className="flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
-                <span className="inline-flex items-center justify-center h-6 w-6">≡</span>
-                Speechly
-              </span>
-            </div>
-            <div className="flex items-center justify-center h-24 md:h-28 border-b border-r border-hairline px-4">
-              <span className="flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
-                <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px]">P</span>
-                PeakLab
-              </span>
-            </div>
-            <div className="flex items-center justify-center h-24 md:h-28 border-b border-r border-hairline px-4">
-              <span className="flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
-                <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px]">S</span>
-                SoftSearch
-              </span>
-            </div>
-            <div className="flex items-center justify-center h-24 md:h-28 border-b border-hairline px-4">
-              <span className="text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">Uplix</span>
-            </div>
-            <div className="flex items-center justify-center h-24 md:h-28 border-r border-hairline px-4">
-              <span className="text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">Uplix</span>
-            </div>
-            <div className="flex items-center justify-center h-24 md:h-28 border-r border-hairline px-4">
-              <span className="text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">suma ai</span>
-            </div>
-            <div className="flex items-center justify-center h-24 md:h-28 border-r border-hairline px-4">
-              <span className="text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">MailTester.Ninja</span>
-            </div>
-            <div className="flex items-center justify-center h-24 md:h-28 px-4">
-              <span className="flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
-                <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px]">SD</span>
-                Skyden
-              </span>
-            </div>
+          <div className="mt-10">
+            <LogoMarquee />
           </div>
         </div>
       </div>
@@ -405,5 +344,42 @@ function SmileIcon() {
       <path d="M8 14s1.5 2 4 2 4-2 4-2" />
       <path d="M9 9h.01M15 9h.01" />
     </svg>
+  );
+}
+
+function LogoMarquee() {
+  const logos = [
+    { name: "taap.it", icon: "✕", box: false },
+    { name: "Trendtrack", icon: "T", box: true },
+    { name: "Arcade", icon: "A", box: true },
+    { name: "Adwize", icon: "A", box: true },
+    { name: "Speechly", icon: "≡", box: false },
+    { name: "PeakLab", icon: "P", box: true },
+    { name: "SoftSearch", icon: "S", box: true },
+    { name: "Uplix", icon: null, box: false },
+    { name: "suma ai", icon: null, box: false },
+    { name: "MailTester.Ninja", icon: null, box: false },
+    { name: "Skyden", icon: "SD", box: true },
+  ];
+
+  const items = [...logos, ...logos];
+
+  return (
+    <div className="relative overflow-hidden">
+      <div className="absolute left-0 top-0 bottom-0 w-12 md:w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-12 md:w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+      <div className="flex items-center gap-12 md:gap-16 animate-[marquee_30s_linear_infinite] hover:[animation-play-state:paused] whitespace-nowrap py-6">
+        {items.map((logo, i) => (
+          <span key={i} className="inline-flex items-center gap-2 text-ink text-[15px] md:text-[16px] font-semibold tracking-tight">
+            {logo.icon ? (
+              <span className={`inline-flex items-center justify-center h-6 w-6 text-[10px] ${logo.box ? "rounded-md bg-ink text-white" : ""}`}>
+                {logo.icon}
+              </span>
+            ) : null}
+            {logo.name}
+          </span>
+        ))}
+      </div>
+    </div>
   );
 }
