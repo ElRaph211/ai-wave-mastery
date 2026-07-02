@@ -355,7 +355,7 @@ export function Hero() {
       <BigCta />
 
       {/* FAQ */}
-      <div className="border-t border-hairline bg-white bg-grid">
+      <div className="border-t border-hairline bg-white">
         <div className="mx-auto max-w-[880px] px-6 py-24">
           <div className="text-center">
             <h2 className="text-ink font-semibold tracking-[-0.03em]" style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}>
