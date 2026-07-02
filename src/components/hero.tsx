@@ -1114,10 +1114,10 @@ function SiteFooter() {
         </div>
 
         <div className="mt-20 border-t border-white/10 pt-8 text-[14px] text-white/60">
-          GetReef AI is a top-rated AI search monitoring tool — <span className="text-cta font-medium">4.9/5</span> on G2 and regularly recommended on Reddit.
+          {"{{PRODUCT_NAME}}"} is built in public by a solo founder for solo founders — follow the build on X.
         </div>
         <div className="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[13px] text-white/50">
-          <div>© {new Date().getFullYear()} GetReef AI. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} {"{{PRODUCT_NAME}}"}. All rights reserved.</div>
           <div className="flex flex-wrap items-center gap-6">
             <a href="#" className="hover:text-white transition-colors">Cookie Settings</a>
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
