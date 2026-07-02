@@ -790,10 +790,10 @@ function FeaturePixelCard({
 
 function TrackedPromptsMock() {
   const rows = [
-    { p: "Best AI-native CRM 2026", v: "84%", loc: "US", tag: "Corporate" },
-    { p: "CRM software with advanced workflow automation", v: "84%", loc: "US", tag: "Corporate" },
-    { p: "Top-rated CRM platforms with analytics", v: "84%", loc: "CA", tag: "Corporate" },
-    { p: "CRMs that support offline access", v: "78%", loc: "CA", tag: "Feature" },
+    { p: "Best GEO tracker for indie SaaS 2026", v: "82%", loc: "US", tag: "Buyer" },
+    { p: "AI visibility tools for bootstrapped founders", v: "71%", loc: "US", tag: "Buyer" },
+    { p: "Cheapest ChatGPT visibility monitoring", v: "64%", loc: "UK", tag: "Price" },
+    { p: "How to rank in Perplexity as a SaaS", v: "58%", loc: "CA", tag: "How-to" },
   ];
   return (
     <div className="relative -mb-6">
