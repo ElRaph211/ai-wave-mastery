@@ -173,7 +173,7 @@ export function Hero() {
 
 
       {/* Video sales letter placeholder */}
-      <div className="border-t border-hairline bg-white">
+      <div className="border-t border-hairline bg-white bg-grid">
         <div className="mx-auto max-w-[960px] px-6 py-20">
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
@@ -204,7 +204,7 @@ export function Hero() {
       </div>
 
       {/* Unified SaaS trust block */}
-      <div className="border-t border-hairline bg-white">
+      <div className="border-t border-hairline bg-white bg-grid">
         <div className="mx-auto max-w-[1400px] px-6 py-16">
           <p className="text-center text-[14px] text-neutral-500">
             50+ SaaS navigating the generative shift with <span className="text-ink font-semibold">GetReef.ai</span>
@@ -334,7 +334,7 @@ export function Hero() {
       <KeyFeaturesPixel />
 
       {/* Prompts — new search engines */}
-      <div className="border-t border-hairline bg-white">
+      <div className="border-t border-hairline bg-white bg-grid">
         <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-6 text-center">
           <h2
             className="mx-auto text-ink font-semibold tracking-[-0.03em] leading-[1.05]"
@@ -355,7 +355,7 @@ export function Hero() {
       <BigCta />
 
       {/* FAQ */}
-      <div className="border-t border-hairline bg-white">
+      <div className="border-t border-hairline bg-white bg-grid">
         <div className="mx-auto max-w-[880px] px-6 py-24">
           <div className="text-center">
             <h2 className="text-ink font-semibold tracking-[-0.03em]" style={{ fontSize: "clamp(2rem, 4.5vw, 3.25rem)" }}>
@@ -417,9 +417,13 @@ function Testimonials() {
       company: "KKP",
     },
   ];
+  const row1 = items.slice(0, 3);
+  const row2 = items.slice(3, 6);
+  const offsets1 = ["mt-0", "mt-10", "mt-4"];
+  const offsets2 = ["mt-6", "mt-0", "mt-12"];
   return (
-    <div className="border-t border-hairline bg-[#f5f5f4]">
-      <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-24">
+    <div className="relative border-t border-hairline bg-[#f5f5f4] bg-grid overflow-hidden">
+      <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-6 relative">
         <div className="text-center">
           <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -435,11 +439,36 @@ function Testimonials() {
             <span className="text-cta">GetReef AI</span>.
           </h2>
         </div>
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.map((t, i) => (
-            <TestimonialCard key={i} {...t} />
-          ))}
-        </div>
+      </div>
+
+      <div className="relative pt-14 pb-24 space-y-8">
+        <TestimonialRow items={row1} offsets={offsets1} duration={65} />
+        <TestimonialRow items={row2} offsets={offsets2} duration={80} reverse />
+      </div>
+    </div>
+  );
+}
+
+function TestimonialRow({
+  items, offsets, duration, reverse,
+}: { items: any[]; offsets: string[]; duration: number; reverse?: boolean }) {
+  const loop = [...items, ...items, ...items];
+  return (
+    <div className="relative overflow-hidden">
+      <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-[#f5f5f4] to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-[#f5f5f4] to-transparent z-10 pointer-events-none" />
+      <div
+        className="flex items-start gap-6 whitespace-nowrap hover:[animation-play-state:paused]"
+        style={{
+          animation: `marquee ${duration}s linear infinite`,
+          animationDirection: reverse ? "reverse" : "normal",
+        }}
+      >
+        {loop.map((t, i) => (
+          <div key={i} className={`flex-shrink-0 w-[380px] md:w-[440px] ${offsets[i % offsets.length]}`}>
+            <TestimonialCard {...t} />
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -449,7 +478,7 @@ function TestimonialCard({
   quote, name, role, company,
 }: { quote: string; name: string; role: string; company: string }) {
   return (
-    <div className="rounded-2xl bg-white border border-hairline p-7 flex flex-col shadow-[0_1px_2px_rgba(0,0,0,0.03)] transition hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(15,45,82,0.2)]">
+    <div className="rounded-2xl bg-white border border-hairline p-7 flex flex-col shadow-[0_1px_2px_rgba(0,0,0,0.03)] transition hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(15,45,82,0.2)] whitespace-normal min-h-[280px]">
       <p className="text-[15px] leading-[1.65] text-neutral-600 flex-1">{quote}</p>
       <div className="mt-6 flex items-center justify-between gap-4">
         <div className="flex items-center gap-3 min-w-0">
@@ -784,7 +813,7 @@ function ActOnInsightsMock() {
 
 function BigCta() {
   return (
-    <div className="border-t border-hairline bg-white">
+    <div className="border-t border-hairline bg-white bg-grid">
       <div className="mx-auto max-w-[1400px] px-6 py-16">
         <div className="relative overflow-hidden rounded-3xl bg-[#0b1220] px-8 md:px-16 py-20 md:py-28">
           {/* Subtle grid + glow */}
