@@ -938,10 +938,10 @@ function ChooseModelsMock() {
 
 function KeySourcesMock() {
   const rows = [
-    { d: "reddit.com", t: "UGC", tc: "bg-blue-100 text-blue-700", u: "32%", c: "3.2" },
-    { d: "attio.com", t: "You", tc: "bg-emerald-100 text-emerald-700", u: "43%", c: "5.2" },
-    { d: "wikipedia.org", t: "Reference", tc: "bg-violet-100 text-violet-700", u: "31%", c: "1.4" },
-    { d: "hubspot.com", t: "Competitor", tc: "bg-rose-100 text-rose-700", u: "39%", c: "1.1" },
+    { d: "reddit.com/r/SaaS", t: "UGC", tc: "bg-blue-100 text-blue-700", u: "41%", c: "3.8" },
+    { d: "yoursaas.com", t: "You", tc: "bg-emerald-100 text-emerald-700", u: "22%", c: "2.1" },
+    { d: "indiehackers.com", t: "UGC", tc: "bg-violet-100 text-violet-700", u: "34%", c: "1.9" },
+    { d: "peec.ai", t: "Competitor", tc: "bg-rose-100 text-rose-700", u: "37%", c: "1.4" },
   ];
   return (
     <div className="relative -mb-6">
