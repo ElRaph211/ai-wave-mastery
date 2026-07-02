@@ -152,3 +152,70 @@
     color: var(--color-foreground);
   }
 }
+
+@keyframes aurora-1 {
+  0%, 100% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate(10%, -10%) rotate(120deg) scale(1.1);
+  }
+  66% {
+    transform: translate(-5%, 5%) rotate(240deg) scale(0.95);
+  }
+}
+
+@keyframes aurora-2 {
+  0%, 100% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate(-10%, 5%) rotate(-120deg) scale(1.05);
+  }
+  66% {
+    transform: translate(5%, -10%) rotate(-240deg) scale(1);
+  }
+}
+
+@keyframes aurora-3 {
+  0%, 100% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translate(5%, 5%) rotate(180deg) scale(1.1);
+  }
+}
+
+@utility aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  will-change: transform;
+  animation-duration: 20s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@utility aurora-blob-1 {
+  width: 40rem;
+  height: 40rem;
+  background: radial-gradient(circle, var(--color-hero-cyan), transparent 70%);
+  animation-name: aurora-1;
+}
+
+@utility aurora-blob-2 {
+  width: 48rem;
+  height: 48rem;
+  background: radial-gradient(circle, var(--color-hero-electric), transparent 70%);
+  animation-name: aurora-2;
+  animation-delay: -7s;
+}
+
+@utility aurora-blob-3 {
+  width: 36rem;
+  height: 36rem;
+  background: radial-gradient(circle, var(--color-hero-violet), transparent 70%);
+  animation-name: aurora-3;
+  animation-delay: -14s;
+}
