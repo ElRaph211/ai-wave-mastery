@@ -490,7 +490,7 @@ function Pricing() {
             <span className="h-px w-8 bg-sky-500" /> Pricing
           </div>
           <h2 className="mt-6 text-ink font-semibold tracking-[-0.03em]" style={{ fontSize: "clamp(2rem, 4.8vw, 3.5rem)", lineHeight: 1.05 }}>
-            Simple. <em className="not-italic text-sky-500 italic font-semibold">Locked forever</em> for founding members.
+            Priced for a founder's stack, <em className="not-italic text-sky-500 italic font-semibold">locked forever</em> for the first 50.
           </h2>
         </div>
 
