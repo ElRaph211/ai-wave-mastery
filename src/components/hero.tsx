@@ -147,19 +147,19 @@ export function Hero() {
               className="text-white font-semibold tracking-[-0.035em] leading-[0.98] drop-shadow-[0_2px_20px_rgba(15,45,82,0.35)]"
               style={{ fontSize: "clamp(2.5rem, 6.5vw, 5rem)" }}
             >
-              AI search analytics for SaaS
+              Your next signup is asking
               <br />
-              <span className="text-white/95">which rank first on </span>
               <RotatingPlatform />
-
+              <span className="text-white/95"> which SaaS to buy.</span>
+              <br />
+              <span className="text-white/95">Is it naming you?</span>
             </h1>
 
-            <p className="mt-5 mx-auto max-w-[600px] text-[16px] md:text-[17px] leading-[1.6] text-white/95 drop-shadow-[0_1px_10px_rgba(15,45,82,0.35)]">
-              Track, analyze, and improve brand performance on AI search platforms through
-              key metrics like{" "}
+            <p className="mt-5 mx-auto max-w-[620px] text-[16px] md:text-[17px] leading-[1.6] text-white/95 drop-shadow-[0_1px_10px_rgba(15,45,82,0.35)]">
+              Every day, buyers ask AI for the best tool in your category — and get an answer you never see. {"{{PRODUCT_NAME}}"} shows you which prompts you're missing from, what to ship to fix it, and tracks{" "}
               <Chip icon={<EyeIcon />}>Visibility</Chip>,{" "}
               <Chip icon={<PositionIcon />}>Position</Chip>, and{" "}
-              <Chip icon={<SmileIcon />}>Sentiment</Chip>.
+              <Chip icon={<SmileIcon />}>Sentiment</Chip> across every model that matters.
             </p>
 
             {/* URL audit input */}
@@ -167,11 +167,11 @@ export function Hero() {
               <div className="flex items-center gap-2 h-14 md:h-16 pl-6 pr-2 rounded-full border border-hairline bg-white shadow-[0_10px_30px_-10px_rgba(15,45,82,0.35)]">
                 <input
                   type="url"
-                  placeholder="Enter your website URL"
+                  placeholder="yoursaas.com"
                   className="flex-1 min-w-0 bg-transparent border-none text-[16px] md:text-[17px] text-ink placeholder:text-neutral-400 outline-none focus:ring-0"
                 />
                 <button className="flex-shrink-0 h-11 md:h-12 px-5 md:px-6 rounded-full bg-cta text-cta-foreground text-[14px] md:text-[15px] font-medium whitespace-nowrap hover:bg-cta/90 transition-colors">
-                  Run AI visibility audit
+                  Check my AI score
                 </button>
               </div>
 
