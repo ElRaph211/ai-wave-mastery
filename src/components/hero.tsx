@@ -3,15 +3,25 @@ import heroImage from "@/assets/hero-hawaii-pixel.jpg";
 export function Hero() {
   return (
     <section className="relative bg-white">
-      {/* Top banner */}
-      <div className="w-full border-b border-hairline">
-        <div className="mx-auto max-w-[1400px] px-6 h-11 flex items-center justify-center gap-2 text-[13px] text-ink">
-          <span>🌊 Hawaii Launch Week —</span>
-          <a href="#" className="font-medium underline underline-offset-2">
-            see how your brand rides ChatGPT ↗
+      {/* Pre-sale banner — dark, founding access style */}
+      <div className="w-full bg-[#0b1220] text-white">
+        <div className="mx-auto max-w-[1400px] px-6 h-11 flex items-center justify-between gap-4 text-[13px]">
+          <div className="flex items-center gap-2 font-medium">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+            </span>
+            Founding access open
+          </div>
+          <div className="hidden md:block text-neutral-400">
+            Limited beta — onboard your first 50 tracked prompts before public launch
+          </div>
+          <a href="#" className="font-medium underline underline-offset-4 decoration-neutral-500 hover:decoration-white transition-colors whitespace-nowrap">
+            Book a demo →
           </a>
         </div>
       </div>
+
 
       {/* Nav */}
       <header className="border-b border-hairline">
@@ -111,11 +121,25 @@ export function Hero() {
             <StatusPill state="done" label="Report ready" value="April Wavetrack" />
           </div>
 
-          {/* Bottom-left brand chip */}
-          <div className="hidden md:flex items-center gap-2 absolute bottom-6 left-6 bg-white/90 backdrop-blur px-3 py-2 rounded-lg border border-white/60 shadow-sm">
-            <span className="inline-block h-4 w-4 rounded-sm bg-ink" />
-            <span className="text-[12px] font-medium text-ink">Wavetrack — Live</span>
-          </div>
+          {/* Bottom-right founder chat pill */}
+          <a
+            href="#"
+            className="hidden sm:flex items-center gap-3 absolute bottom-5 right-5 md:bottom-8 md:right-8 bg-[#0b1220] text-white pl-2 pr-2 py-2 rounded-full shadow-[0_10px_30px_-10px_rgba(0,0,0,0.45)] hover:bg-[#0f172a] transition-colors"
+          >
+            <span className="relative inline-flex">
+              <span className="flex items-center justify-center h-10 w-10 rounded-full bg-sky-400 text-white font-semibold text-[15px]">
+                R
+              </span>
+              <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-emerald-400 ring-2 ring-[#0b1220]" />
+            </span>
+            <span className="flex flex-col leading-tight pr-1">
+              <span className="text-[14px] font-semibold">Raphaël</span>
+              <span className="text-[12px] text-neutral-400">Founder · Book a demo</span>
+            </span>
+            <span className="inline-flex items-center h-8 px-3 rounded-full bg-white text-ink text-[12px] font-semibold">
+              Chat now
+            </span>
+          </a>
         </div>
       </div>
 
