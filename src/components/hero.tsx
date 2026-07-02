@@ -1,4 +1,5 @@
 import heroImage from "@/assets/hero-hawaii-pixel.jpg";
+import featuresPixel from "@/assets/hero-hawaii-features.jpg";
 
 export function Hero() {
   return (
