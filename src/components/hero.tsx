@@ -124,88 +124,109 @@ export function Hero() {
       </header>
 
 
-      {/* Hero — painterly Hawaii full-bleed poster, balanced headline + CTA stack */}
-      <div className="relative overflow-hidden bg-[#e8a86c]">
-        {/* Painterly full-bleed backdrop — pulled back to show the full composition */}
-        <img
-          src={heroImage}
-          alt="Painterly illustration of a surfer riding a Hawaiian wave at sunset"
-          width={1920}
-          height={1280}
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none"
-        />
-        {/* Readability gradient — top for nav, bottom for content */}
-        <div aria-hidden="true" className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/25 to-transparent" />
-        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-        {/* Bottom fade to cream so next section transitions cleanly */}
-        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#faf5ec] to-transparent" />
-
-        <div className="relative mx-auto max-w-[1200px] px-6 pt-14 md:pt-20 pb-14 md:pb-20">
-          <div className="mx-auto max-w-[860px] text-center">
-            <h1
-              className="text-white font-semibold tracking-[-0.03em] leading-[1.04] drop-shadow-[0_2px_30px_rgba(0,0,0,0.4)]"
-              style={{ fontSize: "clamp(2.25rem, 5.5vw, 4.5rem)" }}
-            >
-              Your next signup is asking
-              <br />
-              <RotatingPlatform />
-              <span className="text-white"> which SaaS to buy.</span>
-              <br />
-              <span className="text-white">Is it naming you?</span>
-            </h1>
-
-            <p className="mt-5 mx-auto max-w-[540px] md:max-w-[640px] text-[15px] md:text-[18px] leading-[1.55] text-white/90 drop-shadow-[0_1px_10px_rgba(0,0,0,0.4)]">
-              Track your <Chip icon={<EyeIcon />}>Visibility</Chip>, <Chip icon={<PositionIcon />}>Position</Chip>, and <Chip icon={<SmileIcon />}>Sentiment</Chip> across the AI models that matter — then fix the gaps that cost you signups.
-            </p>
-
-            {/* URL audit */}
-            <div className="mt-6 mx-auto max-w-[520px]">
-              <div className="flex items-center gap-2 h-12 md:h-14 pl-5 pr-2 rounded-full bg-white shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)]">
-                <input
-                  type="url"
-                  placeholder="yoursaas.com"
-                  className="flex-1 min-w-0 bg-transparent border-none text-[15px] md:text-[16px] text-ink placeholder:text-neutral-400 outline-none focus:ring-0"
-                />
-                <button className="flex-shrink-0 h-10 md:h-11 px-4 md:px-5 rounded-full bg-cta text-cta-foreground text-[13px] md:text-[14px] font-medium whitespace-nowrap hover:bg-cta/90 transition-colors">
-                  Check my AI score
-                </button>
+      {/* Hero — two-column: copy left on clean bg, painterly illustration right */}
+      <div className="relative bg-white border-b border-hairline">
+        <div className="mx-auto max-w-[1400px] px-6 py-12 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            {/* LEFT — copy stack on clean background */}
+            <div className="max-w-[600px]">
+              <div className="inline-flex items-center gap-2 h-7 px-3 rounded-full border border-hairline bg-white text-[12px] font-medium text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
+                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                </span>
+                Founding cohort · 50 spots
               </div>
-              <div className="mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-white/85 drop-shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+
+              <h1
+                className="mt-5 text-ink font-semibold tracking-[-0.03em] leading-[1.04]"
+                style={{ fontSize: "clamp(2rem, 4.4vw, 3.75rem)" }}
+              >
+                Your next signup is asking
+                {" "}
+                <RotatingPlatform />
+                {" "}
+                which SaaS to buy. Is it naming you?
+              </h1>
+
+              <p className="mt-5 text-[15px] md:text-[17px] leading-[1.55] text-neutral-600">
+                Track your <Chip icon={<EyeIcon />}>Visibility</Chip>, <Chip icon={<PositionIcon />}>Position</Chip>, and <Chip icon={<SmileIcon />}>Sentiment</Chip> across the AI models that matter — then fix the gaps that cost you signups.
+              </p>
+
+              {/* URL audit */}
+              <div className="mt-6 max-w-[520px]">
+                <div className="flex items-center gap-2 h-12 md:h-14 pl-5 pr-2 rounded-full bg-white border border-hairline shadow-[0_10px_30px_-15px_rgba(15,45,82,0.25)]">
+                  <input
+                    type="url"
+                    placeholder="yoursaas.com"
+                    className="flex-1 min-w-0 bg-transparent border-none text-[15px] md:text-[16px] text-ink placeholder:text-neutral-400 outline-none focus:ring-0"
+                  />
+                  <button className="flex-shrink-0 h-10 md:h-11 px-4 md:px-5 rounded-full bg-cta text-cta-foreground text-[13px] md:text-[14px] font-medium whitespace-nowrap hover:bg-cta/90 transition-colors">
+                    Check my AI score
+                  </button>
+                </div>
+                <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px] text-neutral-500">
+                  <span className="flex items-center gap-1.5">
+                    <svg className="w-3.5 h-3.5 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    Score in under 30 seconds
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <svg className="w-3.5 h-3.5 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    No credit card, no sales call
+                  </span>
+                </div>
+              </div>
+
+              {/* Two CTAs */}
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-2 h-11 px-6 rounded-full bg-cta text-cta-foreground text-[14px] font-medium shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:bg-cta/90 transition-colors"
+                >
+                  Start now
+                  <span aria-hidden="true">→</span>
+                </a>
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-2 h-11 px-6 rounded-full bg-white border border-hairline text-ink text-[14px] font-medium hover:bg-neutral-50 transition-colors"
+                >
+                  Book a demo
+                </a>
+              </div>
+
+              {/* Honest pre-launch proof line */}
+              <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[12.5px] text-neutral-500">
                 <span className="flex items-center gap-1.5">
-                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  Score in under 30 seconds
+                  <span className="h-1.5 w-1.5 rounded-full bg-sky-500" />
+                  6 AI models tracked
                 </span>
-                <span className="flex items-center gap-1.5">
-                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  No credit card, no sales call
-                </span>
+                <span className="hidden sm:inline text-neutral-300">·</span>
+                <span>Built in public by a solo founder</span>
+                <span className="hidden sm:inline text-neutral-300">·</span>
+                <span>Founding price locked for life</span>
               </div>
             </div>
 
-            {/* Two CTAs */}
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 h-10 md:h-11 px-5 md:px-6 rounded-full bg-cta text-cta-foreground text-[13px] md:text-[14px] font-medium shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:bg-cta/90 transition-colors"
-              >
-                Start now
-                <span aria-hidden="true">→</span>
-              </a>
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 h-10 md:h-11 px-5 md:px-6 rounded-full bg-white/10 border border-white/20 text-white text-[13px] md:text-[14px] font-medium hover:bg-white/15 transition-colors"
-              >
-                Book a demo
-              </a>
+            {/* RIGHT — painterly illustration, uncropped */}
+            <div className="relative">
+              <div className="relative rounded-3xl overflow-hidden bg-[#e8a86c] shadow-[0_30px_80px_-30px_rgba(15,45,82,0.35)] aspect-[4/5] lg:aspect-[5/6]">
+                <img
+                  src={heroImage}
+                  alt="Painterly illustration of a surfer riding a Hawaiian wave at sunset"
+                  width={1200}
+                  height={1400}
+                  className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
+
 
 
       {/* Social proof */}
