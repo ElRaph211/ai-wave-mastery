@@ -195,7 +195,137 @@ export function Hero() {
           </div>
         </div>
       </div>
+
+      {/* AI Search Metrics section */}
+      <div className="border-t border-hairline bg-[#f5f5f4]">
+        <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-16 text-center">
+          <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2l2.4 6.4L21 10l-5.4 3.6L18 21l-6-4-6 4 2.4-7.4L3 10l6.6-1.6L12 2z" />
+            </svg>
+            AI Search Metrics
+          </div>
+          <h2
+            className="mt-8 mx-auto text-ink font-semibold tracking-[-0.03em] leading-[1.02]"
+            style={{ fontSize: "clamp(2rem, 5vw, 4rem)", maxWidth: "22ch" }}
+          >
+            Decode your brand's footprint in the semantic swell.
+          </h2>
+          <p className="mt-6 mx-auto max-w-[720px] text-[19px] leading-[1.55] text-neutral-500">
+            Continuous observation built around the critical metrics shaping generative visibility.
+          </p>
+        </div>
+
+        <div className="mx-auto max-w-[1400px] px-6 pb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] gap-6">
+            {/* Left column — 3 metric cards */}
+            <div className="flex flex-col gap-6">
+              <MetricCard
+                accent
+                icon={<EyeIcon />}
+                title="Visibility"
+                body="See the share of chats where your brand is mentioned and understand how often you show up in conversations."
+              />
+              <MetricCard
+                icon={<PositionIcon />}
+                title="Position"
+                body="Understand your brand's position within AI search results and uncover opportunities to improve your ranking."
+              />
+              <MetricCard
+                accent
+                icon={<SmileIcon />}
+                title="Sentiment"
+                body="Find out how your brand is perceived by AI, what's going well, and what requires improvements."
+              />
+            </div>
+
+            {/* Right column — chat mockup */}
+            <div className="rounded-2xl border border-hairline bg-white p-8 md:p-10">
+              <div className="flex justify-end">
+                <div className="inline-flex items-center h-10 px-4 rounded-full border border-hairline bg-white text-[14px] text-ink">
+                  What are the best CRMs for Startups?
+                </div>
+              </div>
+
+              <div className="mt-8 flex gap-3">
+                <div className="flex-shrink-0 h-8 w-8 rounded-full bg-ink flex items-center justify-center text-white text-[11px] font-semibold">GPT</div>
+                <div className="flex-1 rounded-xl border border-hairline p-5 space-y-5">
+                  <p className="text-[14px] leading-[1.65] text-ink">
+                    Choosing the right CRM really comes down to how your startup sells, grows, and automates. Here's a curated breakdown of the top CRM platforms for startups in 2026.
+                  </p>
+
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <span className="inline-flex items-center h-6 px-2 rounded-md border border-hairline text-[11px] text-neutral-500 font-mono">#1</span>
+                      <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px] font-semibold">M</span>
+                      <span className="text-[14px] font-semibold text-ink">Monday</span>
+                    </div>
+                    <p className="text-[14px] leading-[1.65] text-ink">
+                      Monday offers a <mark className="bg-emerald-100 text-ink px-1 rounded">strong free tier</mark> with contact management, email tracking, reporting, and integrations. It <mark className="bg-emerald-100 text-ink px-1 rounded">easily expands</mark> into Sales, Marketing, or Service Hubs as you grow. Paid plans <mark className="bg-red-100 text-ink px-1 rounded">can become expensive, and some advanced features are locked</mark> behind higher tiers.
+                    </p>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <span className="inline-flex items-center h-6 px-2 rounded-md border border-hairline text-[11px] text-neutral-500 font-mono">#2</span>
+                      <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px] font-semibold">A</span>
+                      <span className="text-[14px] font-semibold text-ink">Attio</span>
+                    </div>
+                    <p className="text-[14px] leading-[1.65] text-ink">
+                      Attio is a <mark className="bg-emerald-100 text-ink px-1 rounded">flexible modern</mark> CRM that works like a relational database, letting you design pipelines, views, and workflows around your data with tools like Slack, Notion, and Segment.
+                    </p>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="flex items-center gap-2">
+                      <span className="inline-flex items-center h-6 px-2 rounded-md border border-hairline text-[11px] text-neutral-500 font-mono">#3</span>
+                      <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px] font-semibold">Z</span>
+                      <span className="text-[14px] font-semibold text-ink">Zero</span>
+                    </div>
+                    <div className="relative">
+                      <p className="text-[14px] leading-[1.65] text-ink">
+                        Zero is built for founders who want a <mark className="bg-emerald-100 text-ink px-1 rounded">streamlined CRM without the usual bloat</mark>. It focuses on speed, simplicity, and essential deal tracking while still offering automation and integrations with tools like Google Workspace, Slack, and Zapier.
+                      </p>
+
+                      {/* Sentiment tooltip */}
+                      <div className="hidden md:block absolute -right-2 -bottom-4 translate-y-full w-[300px] rounded-xl bg-[#0b1220] text-white p-4 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.4)]">
+                        <div className="flex items-center justify-between">
+                          <span className="text-[12px] text-neutral-400">Positive Sentiment</span>
+                          <span className="inline-flex items-center justify-center h-5 w-5 rounded bg-white/10 text-[10px]">◎</span>
+                        </div>
+                        <div className="mt-2 inline-flex items-center h-6 px-2 rounded border-l-2 border-emerald-400 bg-white/5 text-[13px] font-semibold">
+                          95
+                        </div>
+                        <p className="mt-3 text-[12px] leading-[1.5] text-neutral-300">
+                          Positive endorsement of Zero as a fast, simple, and efficient CRM for founders.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+  );
+}
+
+function MetricCard({
+  icon, title, body, accent,
+}: { icon: React.ReactNode; title: string; body: string; accent?: boolean }) {
+  return (
+    <div className={"relative rounded-2xl border border-hairline bg-white p-8 " + (accent ? "" : "")}>
+      {accent && <span className="absolute left-8 top-8 bottom-8 w-[2px] rounded-full bg-ink/80" />}
+      <div className={accent ? "pl-5" : ""}>
+        <div className="flex items-center gap-2 text-ink">
+          <span className="inline-flex items-center justify-center h-5 w-5 text-ink">{icon}</span>
+          <h3 className="text-[17px] font-semibold tracking-tight">{title}</h3>
+        </div>
+        <p className="mt-3 text-[15px] leading-[1.6] text-neutral-500">{body}</p>
+      </div>
+    </div>
   );
 }
 
