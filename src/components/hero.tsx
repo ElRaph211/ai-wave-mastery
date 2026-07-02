@@ -54,138 +54,131 @@ export function Hero() {
         </div>
       </header>
 
-      {/* Hero content */}
-      <div className="mx-auto max-w-[1400px] px-6 pt-20 pb-10 text-center">
-        {/* Headline */}
-        <h1
-          className="mx-auto text-ink font-semibold tracking-[-0.035em] leading-[0.98]"
-          style={{ fontSize: "clamp(2.75rem, 7.5vw, 6.5rem)", maxWidth: "18ch" }}
-        >
-          AI search analytics
-          <br />
-          <span className="text-neutral-300">for surf-ready brands</span>
-        </h1>
+      {/* Hero — pixel scene as immersive backdrop */}
+      <div className="relative overflow-hidden bg-[#7cc3f0]">
+        {/* Pixel background */}
+        <img
+          src={heroImage}
+          alt="Pixel art of a surfer riding a Hawaiian wave at sunrise"
+          width={1920}
+          height={1088}
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
+          style={{ imageRendering: "pixelated", animation: "drift-slow 12s ease-in-out infinite" }}
+        />
+        {/* Soft left wash to keep copy legible */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-r from-[#7cc3f0]/85 via-[#7cc3f0]/40 to-transparent"
+        />
+        {/* Bottom fade so page transitions cleanly */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent"
+        />
 
-        {/* Subtitle with inline chips */}
-        <p className="mt-8 mx-auto max-w-[720px] text-[17px] leading-[1.6] text-neutral-500">
-          Track, analyze, and improve brand performance on AI search platforms through
-          key metrics like{" "}
-          <Chip icon={<EyeIcon />}>Visibility</Chip>,{" "}
-          <Chip icon={<PositionIcon />}>Position</Chip>, and{" "}
-          <Chip icon={<SmileIcon />}>Sentiment</Chip>.
-        </p>
+        <div className="relative mx-auto max-w-[1400px] px-6 pt-20 md:pt-28 pb-32 md:pb-40 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-10 items-start">
+          {/* Left column — copy + CTA */}
+          <div>
+            <h1
+              className="text-white font-semibold tracking-[-0.035em] leading-[0.98] drop-shadow-[0_2px_20px_rgba(15,45,82,0.35)]"
+              style={{ fontSize: "clamp(2.5rem, 6.5vw, 5.5rem)", maxWidth: "16ch" }}
+            >
+              AI search analytics
+              <br />
+              <span className="text-white/75">for surf-ready brands</span>
+            </h1>
 
-        {/* URL audit input */}
-        <div className="mt-10 mx-auto max-w-[560px]">
-          <div className="flex items-center gap-2 h-14 md:h-16 pl-6 pr-2 rounded-full border border-hairline bg-white shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
-            <input
-              type="url"
-              placeholder="Enter your website URL"
-              className="flex-1 min-w-0 bg-transparent border-none text-[16px] md:text-[17px] text-ink placeholder:text-neutral-400 outline-none focus:ring-0"
-            />
-            <button className="flex-shrink-0 h-11 md:h-12 px-5 md:px-6 rounded-full bg-cta text-cta-foreground text-[14px] md:text-[15px] font-medium whitespace-nowrap hover:bg-cta/90 transition-colors">
-              Run AI visibility audit
-            </button>
-          </div>
-          <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-[13px] md:text-[14px] text-neutral-500">
-            <span className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-cta" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-              See results in 30 seconds
-            </span>
-            <span className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-cta" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-              No credit card required
-            </span>
-          </div>
-          </div>
+            <p className="mt-6 max-w-[600px] text-[16px] md:text-[17px] leading-[1.6] text-white/90">
+              Track, analyze, and improve brand performance on AI search platforms through
+              key metrics like{" "}
+              <Chip icon={<EyeIcon />}>Visibility</Chip>,{" "}
+              <Chip icon={<PositionIcon />}>Position</Chip>, and{" "}
+              <Chip icon={<SmileIcon />}>Sentiment</Chip>.
+            </p>
 
-          {/* Social proof */}
-          <div className="mt-16 mx-auto max-w-[800px]">
-            <div className="flex flex-col items-center gap-5">
-              <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
-                <div className="flex -space-x-2">
-                  {["MR", "JL", "AK", "SC", "DK"].map((initials, i) => (
-                    <div
-                      key={i}
-                      className={`inline-flex items-center justify-center h-9 w-9 rounded-full border-2 border-white text-[11px] font-semibold text-white ${
-                        i % 2 === 0 ? "bg-cta" : "bg-cta/70"
-                      }`}
-                    >
-                      {initials}
-                    </div>
-                  ))}
-                </div>
-                <div className="flex items-center gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-4 h-4 text-star" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-                <p className="text-[16px] md:text-[18px] font-semibold text-ink">
-                  Loved by SaaS founders who'd rather scoop than guess
-                </p>
+            {/* URL audit input */}
+            <div className="mt-8 max-w-[560px]">
+              <div className="flex items-center gap-2 h-14 md:h-16 pl-6 pr-2 rounded-full border border-hairline bg-white shadow-[0_10px_30px_-10px_rgba(15,45,82,0.35)]">
+                <input
+                  type="url"
+                  placeholder="Enter your website URL"
+                  className="flex-1 min-w-0 bg-transparent border-none text-[16px] md:text-[17px] text-ink placeholder:text-neutral-400 outline-none focus:ring-0"
+                />
+                <button className="flex-shrink-0 h-11 md:h-12 px-5 md:px-6 rounded-full bg-cta text-cta-foreground text-[14px] md:text-[15px] font-medium whitespace-nowrap hover:bg-cta/90 transition-colors">
+                  Run AI visibility audit
+                </button>
               </div>
-              <div className="grid grid-cols-3 gap-6 md:gap-16 text-center">
-                <div>
-                  <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">50+</div>
-                  <div className="text-[13px] md:text-[14px] text-neutral-500">SaaS tracked</div>
-                </div>
-                <div>
-                  <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">12,000</div>
-                  <div className="text-[13px] md:text-[14px] text-neutral-500">live signals</div>
-                </div>
-                <div>
-                  <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">8</div>
-                  <div className="text-[13px] md:text-[14px] text-neutral-500">verticals</div>
-                </div>
+              <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 text-[13px] md:text-[14px] text-white/90">
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  See results in 30 seconds
+                </span>
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  No credit card required
+                </span>
               </div>
             </div>
           </div>
+
+          {/* Right column — floating status pills over the scene */}
+          <div className="hidden lg:flex flex-col gap-3 mt-4" style={{ animation: "float-surf 8s ease-in-out infinite" }}>
+            <StatusPill state="running" label="Prompt tracking" value="chatgpt-5" />
+            <StatusPill state="done" label="Analysis complete" value="Share of Voice ↑ 5.2%" />
+            <StatusPill state="done" label="Report ready" value="April Wavetrack" />
+          </div>
         </div>
+      </div>
 
-      {/* Integrated hero visual — surfer riding into the product */}
-      <div className="relative mx-auto max-w-[1400px] px-6 pb-24">
-        <div className="relative">
-          {/* Ambient sky-blue glow behind the frame */}
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute -inset-x-10 -top-10 -bottom-10 rounded-[36px] bg-[radial-gradient(60%_60%_at_50%_40%,rgba(56,189,248,0.25),transparent_70%)] blur-2xl"
-            style={{ animation: "drift-slow 9s ease-in-out infinite" }}
-          />
-
-          <div
-            className="relative rounded-[28px] overflow-hidden border border-hairline shadow-[0_30px_80px_-30px_rgba(56,189,248,0.45)]"
-            style={{ animation: "float-surf 8s ease-in-out infinite" }}
-          >
-            <img
-              src={heroImage}
-              alt="Pixel art of a surfer riding a Hawaiian wave at sunrise"
-              width={1920}
-              height={1088}
-              className="w-full h-auto block"
-              style={{ imageRendering: "pixelated" }}
-            />
-
-            {/* Bottom fade blending into page */}
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white via-white/40 to-transparent"
-            />
-
-            {/* Floating status pills — top right, Cofounder style */}
-            <div className="hidden sm:flex flex-col gap-2 absolute top-6 right-6 md:top-10 md:right-10">
-              <StatusPill state="running" label="Prompt tracking" value="chatgpt-5" />
-              <StatusPill state="done" label="Analysis complete" value="Share of Voice ↑ 5.2%" />
-              <StatusPill state="done" label="Report ready" value="April Wavetrack" />
+      {/* Social proof */}
+      <div className="mx-auto max-w-[800px] px-6 pt-20 pb-16 text-center">
+        <div className="flex flex-col items-center gap-5">
+          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
+            <div className="flex -space-x-2">
+              {["MR", "JL", "AK", "SC", "DK"].map((initials, i) => (
+                <div
+                  key={i}
+                  className={`inline-flex items-center justify-center h-9 w-9 rounded-full border-2 border-white text-[11px] font-semibold text-white ${
+                    i % 2 === 0 ? "bg-cta" : "bg-cta/70"
+                  }`}
+                >
+                  {initials}
+                </div>
+              ))}
+            </div>
+            <div className="flex items-center gap-0.5">
+              {[...Array(5)].map((_, i) => (
+                <svg key={i} className="w-4 h-4 text-star" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              ))}
+            </div>
+            <p className="text-[16px] md:text-[18px] font-semibold text-ink">
+              Loved by SaaS founders who'd rather scoop than guess
+            </p>
+          </div>
+          <div className="grid grid-cols-3 gap-6 md:gap-16 text-center">
+            <div>
+              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">50+</div>
+              <div className="text-[13px] md:text-[14px] text-neutral-500">SaaS tracked</div>
+            </div>
+            <div>
+              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">12,000</div>
+              <div className="text-[13px] md:text-[14px] text-neutral-500">live signals</div>
+            </div>
+            <div>
+              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">8</div>
+              <div className="text-[13px] md:text-[14px] text-neutral-500">verticals</div>
             </div>
           </div>
         </div>
       </div>
+
 
       {/* Video sales letter placeholder */}
       <div className="border-t border-hairline bg-white">
