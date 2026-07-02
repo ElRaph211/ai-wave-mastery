@@ -77,17 +77,17 @@ export function Hero() {
         />
 
         <div className="relative mx-auto max-w-[1400px] px-6 pt-20 md:pt-28 pb-32 md:pb-40">
-          <div className="max-w-[720px]">
+          <div className="mx-auto max-w-[860px] text-center">
             <h1
               className="text-white font-semibold tracking-[-0.035em] leading-[0.98] drop-shadow-[0_2px_20px_rgba(15,45,82,0.35)]"
-              style={{ fontSize: "clamp(2.5rem, 6.5vw, 5.5rem)", maxWidth: "16ch" }}
+              style={{ fontSize: "clamp(2.5rem, 6.5vw, 5.5rem)" }}
             >
               AI search analytics
               <br />
               <span className="text-white/80">for surf-ready brands</span>
             </h1>
 
-            <p className="mt-6 max-w-[600px] text-[16px] md:text-[17px] leading-[1.6] text-white/95 drop-shadow-[0_1px_10px_rgba(15,45,82,0.35)]">
+            <p className="mt-6 mx-auto max-w-[600px] text-[16px] md:text-[17px] leading-[1.6] text-white/95 drop-shadow-[0_1px_10px_rgba(15,45,82,0.35)]">
               Track, analyze, and improve brand performance on AI search platforms through
               key metrics like{" "}
               <Chip icon={<EyeIcon />}>Visibility</Chip>,{" "}
@@ -96,7 +96,7 @@ export function Hero() {
             </p>
 
             {/* URL audit input */}
-            <div className="mt-8 max-w-[560px]">
+            <div className="mt-8 mx-auto max-w-[560px]">
               <div className="flex items-center gap-2 h-14 md:h-16 pl-6 pr-2 rounded-full border border-hairline bg-white shadow-[0_10px_30px_-10px_rgba(15,45,82,0.35)]">
                 <input
                   type="url"
@@ -107,7 +107,7 @@ export function Hero() {
                   Run AI visibility audit
                 </button>
               </div>
-              <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 text-[13px] md:text-[14px] text-white drop-shadow-[0_1px_8px_rgba(15,45,82,0.4)]">
+              <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-[13px] md:text-[14px] text-white drop-shadow-[0_1px_8px_rgba(15,45,82,0.4)]">
                 <span className="flex items-center gap-2">
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12" />
