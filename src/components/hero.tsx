@@ -710,42 +710,42 @@ function KeyFeaturesPixel() {
             className="mt-8 mx-auto text-white font-semibold tracking-[-0.03em] leading-[1.02] drop-shadow-[0_2px_20px_rgba(15,45,82,0.4)]"
             style={{ fontSize: "clamp(2rem, 5vw, 4rem)", maxWidth: "22ch" }}
           >
-            Turn AI search insights into new customers with GetReef AI.
+            Every score comes with the exact next thing to ship.
           </h2>
           <p className="mt-6 mx-auto max-w-[720px] text-[17px] md:text-[18px] leading-[1.55] text-white/95 drop-shadow-[0_1px_10px_rgba(15,45,82,0.35)]">
-            Identify the prompts that matter, monitor your rankings, and act before your competitors do.
+            Most GEO tools hand you a number and wish you luck. {"{{PRODUCT_NAME}}"} hands you a to-do list your future signups will find you through.
           </p>
         </div>
 
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <FeaturePixelCard
-            title="Set up Prompts"
-            body="Prompts are the foundation of your AI search strategy. Uncover and organize the prompts that matter most for your brand's discovery."
+            title="Track the prompts that matter"
+            body="Paste your product or auto-import the buyer questions in your category — start seeing your rank in ChatGPT, Claude, Gemini and Perplexity within 24h."
             mock={<TrackedPromptsMock />}
           />
           <FeaturePixelCard
-            title="Use Data to Pick Winners"
-            body="Leverage AI-suggested prompts and search volumes to focus on the biggest opportunities in your vertical."
+            title="Get suggested prompts, ranked by volume"
+            body="Stop guessing what to track. We surface the queries buyers in your niche actually ask, sorted by traffic potential — so you only write content that could move signups."
             mock={<SuggestedPromptsMock />}
           />
           <FeaturePixelCard
-            title="Add Brands"
-            body="See how you rank against the players that matter in your market."
+            title="See exactly who's beating you"
+            body="Drop in your top 3 competitors and watch head-to-head rankings shift model by model. Know when a competitor launches content that steals a query — and copy the play."
             mock={<AddBrandsMock />}
           />
           <FeaturePixelCard
-            title="Choose AI Models"
-            body="Track rankings across the models that drive the most traffic and visibility."
+            title="Pick the models your buyers actually use"
+            body="ChatGPT, Claude, Gemini, Perplexity, DeepSeek, AI Overviews. Toggle what matters, ignore what doesn't. No wasted credits on models your buyers never touch."
             mock={<ChooseModelsMock />}
           />
           <FeaturePixelCard
-            title="Find Key Sources"
-            body="Spot the citations shaping your visibility and refine your generative search strategy."
+            title="See which sources feed the answer"
+            body="Every AI response is stitched together from a handful of sources — Reddit threads, listicles, docs. We show you which ones so you know exactly where to plant your next post."
             mock={<KeySourcesMock />}
           />
           <FeaturePixelCard
-            title="Act on Insights"
-            body="Use recommendations to capture high-impact opportunities and boost your ranking."
+            title="Get a next-action list, not just a dashboard"
+            body="Every drop in ranking comes with a concrete play: a Reddit thread to answer, a comparison page to write, a directory to submit to. Actions, not vibes."
             mock={<ActOnInsightsMock />}
           />
         </div>
