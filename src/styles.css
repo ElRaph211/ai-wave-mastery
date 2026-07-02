@@ -105,3 +105,11 @@
   50% { transform: translate(6px, -8px); }
 }
 
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(15, 45, 82, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 45, 82, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+
