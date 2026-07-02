@@ -28,50 +28,44 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  --color-abyss: var(--abyss);
-  --color-abyss-2: var(--abyss-2);
-  --color-hairline: var(--hairline);
-  --color-hairline-strong: var(--hairline-strong);
   --color-ink: var(--ink);
   --color-ink-dim: var(--ink-dim);
   --color-ink-muted: var(--ink-muted);
-  --color-seafoam: var(--seafoam);
+  --color-hairline: var(--hairline);
+  --color-surf: var(--surf);
 
-  --font-serif: "Instrument Serif", "Playfair Display", ui-serif, Georgia, serif;
-  --font-mono: "JetBrains Mono", "Geist Mono", ui-monospace, SFMono-Regular, monospace;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter Tight", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-pixel: "VT323", ui-monospace, monospace;
 }
 
 :root {
-  --radius: 0.25rem;
-  --abyss: #020408;
-  --abyss-2: #05080d;
-  --hairline: #111827;
-  --hairline-strong: #1e293b;
-  --ink: #f8fafc;
-  --ink-dim: #cbd5e1;
-  --ink-muted: #64748b;
-  --seafoam: #a8d8d1;
+  --radius: 0.5rem;
 
-  --background: #020408;
-  --foreground: #f8fafc;
-  --card: #05080d;
-  --card-foreground: #f8fafc;
-  --popover: #05080d;
-  --popover-foreground: #f8fafc;
-  --primary: #f8fafc;
-  --primary-foreground: #020408;
-  --secondary: #0b1220;
-  --secondary-foreground: #f8fafc;
-  --muted: #0b1220;
-  --muted-foreground: #64748b;
-  --accent: #0b1220;
-  --accent-foreground: #f8fafc;
+  --ink: #0a0a0a;
+  --ink-dim: #b8b8b8;
+  --ink-muted: #6b7280;
+  --hairline: #ececec;
+  --surf: #16a34a;
+
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+  --popover: #ffffff;
+  --popover-foreground: #0a0a0a;
+  --primary: #0a0a0a;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #0a0a0a;
+  --muted: #f5f5f5;
+  --muted-foreground: #6b7280;
+  --accent: #f5f5f5;
+  --accent-foreground: #0a0a0a;
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: #f8fafc;
-  --border: #111827;
-  --input: #111827;
-  --ring: #1e293b;
+  --destructive-foreground: #ffffff;
+  --border: #ececec;
+  --input: #ececec;
+  --ring: #d4d4d4;
 }
 
 @layer base {
@@ -79,23 +73,13 @@
     border-color: var(--color-border);
   }
   html, body {
-    background-color: var(--color-abyss);
+    background-color: #ffffff;
     color: var(--color-ink);
     font-family: var(--font-sans);
-    font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
   }
   ::selection {
-    background: var(--color-seafoam);
-    color: var(--color-abyss);
+    background: #0a0a0a;
+    color: #ffffff;
   }
-}
-
-@keyframes swell {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(-2%); }
-}
-
-@utility swell-anim {
-  animation: swell 14s ease-in-out infinite;
 }
