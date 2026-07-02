@@ -1204,12 +1204,12 @@ function PromptsMarquee() {
 
 function FaqList() {
   const faqs = [
-    { q: "How do I get started with GetReef AI?", a: "Enter your website URL for a free instant AI visibility audit. From there, connect the prompts that matter to your brand and we'll start tracking them across ChatGPT, Claude, Gemini and Perplexity within minutes." },
-    { q: "Can I segment visibility by model, region, or audience?", a: "Yes — every prompt can be broken down by AI platform, geography, persona and buying stage so you can see exactly where you show up and where you don't." },
-    { q: "How often is the data refreshed?", a: "Core prompts refresh daily. High-priority prompts can be set to hourly polling, and you'll get alerts the moment your position or sentiment shifts." },
-    { q: "What are brand visibility vs. source visibility metrics?", a: "Brand visibility measures how often your brand is mentioned in AI answers. Source visibility measures how often your own pages are cited as the source behind those answers — both matter, and we track them separately." },
-    { q: "How do source citations work behind the scenes?", a: "We parse every AI response for cited URLs, resolve them to domains, and attribute them to your brand or your competitors so you can see who's feeding the model." },
-    { q: "How do I integrate GetReef AI into my BI/reporting tools?", a: "Push metrics into Notion, Slack, Looker, or your warehouse via our API and native integrations. Weekly digests land in your inbox out of the box." },
+    { q: "How do I get started?", a: "Drop your URL, get a free AI visibility score in under 30 seconds. If it's not embarrassing enough to fix, close the tab. If it is, connect your prompts and we'll start tracking across ChatGPT, Claude, Gemini and Perplexity within 24 hours." },
+    { q: "Can I segment visibility by model, region, or buyer persona?", a: "Yes. Every tracked prompt breaks down by AI model, geography, and buying stage — so you can see where you rank when a US CTO asks Claude vs when a European founder asks Perplexity." },
+    { q: "How often is the data refreshed?", a: "Prompts refresh daily by default. Your top 5 can be set to hourly, and you get a Slack or email ping the moment your ranking drops or a competitor jumps you." },
+    { q: "What's the difference between brand visibility and source visibility?", a: "Brand visibility = how often the model names your product in its answer. Source visibility = how often your own pages are the citation behind that answer. Both matter, and we track them separately with a fix attached to each." },
+    { q: "Why is this priced for founders instead of enterprise?", a: "Because the founder building at $2K MRR shouldn't have to book a sales call to find out if AI is ignoring them. Founding members lock €55/mo forever — public pricing after launch is €79/mo. Still no seats, no annual contract, no sales rep." },
+    { q: "How does {{PRODUCT_NAME}} plug into my stack?", a: "Slack alerts, weekly email digest, CSV export, and a REST API. Push metrics into Notion, Linear, or a spreadsheet. No BI tool required." },
   ];
   return (
     <div className="divide-y divide-hairline border-t border-b border-hairline">
