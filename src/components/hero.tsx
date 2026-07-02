@@ -419,10 +419,10 @@ function Testimonials() {
   ];
   const row1 = items.slice(0, 3);
   const row2 = items.slice(3, 6);
-  const offsets1 = ["mt-0", "mt-10", "mt-4"];
-  const offsets2 = ["mt-6", "mt-0", "mt-12"];
+  const offsets1 = ["mt-0", "mt-3", "mt-6"];
+  const offsets2 = ["mt-6", "mt-0", "mt-3"];
   return (
-    <div className="relative border-t border-hairline bg-[#f5f5f4] bg-grid overflow-hidden">
+    <div className="relative border-t border-hairline bg-[#f5f5f4] overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-6 relative">
         <div className="text-center">
           <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
@@ -441,7 +441,7 @@ function Testimonials() {
         </div>
       </div>
 
-      <div className="relative pt-14 pb-24 space-y-8">
+      <div className="relative pt-10 pb-20 space-y-4">
         <TestimonialRow items={row1} offsets={offsets1} duration={65} />
         <TestimonialRow items={row2} offsets={offsets2} duration={80} reverse />
       </div>
