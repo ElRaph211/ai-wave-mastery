@@ -317,10 +317,10 @@ export function Hero() {
             className="mt-8 mx-auto text-ink font-semibold tracking-[-0.03em] leading-[1.02]"
             style={{ fontSize: "clamp(2rem, 5vw, 4rem)", maxWidth: "22ch" }}
           >
-            Decode your brand's footprint in the semantic swell.
+            Three numbers that tell you if you're actually in the answer.
           </h2>
           <p className="mt-6 mx-auto max-w-[720px] text-[19px] leading-[1.55] text-neutral-500">
-            Continuous observation built around the critical metrics shaping generative visibility.
+            A score is not a strategy. Every metric here comes with the exact next thing to ship.
           </p>
         </div>
 
@@ -332,18 +332,18 @@ export function Hero() {
                 accent
                 icon={<EyeIcon />}
                 title="Visibility"
-                body="See the share of chats where your brand is mentioned and understand how often you show up in conversations."
+                body="What share of buyer questions in your category name your product at all. If it's under 20%, you're invisible — and we tell you which prompts to go earn first."
               />
               <MetricCard
                 icon={<PositionIcon />}
                 title="Position"
-                body="Understand your brand's position within AI search results and uncover opportunities to improve your ranking."
+                body="When you do show up, where in the answer — first, buried at #7, or an afterthought. Position is what turns a mention into a signup."
               />
               <MetricCard
                 accent
                 icon={<SmileIcon />}
                 title="Sentiment"
-                body="Find out how your brand is perceived by AI, what's going well, and what requires improvements."
+                body="What the model actually says about you next to competitors. Catch a bad framing before it becomes the default answer for the next 10,000 buyers."
               />
             </div>
 
