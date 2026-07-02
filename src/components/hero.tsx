@@ -204,7 +204,7 @@ export function Hero() {
       </div>
 
       {/* Unified SaaS trust block */}
-      <div className="border-t border-hairline bg-white bg-grid">
+      <div className="border-t border-hairline bg-white">
         <div className="mx-auto max-w-[1400px] px-6 py-16">
           <p className="text-center text-[14px] text-neutral-500">
             50+ SaaS navigating the generative shift with <span className="text-ink font-semibold">GetReef.ai</span>
