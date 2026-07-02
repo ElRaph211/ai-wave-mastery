@@ -28,7 +28,7 @@ export function Hero() {
         <div className="mx-auto max-w-[1400px] px-6 h-16 flex items-center justify-between">
           <a href="/" className="flex items-center gap-2">
             <span className="inline-block h-5 w-5 rounded-[4px] bg-ink" />
-            <span className="text-[17px] font-semibold tracking-tight text-ink">GetReef</span>
+            <span className="text-[17px] font-semibold tracking-tight text-ink">GetReef AI</span>
           </a>
           <nav className="hidden md:flex items-center gap-8 text-[14px] text-ink">
             <a href="#" className="hover:text-ink-muted transition-colors">Product</a>
@@ -128,7 +128,7 @@ export function Hero() {
       <div className="border-t border-hairline bg-white">
         <div className="mx-auto max-w-[1400px] px-6 py-16">
           <p className="text-center text-[14px] text-neutral-500">
-            Trusted by <span className="text-ink font-semibold">2,000+ marketing teams</span>
+            50+ SaaS navigating the generative shift with <span className="text-ink font-semibold">GetReef.ai</span>
           </p>
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 border border-hairline rounded-2xl overflow-hidden bg-white">
