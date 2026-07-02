@@ -176,32 +176,32 @@ export function Hero() {
               </div>
 
               {/* CTA frame — readable against the pixel background */}
-              <div className="mt-5 rounded-2xl border border-white/20 bg-white/[0.08] backdrop-blur-md p-5 shadow-[0_20px_50px_-12px_rgba(15,45,82,0.35)]">
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-[13px] text-white/90 drop-shadow-[0_1px_8px_rgba(15,45,82,0.4)]">
+              <div className="mt-4 rounded-2xl border border-white/20 bg-white/[0.08] backdrop-blur-md p-4 shadow-[0_20px_50px_-12px_rgba(15,45,82,0.35)]">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-5 text-[12px] text-white/90 drop-shadow-[0_1px_8px_rgba(15,45,82,0.4)]">
                   <span className="flex items-center gap-2">
-                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
                     See results in 30 seconds
                   </span>
                   <span className="flex items-center gap-2">
-                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                    <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
                     No credit card required
                   </span>
                 </div>
-                <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
+                <div className="mt-3 flex flex-col sm:flex-row items-center justify-center gap-2.5">
                   <a
                     href="#"
-                    className="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full bg-cta text-cta-foreground text-[14px] font-medium hover:bg-cta/90 transition-colors shadow-[0_10px_30px_-10px_rgba(15,45,82,0.5)]"
+                    className="inline-flex items-center justify-center gap-2 h-10 px-5 rounded-full bg-cta text-cta-foreground text-[13px] font-medium hover:bg-cta/90 transition-colors shadow-[0_10px_30px_-10px_rgba(15,45,82,0.5)]"
                   >
                     Start now
                     <span aria-hidden="true">→</span>
                   </a>
                   <a
                     href="#"
-                    className="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-full bg-white/10 backdrop-blur border border-white/60 text-white text-[14px] font-medium hover:bg-white/20 transition-colors"
+                    className="inline-flex items-center justify-center gap-2 h-10 px-5 rounded-full bg-white/10 backdrop-blur border border-white/60 text-white text-[13px] font-medium hover:bg-white/20 transition-colors"
                   >
                     Book a demo
                   </a>
