@@ -617,8 +617,8 @@ function Testimonials() {
             className="mt-8 mx-auto text-ink font-semibold tracking-[-0.03em] leading-[1.05]"
             style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)", maxWidth: "20ch" }}
           >
-            Check what the best marketers say about{" "}
-            <span className="text-cta">GetReef AI</span>.
+            What founders in the beta cohort are actually saying about{" "}
+            <span className="text-cta">{"{{PRODUCT_NAME}}"}</span>.
           </h2>
         </div>
       </div>
