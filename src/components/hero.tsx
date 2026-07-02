@@ -79,13 +79,13 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
-            Founding access open
+            Founding cohort open
           </div>
           <div className="hidden md:block text-neutral-400">
-            Limited beta — onboard your first 50 tracked prompts before public launch
+            First 50 founders get lifetime pricing. No enterprise sales call, no annual contract.
           </div>
           <a href="#" className="font-medium underline underline-offset-4 decoration-neutral-500 hover:decoration-white transition-colors whitespace-nowrap">
-            Book a demo →
+            Claim a spot →
           </a>
         </div>
       </div>
@@ -96,7 +96,7 @@ export function Hero() {
         <div className="relative mx-auto max-w-[1400px] px-6 h-16 flex items-center justify-between">
           <a href="/" className="flex items-center gap-2">
             <span className="inline-block h-5 w-5 rounded-[4px] bg-ink" />
-            <span className="text-[17px] font-semibold tracking-tight text-ink">GetReef AI</span>
+            <span className="text-[17px] font-semibold tracking-tight text-ink">{"{{PRODUCT_NAME}}"}</span>
           </a>
           <nav className="hidden md:flex items-center gap-8 text-[14px] font-medium text-ink absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <a href="#" className="hover:text-ink-muted transition-colors">Features</a>
@@ -147,19 +147,19 @@ export function Hero() {
               className="text-white font-semibold tracking-[-0.035em] leading-[0.98] drop-shadow-[0_2px_20px_rgba(15,45,82,0.35)]"
               style={{ fontSize: "clamp(2.5rem, 6.5vw, 5rem)" }}
             >
-              AI search analytics for SaaS
+              Your next signup is asking
               <br />
-              <span className="text-white/95">which rank first on </span>
               <RotatingPlatform />
-
+              <span className="text-white/95"> which SaaS to buy.</span>
+              <br />
+              <span className="text-white/95">Is it naming you?</span>
             </h1>
 
-            <p className="mt-5 mx-auto max-w-[600px] text-[16px] md:text-[17px] leading-[1.6] text-white/95 drop-shadow-[0_1px_10px_rgba(15,45,82,0.35)]">
-              Track, analyze, and improve brand performance on AI search platforms through
-              key metrics like{" "}
+            <p className="mt-5 mx-auto max-w-[620px] text-[16px] md:text-[17px] leading-[1.6] text-white/95 drop-shadow-[0_1px_10px_rgba(15,45,82,0.35)]">
+              Every day, buyers ask AI for the best tool in your category — and get an answer you never see. {"{{PRODUCT_NAME}}"} shows you which prompts you're missing from, what to ship to fix it, and tracks{" "}
               <Chip icon={<EyeIcon />}>Visibility</Chip>,{" "}
               <Chip icon={<PositionIcon />}>Position</Chip>, and{" "}
-              <Chip icon={<SmileIcon />}>Sentiment</Chip>.
+              <Chip icon={<SmileIcon />}>Sentiment</Chip> across every model that matters.
             </p>
 
             {/* URL audit input */}
@@ -167,11 +167,11 @@ export function Hero() {
               <div className="flex items-center gap-2 h-14 md:h-16 pl-6 pr-2 rounded-full border border-hairline bg-white shadow-[0_10px_30px_-10px_rgba(15,45,82,0.35)]">
                 <input
                   type="url"
-                  placeholder="Enter your website URL"
+                  placeholder="yoursaas.com"
                   className="flex-1 min-w-0 bg-transparent border-none text-[16px] md:text-[17px] text-ink placeholder:text-neutral-400 outline-none focus:ring-0"
                 />
                 <button className="flex-shrink-0 h-11 md:h-12 px-5 md:px-6 rounded-full bg-cta text-cta-foreground text-[14px] md:text-[15px] font-medium whitespace-nowrap hover:bg-cta/90 transition-colors">
-                  Run AI visibility audit
+                  Check my AI score
                 </button>
               </div>
 
@@ -182,13 +182,13 @@ export function Hero() {
                     <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    See results in 30 seconds
+                    Score in under 30 seconds
                   </span>
                   <span className="flex items-center gap-2">
                     <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                       <polyline points="20 6 9 17 4 12" />
                     </svg>
-                    No credit card required
+                    No credit card, no sales call
                   </span>
                 </div>
                 <div className="mt-3 flex flex-col sm:flex-row items-center justify-center gap-2.5">
@@ -238,21 +238,21 @@ export function Hero() {
               ))}
             </div>
             <p className="text-[16px] md:text-[18px] font-semibold text-ink">
-              Loved by SaaS founders who'd rather scoop than guess
+              Built with founders in the beta cohort — not for enterprise SEO teams
             </p>
           </div>
           <div className="grid grid-cols-3 gap-6 md:gap-16 text-center">
             <div>
-              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">50+</div>
-              <div className="text-[13px] md:text-[14px] text-neutral-500">SaaS tracked</div>
+              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">6</div>
+              <div className="text-[13px] md:text-[14px] text-neutral-500">AI models tracked</div>
             </div>
             <div>
-              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">12,000</div>
-              <div className="text-[13px] md:text-[14px] text-neutral-500">live signals</div>
+              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">24h</div>
+              <div className="text-[13px] md:text-[14px] text-neutral-500">to your first signal</div>
             </div>
             <div>
-              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">8</div>
-              <div className="text-[13px] md:text-[14px] text-neutral-500">verticals</div>
+              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">50</div>
+              <div className="text-[13px] md:text-[14px] text-neutral-500">founding spots</div>
             </div>
           </div>
         </div>
@@ -265,10 +265,10 @@ export function Hero() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
               <span className="h-2 w-2 rounded-full bg-cta" />
-              Watch the 2-min product tour
+              2-min walkthrough
             </div>
             <h2 className="mt-6 text-ink font-semibold tracking-[-0.03em]" style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)" }}>
-              See how founders read the wave in real time
+              What ChatGPT tells your next signup about you.
             </h2>
           </div>
           <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-hairline bg-[#0b1220] shadow-[0_30px_80px_-30px_rgba(15,45,82,0.45)] group cursor-pointer">
@@ -284,7 +284,7 @@ export function Hero() {
               </button>
             </div>
             <div className="absolute bottom-4 left-4 text-white/80 text-[13px] font-medium">
-              GetReef AI — Product tour · 2:14
+              {"{{PRODUCT_NAME}}"} — Founder walkthrough · 2:14
             </div>
           </div>
         </div>
@@ -294,7 +294,7 @@ export function Hero() {
       <div className="border-t border-hairline bg-white">
         <div className="mx-auto max-w-[1400px] px-6 py-16">
           <p className="text-center text-[14px] text-neutral-500">
-            50+ SaaS navigating the generative shift with <span className="text-ink font-semibold">GetReef.ai</span>
+            Founding SaaS shipping with {"{{PRODUCT_NAME}}"} instead of guessing at AI rankings
           </p>
 
           <div className="mt-10">
@@ -317,10 +317,10 @@ export function Hero() {
             className="mt-8 mx-auto text-ink font-semibold tracking-[-0.03em] leading-[1.02]"
             style={{ fontSize: "clamp(2rem, 5vw, 4rem)", maxWidth: "22ch" }}
           >
-            Decode your brand's footprint in the semantic swell.
+            Three numbers that tell you if you're actually in the answer.
           </h2>
           <p className="mt-6 mx-auto max-w-[720px] text-[19px] leading-[1.55] text-neutral-500">
-            Continuous observation built around the critical metrics shaping generative visibility.
+            A score is not a strategy. Every metric here comes with the exact next thing to ship.
           </p>
         </div>
 
@@ -332,18 +332,18 @@ export function Hero() {
                 accent
                 icon={<EyeIcon />}
                 title="Visibility"
-                body="See the share of chats where your brand is mentioned and understand how often you show up in conversations."
+                body="What share of buyer questions in your category name your product at all. If it's under 20%, you're invisible — and we tell you which prompts to go earn first."
               />
               <MetricCard
                 icon={<PositionIcon />}
                 title="Position"
-                body="Understand your brand's position within AI search results and uncover opportunities to improve your ranking."
+                body="When you do show up, where in the answer — first, buried at #7, or an afterthought. Position is what turns a mention into a signup."
               />
               <MetricCard
                 accent
                 icon={<SmileIcon />}
                 title="Sentiment"
-                body="Find out how your brand is perceived by AI, what's going well, and what requires improvements."
+                body="What the model actually says about you next to competitors. Catch a bad framing before it becomes the default answer for the next 10,000 buyers."
               />
             </div>
 
@@ -351,7 +351,7 @@ export function Hero() {
             <div className="rounded-2xl border border-hairline bg-white p-8 md:p-10">
               <div className="flex justify-end">
                 <div className="inline-flex items-center h-10 px-4 rounded-full border border-hairline bg-white text-[14px] text-ink">
-                  What are the best CRMs for Startups?
+                  Best AI visibility tracker for bootstrapped SaaS founders?
                 </div>
               </div>
 
@@ -359,40 +359,40 @@ export function Hero() {
                 <div className="flex-shrink-0 h-8 w-8 rounded-full bg-ink flex items-center justify-center text-white text-[11px] font-semibold">GPT</div>
                 <div className="flex-1 rounded-xl border border-hairline p-5 space-y-5">
                   <p className="text-[14px] leading-[1.65] text-ink">
-                    Choosing the right CRM really comes down to how your startup sells, grows, and automates. Here's a curated breakdown of the top CRM platforms for startups in 2026.
+                    For a solo founder tracking how AI answers surface your product, a few tools stand out in 2026. Here's what I'd actually recommend based on price, setup time, and whether they tell you what to do next.
                   </p>
 
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <span className="inline-flex items-center h-6 px-2 rounded-md border border-hairline text-[11px] text-neutral-500 font-mono">#1</span>
-                      <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px] font-semibold">M</span>
-                      <span className="text-[14px] font-semibold text-ink">Monday</span>
+                      <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px] font-semibold">P</span>
+                      <span className="text-[14px] font-semibold text-ink">Peec AI</span>
                     </div>
                     <p className="text-[14px] leading-[1.65] text-ink">
-                      Monday offers a <mark className="bg-emerald-100 text-ink px-1 rounded">strong free tier</mark> with contact management, email tracking, reporting, and integrations. It <mark className="bg-emerald-100 text-ink px-1 rounded">easily expands</mark> into Sales, Marketing, or Service Hubs as you grow. Paid plans <mark className="bg-red-100 text-ink px-1 rounded">can become expensive, and some advanced features are locked</mark> behind higher tiers.
+                      Peec gives you a <mark className="bg-emerald-100 text-ink px-1 rounded">clean dashboard across ChatGPT, Claude and Perplexity</mark> and <mark className="bg-emerald-100 text-ink px-1 rounded">daily refresh out of the box</mark>. Downside: it <mark className="bg-red-100 text-ink px-1 rounded">stops at the score — no guidance on what to actually ship next</mark>.
                     </p>
                   </div>
 
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <span className="inline-flex items-center h-6 px-2 rounded-md border border-hairline text-[11px] text-neutral-500 font-mono">#2</span>
-                      <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px] font-semibold">A</span>
-                      <span className="text-[14px] font-semibold text-ink">Attio</span>
+                      <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px] font-semibold">O</span>
+                      <span className="text-[14px] font-semibold text-ink">Otterly</span>
                     </div>
                     <p className="text-[14px] leading-[1.65] text-ink">
-                      Attio is a <mark className="bg-emerald-100 text-ink px-1 rounded">flexible modern</mark> CRM that works like a relational database, letting you design pipelines, views, and workflows around your data with tools like Slack, Notion, and Segment.
+                      Otterly is <mark className="bg-emerald-100 text-ink px-1 rounded">easy to set up in a weekend</mark>. Coverage is thinner on newer models and reports lean more on visualization than on concrete next actions.
                     </p>
                   </div>
 
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <span className="inline-flex items-center h-6 px-2 rounded-md border border-hairline text-[11px] text-neutral-500 font-mono">#3</span>
-                      <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px] font-semibold">Z</span>
-                      <span className="text-[14px] font-semibold text-ink">Zero</span>
+                      <span className="inline-flex items-center justify-center h-6 w-6 rounded-md bg-ink text-white text-[10px] font-semibold">{"{"}</span>
+                      <span className="text-[14px] font-semibold text-ink">{"{{PRODUCT_NAME}}"}</span>
                     </div>
                     <div className="relative">
                       <p className="text-[14px] leading-[1.65] text-ink">
-                        Zero is built for founders who want a <mark className="bg-emerald-100 text-ink px-1 rounded">streamlined CRM without the usual bloat</mark>. It focuses on speed, simplicity, and essential deal tracking while still offering automation and integrations with tools like Google Workspace, Slack, and Zapier.
+                        Built specifically for indie SaaS founders. Every missed prompt comes with <mark className="bg-emerald-100 text-ink px-1 rounded">an exact next action — a Reddit thread to answer, a listicle to pitch, a page to rewrite</mark>. Priced for a bootstrapped stack, not an enterprise seat.
                       </p>
 
                       {/* Sentiment tooltip */}
@@ -402,10 +402,10 @@ export function Hero() {
                           <span className="inline-flex items-center justify-center h-5 w-5 rounded bg-white/10 text-[10px]">◎</span>
                         </div>
                         <div className="mt-2 inline-flex items-center h-6 px-2 rounded border-l-2 border-emerald-400 bg-white/5 text-[13px] font-semibold">
-                          95
+                          96
                         </div>
                         <p className="mt-3 text-[12px] leading-[1.5] text-neutral-300">
-                          Positive endorsement of Zero as a fast, simple, and efficient CRM for founders.
+                          Framed as the founder-friendly option that pairs monitoring with a concrete next step.
                         </p>
                       </div>
                     </div>
@@ -427,9 +427,9 @@ export function Hero() {
             className="mx-auto text-ink font-semibold tracking-[-0.03em] leading-[1.05]"
             style={{ fontSize: "clamp(1.75rem, 4vw, 3.25rem)", maxWidth: "22ch" }}
           >
-            AI platforms are becoming the new search engines.
+            AI is the new distribution channel for SaaS.
             <br />
-            <span className="text-neutral-500">Track the prompts that define your brand's relevance.</span>
+            <span className="text-neutral-500">Track the prompts your next 100 signups are actually asking.</span>
           </h2>
         </div>
         <PromptsMarquee />
@@ -452,8 +452,8 @@ export function Hero() {
               FAQs
             </h2>
             <p className="mt-4 text-[17px] md:text-[19px] leading-[1.5] text-neutral-500">
-              Get answers to the most common questions
-              <br className="hidden md:block" /> about AI search and GetReef AI.
+              What founders ask us before they claim a founding spot in
+              <br className="hidden md:block" /> {"{{PRODUCT_NAME}}"}.
             </p>
           </div>
           <div className="mt-14">
@@ -490,7 +490,7 @@ function Pricing() {
             <span className="h-px w-8 bg-sky-500" /> Pricing
           </div>
           <h2 className="mt-6 text-ink font-semibold tracking-[-0.03em]" style={{ fontSize: "clamp(2rem, 4.8vw, 3.5rem)", lineHeight: 1.05 }}>
-            Simple. <em className="not-italic text-sky-500 italic font-semibold">Locked forever</em> for founding members.
+            Priced for a founder's stack, <em className="not-italic text-sky-500 italic font-semibold">locked forever</em> for the first 50.
           </h2>
         </div>
 
@@ -539,7 +539,7 @@ function Pricing() {
           </div>
 
           <div className="mt-8 rounded-2xl bg-sky-50/70 border border-sky-100 p-5 text-center text-[14.5px] text-ink/80 leading-relaxed">
-            Founding pricing is locked forever. After launch, this plan goes back to €{monthlyBase}/month.
+            One SaaS, tracked across every model that matters. Founding price is locked for life — after launch, this plan goes back to €{monthlyBase}/month.
           </div>
 
           <div className="mt-8 min-h-[140px]" aria-hidden="true" />
@@ -551,7 +551,7 @@ function Pricing() {
             Claim your founding spot →
           </button>
           <p className="mt-4 text-center text-[13px] text-neutral-500">
-            Cancel anytime from your dashboard. No calls, no emails.
+            Cancel from the dashboard in one click. No calls, no annual contract.
           </p>
         </div>
       </div>
@@ -563,40 +563,40 @@ function Pricing() {
 function Testimonials() {
   const items = [
     {
-      quote: "GetReef gave us key insights on AI visibility, helping our SaaS stay at the forefront of discovery in the age of generative search. As ChatGPT, Claude, and Perplexity drive traffic and signups, GetReef measures the growth.",
-      name: "Crystal Carter",
-      role: "Head of SEO Comms",
-      company: "WIX",
+      quote: "I found out ChatGPT was recommending a competitor for a query I literally built my product around. Two weeks of pointed content later, I'm the #1 answer. That's the whole game.",
+      name: "Founder, beta cohort",
+      role: "Indie SaaS · $2K MRR",
+      company: "BETA",
     },
     {
-      quote: "GetReef avoids the issues we see with other SEO/AEO platforms, where there's often an overload of features and information that isn't of primary importance. It keeps things simple — set up your prompts, see your AI visibility, and act on top citations.",
-      name: "Ethan Smith",
-      role: "CEO",
-      company: "GRAPHITE",
+      quote: "Other tools told me my score was 34. Cool. This one told me exactly which four Reddit threads I needed to answer this week. That's actionable.",
+      name: "Founder, beta cohort",
+      role: "Bootstrapped devtool",
+      company: "BETA",
     },
     {
-      quote: "GetReef helps us identify what's being cited, adjust our strategy in real-time, and stay ahead of a rapidly evolving search landscape. For our team, the clarity and simplicity of the platform is invaluable when making strategic content decisions.",
-      name: "Thomas Smeaton",
-      role: "SEO Manager",
-      company: "SQUARESPACE",
+      quote: "I'm a solo founder. I don't have time for a dashboard I have to interpret. I want a to-do list. This is the first GEO tool that gives me one.",
+      name: "Founder, beta cohort",
+      role: "Solo B2B SaaS",
+      company: "BETA",
     },
     {
-      quote: "GetReef allows us to pinpoint the exact types of content that are surfaced in specific LLMs. With that visibility, we've been able to prioritize our content strategy and drive a 5x year-over-year increase in traffic and demo requests from LLMs.",
-      name: "Jon Gitlin",
-      role: "SEO Strategist",
-      company: "MERGE",
+      quote: "Priced like a Stripe subscription, not like a Salesforce add-on. Finally.",
+      name: "Founder, beta cohort",
+      role: "Building in public",
+      company: "BETA",
     },
     {
-      quote: "GetReef gave us a data-informed view of our LLMO strategy at Glide — virtually overnight. With its insights, our blog posts started ranking for targeted ChatGPT and Perplexity prompts within 24 hours. I'm really impressed with the platform and the support from the team.",
-      name: "Sepy Bazzazi",
-      role: "Head of Marketing",
-      company: "Glide",
+      quote: "I shipped one landing page based on a suggested prompt on Monday. By Friday it was cited by Claude. First time a marketing tool has paid for itself that fast.",
+      name: "Founder, beta cohort",
+      role: "AI-native SaaS",
+      company: "BETA",
     },
     {
-      quote: "As search marketers, our decisions should always be driven by data. GetReef provides exactly the critical insights we need to stay competitive in the ever-evolving world of search.",
-      name: "Artur Kosch",
-      role: "General Manager",
-      company: "KKP",
+      quote: "I was ready to hire a GEO agency for €3K/month. Cancelled the intro call after one afternoon with this.",
+      name: "Founder, beta cohort",
+      role: "Bootstrapped, pre-seed",
+      company: "BETA",
     },
   ];
   const row1 = items.slice(0, 3);
@@ -617,8 +617,8 @@ function Testimonials() {
             className="mt-8 mx-auto text-ink font-semibold tracking-[-0.03em] leading-[1.05]"
             style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)", maxWidth: "20ch" }}
           >
-            Check what the best marketers say about{" "}
-            <span className="text-cta">GetReef AI</span>.
+            What founders in the beta cohort are actually saying about{" "}
+            <span className="text-cta">{"{{PRODUCT_NAME}}"}</span>.
           </h2>
         </div>
       </div>
@@ -710,42 +710,42 @@ function KeyFeaturesPixel() {
             className="mt-8 mx-auto text-white font-semibold tracking-[-0.03em] leading-[1.02] drop-shadow-[0_2px_20px_rgba(15,45,82,0.4)]"
             style={{ fontSize: "clamp(2rem, 5vw, 4rem)", maxWidth: "22ch" }}
           >
-            Turn AI search insights into new customers with GetReef AI.
+            Every score comes with the exact next thing to ship.
           </h2>
           <p className="mt-6 mx-auto max-w-[720px] text-[17px] md:text-[18px] leading-[1.55] text-white/95 drop-shadow-[0_1px_10px_rgba(15,45,82,0.35)]">
-            Identify the prompts that matter, monitor your rankings, and act before your competitors do.
+            Most GEO tools hand you a number and wish you luck. {"{{PRODUCT_NAME}}"} hands you a to-do list your future signups will find you through.
           </p>
         </div>
 
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <FeaturePixelCard
-            title="Set up Prompts"
-            body="Prompts are the foundation of your AI search strategy. Uncover and organize the prompts that matter most for your brand's discovery."
+            title="Track the prompts that matter"
+            body="Paste your product or auto-import the buyer questions in your category — start seeing your rank in ChatGPT, Claude, Gemini and Perplexity within 24h."
             mock={<TrackedPromptsMock />}
           />
           <FeaturePixelCard
-            title="Use Data to Pick Winners"
-            body="Leverage AI-suggested prompts and search volumes to focus on the biggest opportunities in your vertical."
+            title="Get suggested prompts, ranked by volume"
+            body="Stop guessing what to track. We surface the queries buyers in your niche actually ask, sorted by traffic potential — so you only write content that could move signups."
             mock={<SuggestedPromptsMock />}
           />
           <FeaturePixelCard
-            title="Add Brands"
-            body="See how you rank against the players that matter in your market."
+            title="See exactly who's beating you"
+            body="Drop in your top 3 competitors and watch head-to-head rankings shift model by model. Know when a competitor launches content that steals a query — and copy the play."
             mock={<AddBrandsMock />}
           />
           <FeaturePixelCard
-            title="Choose AI Models"
-            body="Track rankings across the models that drive the most traffic and visibility."
+            title="Pick the models your buyers actually use"
+            body="ChatGPT, Claude, Gemini, Perplexity, DeepSeek, AI Overviews. Toggle what matters, ignore what doesn't. No wasted credits on models your buyers never touch."
             mock={<ChooseModelsMock />}
           />
           <FeaturePixelCard
-            title="Find Key Sources"
-            body="Spot the citations shaping your visibility and refine your generative search strategy."
+            title="See which sources feed the answer"
+            body="Every AI response is stitched together from a handful of sources — Reddit threads, listicles, docs. We show you which ones so you know exactly where to plant your next post."
             mock={<KeySourcesMock />}
           />
           <FeaturePixelCard
-            title="Act on Insights"
-            body="Use recommendations to capture high-impact opportunities and boost your ranking."
+            title="Get a next-action list, not just a dashboard"
+            body="Every drop in ranking comes with a concrete play: a Reddit thread to answer, a comparison page to write, a directory to submit to. Actions, not vibes."
             mock={<ActOnInsightsMock />}
           />
         </div>
@@ -756,14 +756,14 @@ function KeyFeaturesPixel() {
             className="mx-auto max-w-[1000px] text-center text-ink font-semibold tracking-[-0.02em] leading-[1.2]"
             style={{ fontSize: "clamp(1.5rem, 2.75vw, 2.5rem)" }}
           >
-            Metrics like brand mentions, impressions, and sentiment are hard to track — which is why{" "}
-            <span className="text-cta">GetReef AI</span> is so powerful: it shows how LLMs are framing our brand.
+            Every other GEO tool told me I was invisible.{" "}
+            <span className="text-cta">{"{{PRODUCT_NAME}}"}</span> told me exactly which three pages to ship to fix it. That's the whole difference.
           </p>
           <div className="mt-10 flex items-center justify-center gap-4">
-            <span className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-cta text-white font-semibold text-[14px]">LR</span>
+            <span className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-cta text-white font-semibold text-[14px]">R</span>
             <div className="text-left">
-              <div className="text-[15px] font-semibold text-ink">Lily Ray</div>
-              <div className="text-[13px] text-neutral-500">VP SEO Strategy, Amsive</div>
+              <div className="text-[15px] font-semibold text-ink">Raphaël</div>
+              <div className="text-[13px] text-neutral-500">Founder, {"{{PRODUCT_NAME}}"} · building in public</div>
             </div>
           </div>
         </div>
@@ -790,10 +790,10 @@ function FeaturePixelCard({
 
 function TrackedPromptsMock() {
   const rows = [
-    { p: "Best AI-native CRM 2026", v: "84%", loc: "US", tag: "Corporate" },
-    { p: "CRM software with advanced workflow automation", v: "84%", loc: "US", tag: "Corporate" },
-    { p: "Top-rated CRM platforms with analytics", v: "84%", loc: "CA", tag: "Corporate" },
-    { p: "CRMs that support offline access", v: "78%", loc: "CA", tag: "Feature" },
+    { p: "Best GEO tracker for indie SaaS 2026", v: "82%", loc: "US", tag: "Buyer" },
+    { p: "AI visibility tools for bootstrapped founders", v: "71%", loc: "US", tag: "Buyer" },
+    { p: "Cheapest ChatGPT visibility monitoring", v: "64%", loc: "UK", tag: "Price" },
+    { p: "How to rank in Perplexity as a SaaS", v: "58%", loc: "CA", tag: "How-to" },
   ];
   return (
     <div className="relative -mb-6">
@@ -826,8 +826,8 @@ function TrackedPromptsMock() {
 
 function SuggestedPromptsMock() {
   const cards = [
-    { q: "Best CRM software with intuitive user interfaces and customizable workflows", vol: "High Volume", tone: "emerald", rotate: "-rotate-3" },
-    { q: "What are the top CRM systems that provide AI-driven insights and automation?", vol: "Medium Volume", tone: "orange", rotate: "rotate-2 translate-x-6 translate-y-6" },
+    { q: "What's the best AI visibility tracker for a solo SaaS founder under $50/mo?", vol: "High Volume", tone: "emerald", rotate: "-rotate-3" },
+    { q: "Which GEO tool actually tells you what content to ship, not just a score?", vol: "Medium Volume", tone: "orange", rotate: "rotate-2 translate-x-6 translate-y-6" },
   ];
   const toneMap: Record<string, string> = {
     emerald: "bg-emerald-100 text-emerald-700",
@@ -858,8 +858,8 @@ function SuggestedPromptsMock() {
 
 function AddBrandsMock() {
   const brands = [
-    { name: "Monday", url: "monday.com", extra: "+3", state: "start", color: "bg-pink-100", initial: "M", initialBg: "bg-pink-500" },
-    { name: "Pipedrive", url: "pipedrive.com", extra: "+2", state: "tracking", color: "bg-emerald-50", initial: "P", initialBg: "bg-emerald-600" },
+    { name: "Peec AI", url: "peec.ai", extra: "+3", state: "start", color: "bg-pink-100", initial: "P", initialBg: "bg-pink-500" },
+    { name: "Otterly", url: "otterly.ai", extra: "+2", state: "tracking", color: "bg-emerald-50", initial: "O", initialBg: "bg-emerald-600" },
   ];
   return (
     <div className="relative -mb-6 h-[280px]">
@@ -938,10 +938,10 @@ function ChooseModelsMock() {
 
 function KeySourcesMock() {
   const rows = [
-    { d: "reddit.com", t: "UGC", tc: "bg-blue-100 text-blue-700", u: "32%", c: "3.2" },
-    { d: "attio.com", t: "You", tc: "bg-emerald-100 text-emerald-700", u: "43%", c: "5.2" },
-    { d: "wikipedia.org", t: "Reference", tc: "bg-violet-100 text-violet-700", u: "31%", c: "1.4" },
-    { d: "hubspot.com", t: "Competitor", tc: "bg-rose-100 text-rose-700", u: "39%", c: "1.1" },
+    { d: "reddit.com/r/SaaS", t: "UGC", tc: "bg-blue-100 text-blue-700", u: "41%", c: "3.8" },
+    { d: "yoursaas.com", t: "You", tc: "bg-emerald-100 text-emerald-700", u: "22%", c: "2.1" },
+    { d: "indiehackers.com", t: "UGC", tc: "bg-violet-100 text-violet-700", u: "34%", c: "1.9" },
+    { d: "peec.ai", t: "Competitor", tc: "bg-rose-100 text-rose-700", u: "37%", c: "1.4" },
   ];
   return (
     <div className="relative -mb-6">
@@ -968,9 +968,9 @@ function KeySourcesMock() {
 
 function ActOnInsightsMock() {
   const insights = [
-    { t: "LinkedIn is a common source", s: "Consider joining the conversation", dark: false },
-    { t: "Join r/CRM subreddit discussions", s: "Discussions show frequently in sources.", dark: true },
-    { t: "Articles from NYT regularly show up in citations", s: "Consider placing a story via digital PR", dark: false },
+    { t: "r/SaaS thread ranks for your top query", s: "Reply with a founder story in the next 48h.", dark: false },
+    { t: "Indie Hackers milestone post gets cited daily", s: "Post your MRR update this week — high citation odds.", dark: true },
+    { t: "A comparison listicle is missing you", s: "Email the author with a 3-line pitch — template inside.", dark: false },
   ];
   return (
     <div className="relative -mb-6 space-y-3 pt-2">
@@ -1018,16 +1018,19 @@ function BigCta() {
               className="text-white font-semibold tracking-[-0.035em] leading-[1.02]"
               style={{ fontSize: "clamp(2.25rem, 5.5vw, 4.5rem)" }}
             >
-              Find out what <span className="text-cta">AI says</span>
+              Stop guessing <span className="text-cta">what AI says</span>
               <br />
-              <span className="text-white/70">about your brand</span>
+              <span className="text-white/70">about your SaaS.</span>
             </h2>
+            <p className="mt-6 text-white/70 text-[16px] md:text-[17px] leading-[1.6] max-w-[520px]">
+              A score is where every other tool stops. That's where {"{{PRODUCT_NAME}}"} starts.
+            </p>
             <div className="mt-10 flex flex-wrap items-center gap-3">
               <a
                 href="#"
                 className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-white text-ink text-[15px] font-semibold hover:bg-white/90 transition-colors"
               >
-                Start free trial
+                Run my free AI audit
                 <span aria-hidden="true">→</span>
               </a>
               <a
@@ -1035,7 +1038,7 @@ function BigCta() {
                 className="inline-flex items-center gap-2 h-12 px-6 rounded-full bg-cta text-cta-foreground text-[15px] font-semibold hover:bg-cta/90 transition-colors"
               >
                 <span className="h-2 w-2 rounded-sm bg-white/90" />
-                Talk to Sales
+                Book a founder demo
               </a>
             </div>
           </div>
@@ -1062,7 +1065,7 @@ function SiteFooter() {
   ];
   const cols2 = [
     { title: "Partnership", links: ["Agencies", "Creators", "Media"] },
-    { title: "Comparison", links: ["GetReef vs Ahrefs", "GetReef vs Profound", "GetReef vs Semrush"] },
+    { title: "Comparison", links: ["{{PRODUCT_NAME}} vs Peec AI", "{{PRODUCT_NAME}} vs Otterly", "{{PRODUCT_NAME}} vs Profound", "{{PRODUCT_NAME}} vs Ahrefs"] },
   ];
   return (
     <footer className="bg-[#0a0a0a] text-white">
@@ -1072,12 +1075,12 @@ function SiteFooter() {
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2">
               <span className="inline-block h-5 w-5 rounded-[4px] bg-cta" />
-              <span className="text-[17px] font-semibold tracking-tight text-white">GetReef AI</span>
+              <span className="text-[17px] font-semibold tracking-tight text-white">{"{{PRODUCT_NAME}}"}</span>
             </div>
             <p className="mt-6 text-[22px] md:text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-white/90">
-              AI search analytics
+              AI visibility
               <br />
-              <span className="text-white/50">for SaaS founders</span>
+              <span className="text-white/50">for solo SaaS founders</span>
             </p>
           </div>
 
@@ -1111,10 +1114,10 @@ function SiteFooter() {
         </div>
 
         <div className="mt-20 border-t border-white/10 pt-8 text-[14px] text-white/60">
-          GetReef AI is a top-rated AI search monitoring tool — <span className="text-cta font-medium">4.9/5</span> on G2 and regularly recommended on Reddit.
+          {"{{PRODUCT_NAME}}"} is built in public by a solo founder for solo founders — follow the build on X.
         </div>
         <div className="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[13px] text-white/50">
-          <div>© {new Date().getFullYear()} GetReef AI. All rights reserved.</div>
+          <div>© {new Date().getFullYear()} {"{{PRODUCT_NAME}}"}. All rights reserved.</div>
           <div className="flex flex-wrap items-center gap-6">
             <a href="#" className="hover:text-white transition-colors">Cookie Settings</a>
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
@@ -1148,21 +1151,21 @@ function PromptsMarquee() {
   const rows: { text: string; icon: string; color: string }[][] = [
     [
       { text: "How does AI visibility differ on desktop versus mobile?", icon: "✷", color: "text-neutral-400" },
-      { text: "How easy is it to set up a CRM for the first time?", icon: "◍", color: "text-ink" },
-      { text: "What training or tutorials are included with Attio?", icon: "❄", color: "text-sky-500" },
-      { text: "How does HubSpot compare to Salesforce?", icon: "∞", color: "text-neutral-500" },
+      { text: "Which GEO tracker is cheapest for a solo SaaS founder?", icon: "◍", color: "text-ink" },
+      { text: "Best AI visibility tool under $50/month?", icon: "❄", color: "text-sky-500" },
+      { text: "How often should I refresh my ChatGPT prompt tracking?", icon: "∞", color: "text-neutral-500" },
     ],
     [
-      { text: "Do CRMs replace spreadsheets or manual tracking?", icon: "◍", color: "text-ink" },
-      { text: "What core features should a CRM include?", icon: "◍", color: "text-ink" },
-      { text: "How do CRMs handle customer service or support workflows?", icon: "▲", color: "text-blue-500" },
-      { text: "What integrations are available in Attio?", icon: "❄", color: "text-sky-500" },
+      { text: "Which SaaS gets recommended most in ChatGPT for project management?", icon: "◍", color: "text-ink" },
+      { text: "How do I get my SaaS cited by Perplexity?", icon: "◍", color: "text-ink" },
+      { text: "Does building in public help AI visibility?", icon: "▲", color: "text-blue-500" },
+      { text: "Best Reddit threads to answer for GEO in 2026", icon: "❄", color: "text-sky-500" },
     ],
     [
-      { text: "Do CRMs offer API access for custom integrations?", icon: "❄", color: "text-sky-500" },
-      { text: "How easy is CRM data migration from another system?", icon: "✷", color: "text-orange-500" },
-      { text: "What security certifications do CRMs typically have?", icon: "◍", color: "text-ink" },
-      { text: "How do CRMs handle GDPR compliance?", icon: "✷", color: "text-orange-500" },
+      { text: "How does Claude decide which SaaS to recommend?", icon: "❄", color: "text-sky-500" },
+      { text: "Fastest way to rank in Gemini AI Overviews?", icon: "✷", color: "text-orange-500" },
+      { text: "What content format do LLMs cite most?", icon: "◍", color: "text-ink" },
+      { text: "Is GEO the new SEO for indie SaaS?", icon: "✷", color: "text-orange-500" },
     ],
   ];
   return (
@@ -1201,12 +1204,12 @@ function PromptsMarquee() {
 
 function FaqList() {
   const faqs = [
-    { q: "How do I get started with GetReef AI?", a: "Enter your website URL for a free instant AI visibility audit. From there, connect the prompts that matter to your brand and we'll start tracking them across ChatGPT, Claude, Gemini and Perplexity within minutes." },
-    { q: "Can I segment visibility by model, region, or audience?", a: "Yes — every prompt can be broken down by AI platform, geography, persona and buying stage so you can see exactly where you show up and where you don't." },
-    { q: "How often is the data refreshed?", a: "Core prompts refresh daily. High-priority prompts can be set to hourly polling, and you'll get alerts the moment your position or sentiment shifts." },
-    { q: "What are brand visibility vs. source visibility metrics?", a: "Brand visibility measures how often your brand is mentioned in AI answers. Source visibility measures how often your own pages are cited as the source behind those answers — both matter, and we track them separately." },
-    { q: "How do source citations work behind the scenes?", a: "We parse every AI response for cited URLs, resolve them to domains, and attribute them to your brand or your competitors so you can see who's feeding the model." },
-    { q: "How do I integrate GetReef AI into my BI/reporting tools?", a: "Push metrics into Notion, Slack, Looker, or your warehouse via our API and native integrations. Weekly digests land in your inbox out of the box." },
+    { q: "How do I get started?", a: "Drop your URL, get a free AI visibility score in under 30 seconds. If it's not embarrassing enough to fix, close the tab. If it is, connect your prompts and we'll start tracking across ChatGPT, Claude, Gemini and Perplexity within 24 hours." },
+    { q: "Can I segment visibility by model, region, or buyer persona?", a: "Yes. Every tracked prompt breaks down by AI model, geography, and buying stage — so you can see where you rank when a US CTO asks Claude vs when a European founder asks Perplexity." },
+    { q: "How often is the data refreshed?", a: "Prompts refresh daily by default. Your top 5 can be set to hourly, and you get a Slack or email ping the moment your ranking drops or a competitor jumps you." },
+    { q: "What's the difference between brand visibility and source visibility?", a: "Brand visibility = how often the model names your product in its answer. Source visibility = how often your own pages are the citation behind that answer. Both matter, and we track them separately with a fix attached to each." },
+    { q: "Why is this priced for founders instead of enterprise?", a: "Because the founder building at $2K MRR shouldn't have to book a sales call to find out if AI is ignoring them. Founding members lock €55/mo forever — public pricing after launch is €79/mo. Still no seats, no annual contract, no sales rep." },
+    { q: "How does {{PRODUCT_NAME}} plug into my stack?", a: "Slack alerts, weekly email digest, CSV export, and a REST API. Push metrics into Notion, Linear, or a spreadsheet. No BI tool required." },
   ];
   return (
     <div className="divide-y divide-hairline border-t border-b border-hairline">
@@ -1265,7 +1268,7 @@ export function FounderChatPill() {
       </span>
       <span className="hidden sm:flex flex-col leading-tight pr-1 min-w-0">
         <span className="text-[14px] font-semibold truncate">Raphaël</span>
-        <span className="text-[12px] text-neutral-400 truncate">Founder · Book a demo</span>
+        <span className="text-[12px] text-neutral-400 truncate">Solo founder · Reply in ~1h</span>
       </span>
       <span className="hidden sm:inline-flex items-center h-8 px-3 shrink-0 rounded-full bg-white text-ink text-[12px] font-semibold">
         Chat now
