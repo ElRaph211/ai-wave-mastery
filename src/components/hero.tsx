@@ -188,7 +188,23 @@ export function Hero() {
                   No credit card required
                 </span>
               </div>
+              <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a
+                  href="#"
+                  className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-cta text-cta-foreground text-[15px] font-medium hover:bg-cta/90 transition-colors shadow-[0_10px_30px_-10px_rgba(15,45,82,0.5)]"
+                >
+                  Start now
+                  <span aria-hidden="true">→</span>
+                </a>
+                <a
+                  href="#"
+                  className="inline-flex items-center justify-center gap-2 h-12 px-7 rounded-full bg-white/10 backdrop-blur border border-white/60 text-white text-[15px] font-medium hover:bg-white/20 transition-colors"
+                >
+                  Book a demo
+                </a>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
