@@ -682,23 +682,6 @@ function KeyFeaturesPixel() {
           />
         </div>
 
-        {/* Featured quote */}
-        <div className="mt-16 rounded-3xl bg-white/95 backdrop-blur border border-white/70 shadow-[0_30px_80px_-30px_rgba(15,45,82,0.45)] px-8 md:px-20 py-16 md:py-24">
-          <p
-            className="mx-auto max-w-[1000px] text-center text-ink font-semibold tracking-[-0.02em] leading-[1.2]"
-            style={{ fontSize: "clamp(1.5rem, 2.75vw, 2.5rem)" }}
-          >
-            Every other GEO tool told me I was invisible.{" "}
-            <span className="text-cta">{"{{PRODUCT_NAME}}"}</span> told me exactly which three pages to ship to fix it. That's the whole difference.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-4">
-            <span className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-cta text-white font-semibold text-[14px]">R</span>
-            <div className="text-left">
-              <div className="text-[15px] font-semibold text-ink">Raphaël</div>
-              <div className="text-[13px] text-neutral-500">Founder, {"{{PRODUCT_NAME}}"} · building in public</div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
