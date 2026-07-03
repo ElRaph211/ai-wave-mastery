@@ -1374,6 +1374,24 @@ function Chip({ icon, children, className }: { icon: React.ReactNode; children: 
   );
 }
 
+function MetricRow({
+  label, value, pct, tone,
+}: { label: string; value: string; pct: number; tone: "sky" | "ink" | "emerald" }) {
+  const barTone =
+    tone === "sky" ? "bg-sky-500" : tone === "emerald" ? "bg-emerald-500" : "bg-ink";
+  return (
+    <div>
+      <div className="flex items-baseline justify-between">
+        <span className="text-[12px] font-medium text-neutral-500">{label}</span>
+        <span className="text-[15px] font-semibold text-ink tabular-nums">{value}</span>
+      </div>
+      <div className="mt-2 h-1.5 rounded-full bg-neutral-100 overflow-hidden">
+        <div className={`h-full rounded-full ${barTone}`} style={{ width: `${pct}%` }} />
+      </div>
+    </div>
+  );
+}
+
 function StatusPill({
   state, label, value,
 }: { state: "running" | "done"; label: string; value: string }) {
