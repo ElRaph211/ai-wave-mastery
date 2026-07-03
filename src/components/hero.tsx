@@ -1014,30 +1014,19 @@ function SiteFooter() {
     { title: "Comparison", links: ["{{PRODUCT_NAME}} vs Peec AI", "{{PRODUCT_NAME}} vs Otterly", "{{PRODUCT_NAME}} vs Profound", "{{PRODUCT_NAME}} vs Ahrefs"] },
   ];
   return (
-    <footer className="relative overflow-hidden bg-[#0a0a0a] text-white">
-      <img
-        src={heroImage}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none"
-        style={{ filter: "saturate(0.6) brightness(0.4)" }}
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.92) 60%, rgba(10,10,10,0.98) 100%)",
-        }}
-      />
+    <footer
+      className="relative overflow-hidden text-white"
+      style={{
+        background:
+          "linear-gradient(180deg, #060a14 0%, #05080f 60%, #04060c 100%)",
+      }}
+    >
       <div className="relative mx-auto max-w-[1400px] px-6 pt-24 pb-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2">
-              <span className="inline-block h-5 w-5 rounded-[4px] bg-cta" />
-              <span className="text-[17px] font-semibold tracking-tight text-white">{"{{PRODUCT_NAME}}"}</span>
-            </div>
+            <Wordmark tone="light" />
+
             <p className="mt-6 text-[22px] md:text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-white/90">
               AI visibility
               <br />
