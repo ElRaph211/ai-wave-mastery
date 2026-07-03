@@ -196,8 +196,34 @@ export function Hero() {
                 </a>
               </div>
 
+              {/* Trust bar — avatars + stars + line, in-hero */}
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <div className="flex -space-x-2">
+                  {["MR", "JL", "AK", "SC", "DK"].map((initials, i) => (
+                    <div
+                      key={i}
+                      className={`inline-flex items-center justify-center h-8 w-8 rounded-full border-2 border-white text-[10px] font-semibold text-white ${
+                        i % 2 === 0 ? "bg-cta" : "bg-cta/70"
+                      }`}
+                    >
+                      {initials}
+                    </div>
+                  ))}
+                </div>
+                <div className="flex items-center gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-4 h-4 text-star" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-[13px] md:text-[14px] font-medium text-ink max-w-[380px]">
+                  Built with founders in the beta cohort — not for enterprise SEO teams
+                </p>
+              </div>
+
               {/* Honest pre-launch proof line */}
-              <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[12.5px] text-neutral-500">
+              <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[12.5px] text-neutral-500">
                 <span className="flex items-center gap-1.5">
                   <span className="h-1.5 w-1.5 rounded-full bg-sky-500" />
                   6 AI models tracked
@@ -209,16 +235,72 @@ export function Hero() {
               </div>
             </div>
 
-            {/* RIGHT — painterly illustration, uncropped */}
+            {/* RIGHT — clean minimal product preview on soft gradient */}
             <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden bg-[#e8a86c] shadow-[0_30px_80px_-30px_rgba(15,45,82,0.35)] aspect-[4/5] lg:aspect-[5/6]">
-                <img
-                  src={heroImage}
-                  alt="Painterly illustration of a surfer riding a Hawaiian wave at sunset"
-                  width={1200}
-                  height={1400}
-                  className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none"
+              <div className="relative rounded-3xl overflow-hidden aspect-[4/5] lg:aspect-[5/6] bg-gradient-to-br from-[#0b1220] via-[#0f1a2e] to-[#0b1220] shadow-[0_30px_80px_-30px_rgba(15,45,82,0.35)]">
+                {/* subtle grid */}
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 opacity-[0.07]"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)",
+                    backgroundSize: "36px 36px",
+                  }}
                 />
+                {/* corner glow */}
+                <div
+                  aria-hidden="true"
+                  className="absolute -top-32 -right-32 h-[420px] w-[420px] rounded-full"
+                  style={{ background: "radial-gradient(circle, rgba(56,189,248,0.35), transparent 65%)" }}
+                />
+                {/* subtle abstract wave — vestigial ocean motif */}
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 500 120"
+                  preserveAspectRatio="none"
+                  className="absolute inset-x-0 bottom-0 w-full h-32"
+                >
+                  <defs>
+                    <linearGradient id="wave-fade" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.35" />
+                      <stop offset="100%" stopColor="#38bdf8" stopOpacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,70 C120,20 260,110 380,50 C440,20 480,60 500,50 L500,120 L0,120 Z" fill="url(#wave-fade)" />
+                </svg>
+
+                {/* floating dashboard preview card */}
+                <div className="absolute inset-0 flex items-center justify-center p-6 md:p-10">
+                  <div className="w-full max-w-[380px] rounded-2xl bg-white/[0.97] backdrop-blur border border-white/60 p-6 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)]">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <span className="relative flex h-2 w-2">
+                          <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
+                          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                        </span>
+                        <span className="text-[12px] font-medium text-neutral-500">Live · yoursaas.com</span>
+                      </div>
+                      <span className="text-[11px] text-neutral-400">2m ago</span>
+                    </div>
+
+                    <div className="mt-6 space-y-5">
+                      <MetricRow label="Visibility" value="68%" pct={68} tone="sky" />
+                      <MetricRow label="Position" value="#3" pct={80} tone="ink" />
+                      <MetricRow label="Sentiment" value="92%" pct={92} tone="emerald" />
+                    </div>
+
+                    <div className="mt-6 pt-5 border-t border-hairline">
+                      <div className="text-[10px] uppercase tracking-[0.14em] text-neutral-400 font-semibold">Next action</div>
+                      <div className="mt-2 flex items-start gap-2">
+                        <span className="mt-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-cta/10 text-cta text-[10px] font-bold flex-shrink-0">→</span>
+                        <div className="text-[13px] font-medium text-ink leading-snug">
+                          Answer r/SaaS thread — high citation odds
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
