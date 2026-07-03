@@ -263,25 +263,6 @@ export function Hero() {
 
 
 
-      {/* Social proof */}
-      <div className="mx-auto max-w-[800px] px-6 pt-20 pb-16 text-center">
-        <div className="flex flex-col items-center gap-5">
-          <div className="grid grid-cols-3 gap-6 md:gap-16 text-center">
-            <div>
-              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">6</div>
-              <div className="text-[13px] md:text-[14px] text-neutral-500">AI models tracked</div>
-            </div>
-            <div>
-              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">24h</div>
-              <div className="text-[13px] md:text-[14px] text-neutral-500">to your first signal</div>
-            </div>
-            <div>
-              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">50</div>
-              <div className="text-[13px] md:text-[14px] text-neutral-500">founding spots</div>
-            </div>
-          </div>
-        </div>
-      </div>
 
 
 
