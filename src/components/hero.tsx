@@ -123,20 +123,43 @@ export function Hero() {
       </header>
 
 
-      {/* Hero — centered, single-column stack */}
-      <div className="relative bg-white">
-        <div className="mx-auto max-w-[880px] px-6 pt-16 md:pt-24 pb-10 md:pb-14 text-center flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 h-7 px-3 rounded-full border border-hairline bg-white text-[12px] font-medium text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+      {/* Hero — centered stack over a subtle painterly Hawaii background */}
+      <div className="relative overflow-hidden bg-[#1a1410]">
+        {/* Painterly full-bleed background */}
+        <img
+          src={heroImage}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none scale-105 blur-[1px]"
+          style={{ filter: "saturate(0.75) brightness(0.75)" }}
+        />
+        {/* Readability overlay — darker at edges, lighter behind text */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(60% 55% at 50% 42%, rgba(10,15,25,0.15) 0%, rgba(10,15,25,0.55) 65%, rgba(10,15,25,0.85) 100%)",
+          }}
+        />
+        {/* Bottom fade into next section */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent"
+        />
+
+        <div className="relative mx-auto max-w-[880px] px-6 pt-16 md:pt-24 pb-24 md:pb-32 text-center flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 h-8 px-3.5 rounded-full border border-white/15 bg-white/10 backdrop-blur-md text-[12px] font-medium text-white shadow-[0_1px_2px_rgba(0,0,0,0.15)]">
             <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75 animate-ping" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
             </span>
             Founding cohort · 50 spots
           </div>
 
           <h1
-            className="mt-6 text-ink font-semibold tracking-[-0.03em] leading-[1.04] max-w-[18ch]"
-            style={{ fontSize: "clamp(2.25rem, 5.2vw, 4.25rem)" }}
+            className="mt-6 text-white font-semibold tracking-[-0.03em] leading-[1.05] max-w-[20ch] drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)]"
+            style={{ fontSize: "clamp(1.75rem, 3.6vw, 3rem)" }}
           >
             Your next signup is asking
             {" "}
@@ -145,13 +168,13 @@ export function Hero() {
             which SaaS to buy. Is it naming you?
           </h1>
 
-          <p className="mt-6 max-w-[640px] text-[16px] md:text-[18px] leading-[1.55] text-neutral-600">
+          <p className="mt-5 max-w-[620px] text-[15px] md:text-[17px] leading-[1.55] text-white/85 drop-shadow-[0_1px_10px_rgba(0,0,0,0.3)]">
             Track your <Chip icon={<EyeIcon />}>Visibility</Chip>, <Chip icon={<PositionIcon />}>Position</Chip>, and <Chip icon={<SmileIcon />}>Sentiment</Chip> across the AI models that matter — then fix the gaps that cost you signups.
           </p>
 
           {/* URL audit */}
-          <div className="mt-8 w-full max-w-[540px]">
-            <div className="flex items-center gap-2 h-12 md:h-14 pl-5 pr-2 rounded-full bg-white border border-hairline shadow-[0_10px_30px_-15px_rgba(15,45,82,0.25)]">
+          <div className="mt-7 w-full max-w-[540px]">
+            <div className="flex items-center gap-2 h-12 md:h-14 pl-5 pr-2 rounded-full bg-white border border-white/40 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.4)]">
               <input
                 type="url"
                 placeholder="yoursaas.com"
@@ -161,15 +184,15 @@ export function Hero() {
                 Check my AI score
               </button>
             </div>
-            <div className="mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-neutral-500">
+            <div className="mt-3 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[13px] text-white/80">
               <span className="flex items-center gap-1.5">
-                <svg className="w-3.5 h-3.5 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <svg className="w-3.5 h-3.5 text-emerald-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
                 Score in under 30 seconds
               </span>
               <span className="flex items-center gap-1.5">
-                <svg className="w-3.5 h-3.5 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <svg className="w-3.5 h-3.5 text-emerald-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
                 No credit card, no sales call
@@ -177,30 +200,31 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Two CTAs */}
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
+          {/* Primary CTA + secondary text link */}
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-5">
             <a
               href="#"
-              className="inline-flex items-center gap-2 h-11 px-6 rounded-full bg-cta text-cta-foreground text-[14px] font-medium shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:bg-cta/90 transition-colors"
+              className="inline-flex items-center gap-2 h-12 px-7 rounded-full bg-cta text-cta-foreground text-[15px] font-semibold shadow-[0_10px_30px_-8px_rgba(56,189,248,0.5)] hover:bg-cta/90 transition-colors"
             >
               Start now
               <span aria-hidden="true">→</span>
             </a>
             <a
               href="#"
-              className="inline-flex items-center gap-2 h-11 px-6 rounded-full bg-white border border-hairline text-ink text-[14px] font-medium hover:bg-neutral-50 transition-colors"
+              className="inline-flex items-center gap-1.5 text-[14px] font-medium text-white/85 hover:text-white transition-colors underline-offset-4 hover:underline"
             >
               Book a demo
+              <span aria-hidden="true">→</span>
             </a>
           </div>
 
-          {/* Trust bar — avatars + stars + line, centered */}
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-            <div className="flex -space-x-2">
+          {/* Trust bar — compact pill, TrendTrack style */}
+          <div className="mt-8 inline-flex flex-wrap items-center justify-center gap-3 rounded-full border border-white/15 bg-white/10 backdrop-blur-md px-4 py-2 max-w-full">
+            <div className="flex -space-x-2 shrink-0">
               {["MR", "JL", "AK", "SC", "DK"].map((initials, i) => (
                 <div
                   key={i}
-                  className={`inline-flex items-center justify-center h-8 w-8 rounded-full border-2 border-white text-[10px] font-semibold text-white ${
+                  className={`inline-flex items-center justify-center h-7 w-7 rounded-full border-2 border-[#1a1410] text-[10px] font-semibold text-white ${
                     i % 2 === 0 ? "bg-cta" : "bg-cta/70"
                   }`}
                 >
@@ -208,44 +232,33 @@ export function Hero() {
                 </div>
               ))}
             </div>
-            <div className="flex items-center gap-0.5">
+            <div className="flex items-center gap-0.5 shrink-0">
               {[...Array(5)].map((_, i) => (
-                <svg key={i} className="w-4 h-4 text-star" fill="currentColor" viewBox="0 0 20 20">
+                <svg key={i} className="w-3.5 h-3.5 text-star" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
               ))}
             </div>
-            <p className="text-[13px] md:text-[14px] font-medium text-ink max-w-[380px] text-left">
+            <p className="text-[12.5px] md:text-[13px] font-medium text-white min-w-0">
               Built with founders in the beta cohort — not for enterprise SEO teams
             </p>
           </div>
 
-          {/* Honest pre-launch proof line — stat row */}
-          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 text-[12.5px] text-neutral-500">
+          {/* Honest pre-launch proof line */}
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 text-[12.5px] text-white/70">
             <span className="flex items-center gap-1.5">
-              <span className="h-1.5 w-1.5 rounded-full bg-sky-500" />
+              <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
               6 AI models tracked
             </span>
-            <span className="hidden sm:inline text-neutral-300">·</span>
+            <span className="hidden sm:inline text-white/30">·</span>
             <span>Built in public by a solo founder</span>
-            <span className="hidden sm:inline text-neutral-300">·</span>
+            <span className="hidden sm:inline text-white/30">·</span>
             <span>Founding price locked for life</span>
           </div>
         </div>
-
-        {/* Contained painterly Hawaii illustration — Speechly-style card */}
-        <div className="mx-auto max-w-[1200px] px-6 pb-20 md:pb-28">
-          <div className="relative rounded-[28px] overflow-hidden bg-[#e8a86c] shadow-[0_40px_100px_-30px_rgba(15,45,82,0.45)] ring-1 ring-black/5 aspect-[16/9] md:aspect-[21/9]">
-            <img
-              src={heroImage}
-              alt="Painterly illustration of a surfer riding a Hawaiian wave at sunset"
-              width={2100}
-              height={900}
-              className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none"
-            />
-          </div>
-        </div>
       </div>
+
+
 
 
 
@@ -1091,8 +1104,23 @@ function SiteFooter() {
     { title: "Comparison", links: ["{{PRODUCT_NAME}} vs Peec AI", "{{PRODUCT_NAME}} vs Otterly", "{{PRODUCT_NAME}} vs Profound", "{{PRODUCT_NAME}} vs Ahrefs"] },
   ];
   return (
-    <footer className="bg-[#0a0a0a] text-white">
-      <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-10">
+    <footer className="relative overflow-hidden bg-[#0a0a0a] text-white">
+      <img
+        src={heroImage}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none"
+        style={{ filter: "saturate(0.6) brightness(0.4)" }}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.92) 60%, rgba(10,10,10,0.98) 100%)",
+        }}
+      />
+      <div className="relative mx-auto max-w-[1400px] px-6 pt-24 pb-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
