@@ -190,7 +190,7 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Honest pre-launch proof line */}
+          {/* Neutral proof line */}
           <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 text-[12.5px] text-white/70">
             <span className="flex items-center gap-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
@@ -198,9 +198,8 @@ export function Hero() {
             </span>
             <span className="hidden sm:inline text-white/30">·</span>
             <span>Built in public by a solo founder</span>
-            <span className="hidden sm:inline text-white/30">·</span>
-            <span>Founding price locked for life</span>
           </div>
+
         </div>
       </div>
 
