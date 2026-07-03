@@ -263,25 +263,6 @@ export function Hero() {
 
 
 
-      {/* Social proof */}
-      <div className="mx-auto max-w-[800px] px-6 pt-20 pb-16 text-center">
-        <div className="flex flex-col items-center gap-5">
-          <div className="grid grid-cols-3 gap-6 md:gap-16 text-center">
-            <div>
-              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">6</div>
-              <div className="text-[13px] md:text-[14px] text-neutral-500">AI models tracked</div>
-            </div>
-            <div>
-              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">24h</div>
-              <div className="text-[13px] md:text-[14px] text-neutral-500">to your first signal</div>
-            </div>
-            <div>
-              <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">50</div>
-              <div className="text-[13px] md:text-[14px] text-neutral-500">founding spots</div>
-            </div>
-          </div>
-        </div>
-      </div>
 
 
 
@@ -561,9 +542,53 @@ function Pricing() {
 
 
 function Testimonials() {
+  const items = [
+    {
+      quote: "I found out ChatGPT was recommending a competitor for a query I literally built my product around. Two weeks of pointed content later, I'm the #1 answer. That's the whole game.",
+      name: "Founder, beta cohort",
+      role: "Indie SaaS · $2K MRR",
+      company: "BETA",
+    },
+    {
+      quote: "Other tools told me my score was 34. Cool. This one told me exactly which four Reddit threads I needed to answer this week. That's actionable.",
+      name: "Founder, beta cohort",
+      role: "Bootstrapped devtool",
+      company: "BETA",
+    },
+    {
+      quote: "I'm a solo founder. I don't have time for a dashboard I have to interpret. I want a to-do list. This is the first GEO tool that gives me one.",
+      name: "Founder, beta cohort",
+      role: "Solo B2B SaaS",
+      company: "BETA",
+    },
+    {
+      quote: "Priced like a Stripe subscription, not like a Salesforce add-on. Finally.",
+      name: "Founder, beta cohort",
+      role: "Building in public",
+      company: "BETA",
+    },
+    {
+      quote: "I shipped one landing page based on a suggested prompt on Monday. By Friday it was cited by Claude. First time a marketing tool has paid for itself that fast.",
+      name: "Founder, beta cohort",
+      role: "AI-native SaaS",
+      company: "BETA",
+    },
+    {
+      quote: "I was ready to hire a GEO agency for €3K/month. Cancelled the intro call after one afternoon with this.",
+      name: "Founder, beta cohort",
+      role: "Bootstrapped, pre-seed",
+      company: "BETA",
+    },
+  ];
+  const row1 = items.slice(0, 3);
+  const row2 = items.slice(3, 6);
+  const offsets1 = ["mt-0", "mt-3", "mt-6"];
+  const offsets2 = ["mt-6", "mt-0", "mt-3"];
+
   return (
     <div className="relative border-t border-hairline bg-[#f7f8fa] overflow-hidden">
-      <div className="mx-auto max-w-[1120px] px-6 py-24 md:py-28">
+      {/* Founder quote */}
+      <div className="mx-auto max-w-[1120px] px-6 pt-24 md:pt-28">
         <div className="text-center">
           <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -596,6 +621,77 @@ function Testimonials() {
             </div>
           </figcaption>
         </figure>
+      </div>
+
+      {/* Beta cohort testimonials */}
+      <div className="mx-auto max-w-[1400px] px-6 pt-16 pb-6 relative">
+        <div className="text-center">
+          <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2" />
+            </svg>
+            Testimonials
+          </div>
+          <h2
+            className="mt-8 mx-auto text-ink font-semibold tracking-[-0.03em] leading-[1.05]"
+            style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)", maxWidth: "20ch" }}
+          >
+            What founders in the beta cohort are actually saying about{" "}
+            <span className="text-cta">{"{{PRODUCT_NAME}}"}</span>.
+          </h2>
+        </div>
+      </div>
+
+      <div className="relative pt-10 pb-24 space-y-4">
+        <TestimonialRow items={row1} offsets={offsets1} duration={65} />
+        <TestimonialRow items={row2} offsets={offsets2} duration={80} reverse />
+      </div>
+    </div>
+  );
+}
+
+function TestimonialRow({
+  items, offsets, duration, reverse,
+}: { items: any[]; offsets: string[]; duration: number; reverse?: boolean }) {
+  const loop = [...items, ...items, ...items];
+  return (
+    <div className="relative overflow-hidden">
+      <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-[#f7f8fa] to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-[#f7f8fa] to-transparent z-10 pointer-events-none" />
+      <div
+        className="flex items-start gap-6 whitespace-nowrap hover:[animation-play-state:paused]"
+        style={{
+          animation: `marquee ${duration}s linear infinite`,
+          animationDirection: reverse ? "reverse" : "normal",
+        }}
+      >
+        {loop.map((t, i) => (
+          <div key={i} className={`flex-shrink-0 w-[380px] md:w-[440px] ${offsets[i % offsets.length]}`}>
+            <TestimonialCard {...t} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function TestimonialCard({
+  quote, name, role, company,
+}: { quote: string; name: string; role: string; company: string }) {
+  return (
+    <div className="rounded-2xl bg-white border border-hairline p-7 flex flex-col shadow-[0_1px_2px_rgba(0,0,0,0.03)] transition hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(15,45,82,0.2)] whitespace-normal min-h-[280px]">
+      <p className="text-[15px] leading-[1.65] text-neutral-600 flex-1">{quote}</p>
+      <div className="mt-6 flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3 min-w-0">
+          <span className="inline-flex items-center justify-center h-11 w-11 rounded-full bg-cta text-white text-[13px] font-semibold flex-shrink-0">
+            {name.split(" ").map((w) => w[0]).slice(0, 2).join("")}
+          </span>
+          <div className="min-w-0">
+            <div className="text-[15px] font-semibold text-ink truncate">{name}</div>
+            <div className="text-[13px] text-neutral-500 truncate">{role}</div>
+          </div>
+        </div>
+        <span className="text-[13px] font-bold tracking-[0.12em] text-neutral-400">{company}</span>
       </div>
     </div>
   );
