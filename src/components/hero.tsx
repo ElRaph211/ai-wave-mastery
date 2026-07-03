@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import heroImage from "@/assets/hero-hawaii-painterly.jpg";
-import featuresPixel from "@/assets/features-hawaii-painterly.jpg";
 import founderPhoto from "@/assets/founder-raphael.jpg";
 
 const AI_PLATFORMS = [
@@ -198,8 +196,34 @@ export function Hero() {
                 </a>
               </div>
 
+              {/* Trust bar — avatars + stars + line, in-hero */}
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <div className="flex -space-x-2">
+                  {["MR", "JL", "AK", "SC", "DK"].map((initials, i) => (
+                    <div
+                      key={i}
+                      className={`inline-flex items-center justify-center h-8 w-8 rounded-full border-2 border-white text-[10px] font-semibold text-white ${
+                        i % 2 === 0 ? "bg-cta" : "bg-cta/70"
+                      }`}
+                    >
+                      {initials}
+                    </div>
+                  ))}
+                </div>
+                <div className="flex items-center gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-4 h-4 text-star" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-[13px] md:text-[14px] font-medium text-ink max-w-[380px]">
+                  Built with founders in the beta cohort — not for enterprise SEO teams
+                </p>
+              </div>
+
               {/* Honest pre-launch proof line */}
-              <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[12.5px] text-neutral-500">
+              <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[12.5px] text-neutral-500">
                 <span className="flex items-center gap-1.5">
                   <span className="h-1.5 w-1.5 rounded-full bg-sky-500" />
                   6 AI models tracked
@@ -211,16 +235,72 @@ export function Hero() {
               </div>
             </div>
 
-            {/* RIGHT — painterly illustration, uncropped */}
+            {/* RIGHT — clean minimal product preview on soft gradient */}
             <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden bg-[#e8a86c] shadow-[0_30px_80px_-30px_rgba(15,45,82,0.35)] aspect-[4/5] lg:aspect-[5/6]">
-                <img
-                  src={heroImage}
-                  alt="Painterly illustration of a surfer riding a Hawaiian wave at sunset"
-                  width={1200}
-                  height={1400}
-                  className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none"
+              <div className="relative rounded-3xl overflow-hidden aspect-[4/5] lg:aspect-[5/6] bg-gradient-to-br from-[#0b1220] via-[#0f1a2e] to-[#0b1220] shadow-[0_30px_80px_-30px_rgba(15,45,82,0.35)]">
+                {/* subtle grid */}
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0 opacity-[0.07]"
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)",
+                    backgroundSize: "36px 36px",
+                  }}
                 />
+                {/* corner glow */}
+                <div
+                  aria-hidden="true"
+                  className="absolute -top-32 -right-32 h-[420px] w-[420px] rounded-full"
+                  style={{ background: "radial-gradient(circle, rgba(56,189,248,0.35), transparent 65%)" }}
+                />
+                {/* subtle abstract wave — vestigial ocean motif */}
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 500 120"
+                  preserveAspectRatio="none"
+                  className="absolute inset-x-0 bottom-0 w-full h-32"
+                >
+                  <defs>
+                    <linearGradient id="wave-fade" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.35" />
+                      <stop offset="100%" stopColor="#38bdf8" stopOpacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,70 C120,20 260,110 380,50 C440,20 480,60 500,50 L500,120 L0,120 Z" fill="url(#wave-fade)" />
+                </svg>
+
+                {/* floating dashboard preview card */}
+                <div className="absolute inset-0 flex items-center justify-center p-6 md:p-10">
+                  <div className="w-full max-w-[380px] rounded-2xl bg-white/[0.97] backdrop-blur border border-white/60 p-6 shadow-[0_30px_60px_-20px_rgba(0,0,0,0.5)]">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <span className="relative flex h-2 w-2">
+                          <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
+                          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                        </span>
+                        <span className="text-[12px] font-medium text-neutral-500">Live · yoursaas.com</span>
+                      </div>
+                      <span className="text-[11px] text-neutral-400">2m ago</span>
+                    </div>
+
+                    <div className="mt-6 space-y-5">
+                      <MetricRow label="Visibility" value="68%" pct={68} tone="sky" />
+                      <MetricRow label="Position" value="#3" pct={80} tone="ink" />
+                      <MetricRow label="Sentiment" value="92%" pct={92} tone="emerald" />
+                    </div>
+
+                    <div className="mt-6 pt-5 border-t border-hairline">
+                      <div className="text-[10px] uppercase tracking-[0.14em] text-neutral-400 font-semibold">Next action</div>
+                      <div className="mt-2 flex items-start gap-2">
+                        <span className="mt-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-cta/10 text-cta text-[10px] font-bold flex-shrink-0">→</span>
+                        <div className="text-[13px] font-medium text-ink leading-snug">
+                          Answer r/SaaS thread — high citation odds
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -232,30 +312,6 @@ export function Hero() {
       {/* Social proof */}
       <div className="mx-auto max-w-[800px] px-6 pt-20 pb-16 text-center">
         <div className="flex flex-col items-center gap-5">
-          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
-            <div className="flex -space-x-2">
-              {["MR", "JL", "AK", "SC", "DK"].map((initials, i) => (
-                <div
-                  key={i}
-                  className={`inline-flex items-center justify-center h-9 w-9 rounded-full border-2 border-white text-[11px] font-semibold text-white ${
-                    i % 2 === 0 ? "bg-cta" : "bg-cta/70"
-                  }`}
-                >
-                  {initials}
-                </div>
-              ))}
-            </div>
-            <div className="flex items-center gap-0.5">
-              {[...Array(5)].map((_, i) => (
-                <svg key={i} className="w-4 h-4 text-star" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
-            </div>
-            <p className="text-[16px] md:text-[18px] font-semibold text-ink">
-              Built with founders in the beta cohort — not for enterprise SEO teams
-            </p>
-          </div>
           <div className="grid grid-cols-3 gap-6 md:gap-16 text-center">
             <div>
               <div className="text-[28px] md:text-[40px] font-semibold tracking-tight text-ink">6</div>
@@ -320,7 +376,7 @@ export function Hero() {
 
 
       {/* AI Search Metrics section */}
-      <div className="border-t border-hairline bg-[#faf5ec]">
+      <div className="border-t border-hairline bg-[#f7f8fa]">
         <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-16 text-center">
           <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -498,7 +554,7 @@ function Pricing() {
     : `You save €${monthlySavings}/month`;
 
   return (
-    <section className="relative bg-[#faf5ec] border-y border-hairline bg-grid">
+    <section className="relative bg-[#f7f8fa] border-y border-hairline bg-grid">
       <div className="mx-auto max-w-[1120px] px-6 py-24 md:py-28">
         <div className="text-center">
           <div className="inline-flex items-center gap-3 text-[12px] font-semibold tracking-[0.22em] text-sky-600 uppercase">
@@ -619,7 +675,7 @@ function Testimonials() {
   const offsets1 = ["mt-0", "mt-3", "mt-6"];
   const offsets2 = ["mt-6", "mt-0", "mt-3"];
   return (
-    <div className="relative border-t border-hairline bg-[#faf5ec] overflow-hidden">
+    <div className="relative border-t border-hairline bg-[#f7f8fa] overflow-hidden">
       <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-6 relative">
         <div className="text-center">
           <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
@@ -652,8 +708,8 @@ function TestimonialRow({
   const loop = [...items, ...items, ...items];
   return (
     <div className="relative overflow-hidden">
-      <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-[#faf5ec] to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-[#faf5ec] to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-[#f7f8fa] to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-[#f7f8fa] to-transparent z-10 pointer-events-none" />
       <div
         className="flex items-start gap-6 whitespace-nowrap hover:[animation-play-state:paused]"
         style={{
@@ -695,25 +751,32 @@ function TestimonialCard({
 
 function KeyFeaturesPixel() {
   return (
-    <div className="relative overflow-hidden border-t border-hairline bg-[#e8895a]">
-      <img
-        src={featuresPixel}
-        alt="Painterly Hawaiian sunset with cliff, waterfall and hibiscus"
-        width={1024}
-        height={1408}
-        loading="lazy"
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
-      />
-      {/* Warm dark overlay so white type stays crisp */}
+    <div className="relative overflow-hidden border-t border-hairline bg-gradient-to-b from-[#0a1120] via-[#0d1830] to-[#0a1120]">
+      {/* Subtle grid */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/45 to-black/60"
+        className="absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
+        }}
       />
-      {/* Bottom fade to cream page */}
+      {/* Ambient corner glows */}
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#faf5ec] to-transparent"
+        className="absolute -top-40 -left-40 h-[560px] w-[560px] rounded-full"
+        style={{ background: "radial-gradient(circle, rgba(56,189,248,0.22), transparent 65%)" }}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute -bottom-40 -right-40 h-[560px] w-[560px] rounded-full"
+        style={{ background: "radial-gradient(circle, rgba(56,189,248,0.15), transparent 65%)" }}
+      />
+      {/* Bottom fade to white page */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent"
       />
 
       <div className="relative mx-auto max-w-[1400px] px-6 pt-24 md:pt-32 pb-16">
@@ -1308,6 +1371,24 @@ function Chip({ icon, children, className }: { icon: React.ReactNode; children: 
       {icon}
       {children}
     </span>
+  );
+}
+
+function MetricRow({
+  label, value, pct, tone,
+}: { label: string; value: string; pct: number; tone: "sky" | "ink" | "emerald" }) {
+  const barTone =
+    tone === "sky" ? "bg-sky-500" : tone === "emerald" ? "bg-emerald-500" : "bg-ink";
+  return (
+    <div>
+      <div className="flex items-baseline justify-between">
+        <span className="text-[12px] font-medium text-neutral-500">{label}</span>
+        <span className="text-[15px] font-semibold text-ink tabular-nums">{value}</span>
+      </div>
+      <div className="mt-2 h-1.5 rounded-full bg-neutral-100 overflow-hidden">
+        <div className={`h-full rounded-full ${barTone}`} style={{ width: `${pct}%` }} />
+      </div>
+    </div>
   );
 }
 
