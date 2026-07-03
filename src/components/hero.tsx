@@ -284,36 +284,8 @@ export function Hero() {
       </div>
 
 
-      {/* Video sales letter placeholder */}
-      <div className="border-t border-hairline bg-white bg-grid">
-        <div className="mx-auto max-w-[960px] px-6 py-20">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-              <span className="h-2 w-2 rounded-full bg-cta" />
-              2-min walkthrough
-            </div>
-            <h2 className="mt-6 text-ink font-semibold tracking-[-0.03em]" style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)" }}>
-              What ChatGPT tells your next signup about you.
-            </h2>
-          </div>
-          <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-hairline bg-[#0b1220] shadow-[0_30px_80px_-30px_rgba(15,45,82,0.45)] group cursor-pointer">
-            <div className="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_50%,rgba(56,189,248,0.25),transparent_70%)]" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <button
-                aria-label="Play video"
-                className="flex items-center justify-center h-20 w-20 rounded-full bg-cta text-cta-foreground shadow-[0_10px_30px_rgba(56,189,248,0.6)] transition-transform group-hover:scale-110"
-              >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </button>
-            </div>
-            <div className="absolute bottom-4 left-4 text-white/80 text-[13px] font-medium">
-              {"{{PRODUCT_NAME}}"} — Founder walkthrough · 2:14
-            </div>
-          </div>
-        </div>
-      </div>
+
+
 
       {/* Unified SaaS trust block */}
       <div className="border-t border-hairline bg-white">
