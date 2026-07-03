@@ -604,33 +604,30 @@ function Testimonials() {
 
 function KeyFeaturesPixel() {
   return (
-    <div className="relative overflow-hidden border-t border-hairline bg-gradient-to-b from-[#0a1120] via-[#0d1830] to-[#0a1120]">
-      {/* Subtle grid */}
+    <div className="relative overflow-hidden border-t border-hairline bg-[#0a1120]">
+      {/* Painterly Hawaii full-bleed background */}
+      <img
+        src={heroImage}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none"
+        style={{ filter: "saturate(0.7) brightness(0.5)" }}
+      />
+      {/* Readability overlay */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 opacity-[0.06]"
+        className="absolute inset-0"
         style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
+          background:
+            "linear-gradient(to bottom, rgba(10,17,32,0.65) 0%, rgba(10,17,32,0.55) 50%, rgba(10,17,32,0.85) 100%)",
         }}
-      />
-      {/* Ambient corner glows */}
-      <div
-        aria-hidden="true"
-        className="absolute -top-40 -left-40 h-[560px] w-[560px] rounded-full"
-        style={{ background: "radial-gradient(circle, rgba(56,189,248,0.22), transparent 65%)" }}
-      />
-      <div
-        aria-hidden="true"
-        className="absolute -bottom-40 -right-40 h-[560px] w-[560px] rounded-full"
-        style={{ background: "radial-gradient(circle, rgba(56,189,248,0.15), transparent 65%)" }}
       />
       {/* Bottom fade to white page */}
       <div
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent"
       />
+
 
       <div className="relative mx-auto max-w-[1400px] px-6 pt-24 md:pt-32 pb-16">
         <div className="text-center">
