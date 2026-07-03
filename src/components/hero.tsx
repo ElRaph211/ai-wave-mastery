@@ -284,36 +284,8 @@ export function Hero() {
       </div>
 
 
-      {/* Video sales letter placeholder */}
-      <div className="border-t border-hairline bg-white bg-grid">
-        <div className="mx-auto max-w-[960px] px-6 py-20">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
-              <span className="h-2 w-2 rounded-full bg-cta" />
-              2-min walkthrough
-            </div>
-            <h2 className="mt-6 text-ink font-semibold tracking-[-0.03em]" style={{ fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)" }}>
-              What ChatGPT tells your next signup about you.
-            </h2>
-          </div>
-          <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-hairline bg-[#0b1220] shadow-[0_30px_80px_-30px_rgba(15,45,82,0.45)] group cursor-pointer">
-            <div className="absolute inset-0 bg-[radial-gradient(60%_60%_at_50%_50%,rgba(56,189,248,0.25),transparent_70%)]" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <button
-                aria-label="Play video"
-                className="flex items-center justify-center h-20 w-20 rounded-full bg-cta text-cta-foreground shadow-[0_10px_30px_rgba(56,189,248,0.6)] transition-transform group-hover:scale-110"
-              >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </button>
-            </div>
-            <div className="absolute bottom-4 left-4 text-white/80 text-[13px] font-medium">
-              {"{{PRODUCT_NAME}}"} — Founder walkthrough · 2:14
-            </div>
-          </div>
-        </div>
-      </div>
+
+
 
       {/* Unified SaaS trust block */}
       <div className="border-t border-hairline bg-white">
@@ -533,29 +505,32 @@ function Pricing() {
               <span className="text-neutral-500 text-[18px]">{suffix}</span>
             </div>
 
-            <div className="mt-5 flex items-center justify-center">
-              <div className="relative inline-flex items-center p-1 rounded-full bg-neutral-100 border border-hairline">
+            <div className="mt-5 flex items-center justify-center gap-3">
+              <div className="relative inline-flex items-center p-1 rounded-full bg-neutral-100 border border-hairline w-[260px]">
                 <span
                   aria-hidden="true"
-                  className={`absolute top-1 bottom-1 w-[calc(50%-4px)] rounded-full bg-ink shadow-sm transition-transform duration-200 ease-out ${yearly ? "translate-x-full" : "translate-x-0"}`}
-                  style={{ left: 4 }}
+                  className={`absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] rounded-full bg-ink shadow-sm transition-transform duration-200 ease-out ${yearly ? "translate-x-full" : "translate-x-0"}`}
                 />
                 <button
                   type="button"
                   onClick={() => setYearly(false)}
-                  className={`relative z-10 h-9 px-5 rounded-full text-[13px] font-medium transition-colors ${!yearly ? "text-white" : "text-neutral-600 hover:text-ink"}`}
+                  className={`relative z-10 flex-1 h-9 rounded-full text-[13px] font-medium transition-colors ${!yearly ? "text-white" : "text-neutral-600 hover:text-ink"}`}
                 >
                   Monthly
                 </button>
                 <button
                   type="button"
                   onClick={() => setYearly(true)}
-                  className={`relative z-10 h-9 px-5 rounded-full text-[13px] font-medium transition-colors ${yearly ? "text-white" : "text-neutral-600 hover:text-ink"}`}
+                  className={`relative z-10 flex-1 h-9 rounded-full text-[13px] font-medium transition-colors ${yearly ? "text-white" : "text-neutral-600 hover:text-ink"}`}
                 >
-                  Yearly <span className={yearly ? "text-emerald-300" : "text-emerald-600"}>· 2 months free</span>
+                  Yearly
                 </button>
               </div>
+              <span className="inline-flex items-center h-7 px-2.5 rounded-full bg-emerald-50 text-emerald-700 text-[11.5px] font-semibold whitespace-nowrap">
+                2 months free
+              </span>
             </div>
+
 
 
             <div className="mt-5 inline-flex items-center rounded-full bg-sky-50 text-sky-700 px-4 py-1.5 text-[13px] font-semibold">
@@ -586,152 +561,73 @@ function Pricing() {
 
 
 function Testimonials() {
-  const items = [
-    {
-      quote: "I found out ChatGPT was recommending a competitor for a query I literally built my product around. Two weeks of pointed content later, I'm the #1 answer. That's the whole game.",
-      name: "Founder, beta cohort",
-      role: "Indie SaaS · $2K MRR",
-      company: "BETA",
-    },
-    {
-      quote: "Other tools told me my score was 34. Cool. This one told me exactly which four Reddit threads I needed to answer this week. That's actionable.",
-      name: "Founder, beta cohort",
-      role: "Bootstrapped devtool",
-      company: "BETA",
-    },
-    {
-      quote: "I'm a solo founder. I don't have time for a dashboard I have to interpret. I want a to-do list. This is the first GEO tool that gives me one.",
-      name: "Founder, beta cohort",
-      role: "Solo B2B SaaS",
-      company: "BETA",
-    },
-    {
-      quote: "Priced like a Stripe subscription, not like a Salesforce add-on. Finally.",
-      name: "Founder, beta cohort",
-      role: "Building in public",
-      company: "BETA",
-    },
-    {
-      quote: "I shipped one landing page based on a suggested prompt on Monday. By Friday it was cited by Claude. First time a marketing tool has paid for itself that fast.",
-      name: "Founder, beta cohort",
-      role: "AI-native SaaS",
-      company: "BETA",
-    },
-    {
-      quote: "I was ready to hire a GEO agency for €3K/month. Cancelled the intro call after one afternoon with this.",
-      name: "Founder, beta cohort",
-      role: "Bootstrapped, pre-seed",
-      company: "BETA",
-    },
-  ];
-  const row1 = items.slice(0, 3);
-  const row2 = items.slice(3, 6);
-  const offsets1 = ["mt-0", "mt-3", "mt-6"];
-  const offsets2 = ["mt-6", "mt-0", "mt-3"];
   return (
     <div className="relative border-t border-hairline bg-[#f7f8fa] overflow-hidden">
-      <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-6 relative">
+      <div className="mx-auto max-w-[1120px] px-6 py-24 md:py-28">
         <div className="text-center">
           <div className="inline-flex items-center gap-2 h-8 px-3 rounded-full border border-hairline bg-white text-[13px] text-ink shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polygon points="12 2 15 8.5 22 9.3 17 14.1 18.2 21 12 17.8 5.8 21 7 14.1 2 9.3 9 8.5 12 2" />
             </svg>
-            Testimonials
+            From the founder
           </div>
-          <h2
-            className="mt-8 mx-auto text-ink font-semibold tracking-[-0.03em] leading-[1.05]"
-            style={{ fontSize: "clamp(2rem, 4.5vw, 3.5rem)", maxWidth: "20ch" }}
+        </div>
+
+        <figure className="mt-12 mx-auto max-w-[980px] rounded-3xl bg-white border border-hairline shadow-[0_30px_80px_-30px_rgba(15,45,82,0.25)] px-8 md:px-20 py-16 md:py-24">
+          <blockquote
+            className="text-center text-ink font-semibold tracking-[-0.02em] leading-[1.2]"
+            style={{ fontSize: "clamp(1.5rem, 2.75vw, 2.5rem)" }}
           >
-            What founders in the beta cohort are actually saying about{" "}
-            <span className="text-cta">{"{{PRODUCT_NAME}}"}</span>.
-          </h2>
-        </div>
-      </div>
-
-      <div className="relative pt-10 pb-20 space-y-4">
-        <TestimonialRow items={row1} offsets={offsets1} duration={65} />
-        <TestimonialRow items={row2} offsets={offsets2} duration={80} reverse />
-      </div>
-    </div>
-  );
-}
-
-function TestimonialRow({
-  items, offsets, duration, reverse,
-}: { items: any[]; offsets: string[]; duration: number; reverse?: boolean }) {
-  const loop = [...items, ...items, ...items];
-  return (
-    <div className="relative overflow-hidden">
-      <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-[#f7f8fa] to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-[#f7f8fa] to-transparent z-10 pointer-events-none" />
-      <div
-        className="flex items-start gap-6 whitespace-nowrap hover:[animation-play-state:paused]"
-        style={{
-          animation: `marquee ${duration}s linear infinite`,
-          animationDirection: reverse ? "reverse" : "normal",
-        }}
-      >
-        {loop.map((t, i) => (
-          <div key={i} className={`flex-shrink-0 w-[380px] md:w-[440px] ${offsets[i % offsets.length]}`}>
-            <TestimonialCard {...t} />
-          </div>
-        ))}
+            Every other GEO tool told me I was invisible.{" "}
+            <span className="text-cta">{"{{PRODUCT_NAME}}"}</span> told me exactly which three pages to ship to fix it. That's the whole difference.
+          </blockquote>
+          <figcaption className="mt-10 flex items-center justify-center gap-4">
+            <img
+              src={founderPhoto}
+              alt="Raphaël, founder"
+              width={56}
+              height={56}
+              loading="lazy"
+              className="h-14 w-14 rounded-full object-cover ring-2 ring-white shadow-[0_6px_20px_-6px_rgba(15,45,82,0.35)]"
+            />
+            <div className="text-left">
+              <div className="text-[15px] font-semibold text-ink">Raphaël</div>
+              <div className="text-[13px] text-neutral-500">Founder, {"{{PRODUCT_NAME}}"} · building in public</div>
+            </div>
+          </figcaption>
+        </figure>
       </div>
     </div>
   );
 }
 
-function TestimonialCard({
-  quote, name, role, company,
-}: { quote: string; name: string; role: string; company: string }) {
-  return (
-    <div className="rounded-2xl bg-white border border-hairline p-7 flex flex-col shadow-[0_1px_2px_rgba(0,0,0,0.03)] transition hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(15,45,82,0.2)] whitespace-normal min-h-[280px]">
-      <p className="text-[15px] leading-[1.65] text-neutral-600 flex-1">{quote}</p>
-      <div className="mt-6 flex items-center justify-between gap-4">
-        <div className="flex items-center gap-3 min-w-0">
-          <span className="inline-flex items-center justify-center h-11 w-11 rounded-full bg-cta text-white text-[13px] font-semibold flex-shrink-0">
-            {name.split(" ").map((w) => w[0]).slice(0, 2).join("")}
-          </span>
-          <div className="min-w-0">
-            <div className="text-[15px] font-semibold text-ink truncate">{name}</div>
-            <div className="text-[13px] text-neutral-500 truncate">{role}</div>
-          </div>
-        </div>
-        <span className="text-[13px] font-bold tracking-[0.12em] text-neutral-400">{company}</span>
-      </div>
-    </div>
-  );
-}
 
 function KeyFeaturesPixel() {
   return (
-    <div className="relative overflow-hidden border-t border-hairline bg-gradient-to-b from-[#0a1120] via-[#0d1830] to-[#0a1120]">
-      {/* Subtle grid */}
+    <div className="relative overflow-hidden border-t border-hairline bg-[#0a1120]">
+      {/* Painterly Hawaii full-bleed background */}
+      <img
+        src={heroImage}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none"
+        style={{ filter: "saturate(0.7) brightness(0.5)" }}
+      />
+      {/* Readability overlay */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 opacity-[0.06]"
+        className="absolute inset-0"
         style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
+          background:
+            "linear-gradient(to bottom, rgba(10,17,32,0.65) 0%, rgba(10,17,32,0.55) 50%, rgba(10,17,32,0.85) 100%)",
         }}
-      />
-      {/* Ambient corner glows */}
-      <div
-        aria-hidden="true"
-        className="absolute -top-40 -left-40 h-[560px] w-[560px] rounded-full"
-        style={{ background: "radial-gradient(circle, rgba(56,189,248,0.22), transparent 65%)" }}
-      />
-      <div
-        aria-hidden="true"
-        className="absolute -bottom-40 -right-40 h-[560px] w-[560px] rounded-full"
-        style={{ background: "radial-gradient(circle, rgba(56,189,248,0.15), transparent 65%)" }}
       />
       {/* Bottom fade to white page */}
       <div
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent"
       />
+
 
       <div className="relative mx-auto max-w-[1400px] px-6 pt-24 md:pt-32 pb-16">
         <div className="text-center">
@@ -786,23 +682,6 @@ function KeyFeaturesPixel() {
           />
         </div>
 
-        {/* Featured quote */}
-        <div className="mt-16 rounded-3xl bg-white/95 backdrop-blur border border-white/70 shadow-[0_30px_80px_-30px_rgba(15,45,82,0.45)] px-8 md:px-20 py-16 md:py-24">
-          <p
-            className="mx-auto max-w-[1000px] text-center text-ink font-semibold tracking-[-0.02em] leading-[1.2]"
-            style={{ fontSize: "clamp(1.5rem, 2.75vw, 2.5rem)" }}
-          >
-            Every other GEO tool told me I was invisible.{" "}
-            <span className="text-cta">{"{{PRODUCT_NAME}}"}</span> told me exactly which three pages to ship to fix it. That's the whole difference.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-4">
-            <span className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-cta text-white font-semibold text-[14px]">R</span>
-            <div className="text-left">
-              <div className="text-[15px] font-semibold text-ink">Raphaël</div>
-              <div className="text-[13px] text-neutral-500">Founder, {"{{PRODUCT_NAME}}"} · building in public</div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
