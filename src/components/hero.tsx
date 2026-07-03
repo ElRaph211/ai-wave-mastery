@@ -1140,7 +1140,7 @@ function SiteFooter() {
         </div>
 
         <div className="mt-20 border-t border-white/10 pt-8 text-[14px] text-white/60">
-          {"{{PRODUCT_NAME}}"} is built in public by a solo founder for solo founders — follow the build on X.
+          {"{{PRODUCT_NAME}}"} is built in public by a solo founder for solo founders. Follow the build on X.
         </div>
         <div className="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[13px] text-white/50">
           <div>© {new Date().getFullYear()} {"{{PRODUCT_NAME}}"}. All rights reserved.</div>
