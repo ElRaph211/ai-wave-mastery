@@ -186,7 +186,7 @@ export function Hero() {
               ))}
             </div>
             <p className="text-[12.5px] md:text-[13px] font-medium text-white min-w-0">
-              Built with founders in the beta cohort. Not for enterprise SEO teams.
+              Built for indie SaaS founders. Not for enterprise SEO teams.
             </p>
           </div>
 
