@@ -46,22 +46,11 @@ function RotatingPlatform() {
 export function Hero() {
   return (
     <section className="relative bg-white">
-      {/* Pre-sale banner — dark, founding access style */}
+      {/* Evergreen top strip */}
       <div className="w-full bg-[#0b1220] text-white">
-        <div className="mx-auto max-w-[1400px] px-6 h-11 flex items-center justify-between gap-4 text-[13px]">
-          <div className="flex items-center gap-2 font-medium">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-            </span>
-            Founding cohort open
-          </div>
-          <div className="hidden md:block text-neutral-400">
-            First 50 founders get lifetime pricing. No enterprise sales call, no annual contract.
-          </div>
-          <a href="#" className="font-medium underline underline-offset-4 decoration-neutral-500 hover:decoration-white transition-colors whitespace-nowrap">
-            Claim a spot →
-          </a>
+        <div className="mx-auto max-w-[1400px] px-6 h-11 flex items-center justify-center gap-3 text-[13px] text-neutral-300">
+          <span className="inline-flex h-1.5 w-1.5 rounded-full bg-cta" />
+          The clean way to see how AI is surfacing your SaaS.
         </div>
       </div>
 
@@ -70,8 +59,7 @@ export function Hero() {
       <header className="border-b border-hairline bg-white">
         <div className="relative mx-auto max-w-[1400px] px-6 h-16 flex items-center justify-between">
           <a href="/" className="flex items-center gap-2">
-            <span className="inline-block h-5 w-5 rounded-[4px] bg-ink" />
-            <span className="text-[17px] font-semibold tracking-tight text-ink">{"{{PRODUCT_NAME}}"}</span>
+            <Wordmark />
           </a>
           <nav className="hidden md:flex items-center gap-8 text-[14px] font-medium text-ink absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <a href="#" className="hover:text-ink-muted transition-colors">Features</a>
@@ -90,7 +78,7 @@ export function Hero() {
               href="#"
               className="inline-flex items-center gap-2 h-10 px-5 rounded-full bg-cta text-cta-foreground text-[14px] font-medium hover:bg-cta/90 transition-colors shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
             >
-              Book a demo
+              Start now
               <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -98,39 +86,22 @@ export function Hero() {
       </header>
 
 
-      {/* Hero — centered stack over a subtle painterly Hawaii background */}
-      <div className="relative overflow-hidden bg-[#1a1410]">
-        {/* Painterly full-bleed background */}
-        <img
-          src={heroImage}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none scale-105 blur-[1px]"
-          style={{ filter: "saturate(0.75) brightness(0.75)" }}
-        />
-        {/* Readability overlay — darker at edges, lighter behind text */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(60% 55% at 50% 42%, rgba(10,15,25,0.15) 0%, rgba(10,15,25,0.55) 65%, rgba(10,15,25,0.85) 100%)",
-          }}
-        />
+      {/* Hero — centered stack over a deep navy gradient */}
+      <div
+        className="relative overflow-hidden"
+        style={{
+          background:
+            "radial-gradient(80% 60% at 50% 0%, #142544 0%, #0b1220 55%, #060a14 100%)",
+        }}
+      >
         {/* Bottom fade into next section */}
         <div
           aria-hidden="true"
           className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent"
         />
 
-        <div className="relative mx-auto max-w-[880px] px-6 pt-16 md:pt-24 pb-24 md:pb-32 text-center flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 h-8 px-3.5 rounded-full border border-white/15 bg-white/10 backdrop-blur-md text-[12px] font-medium text-white shadow-[0_1px_2px_rgba(0,0,0,0.15)]">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75 animate-ping" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            </span>
-            Founding cohort · 50 spots
-          </div>
+        <div className="relative mx-auto max-w-[880px] px-6 pt-20 md:pt-28 pb-24 md:pb-32 text-center flex flex-col items-center">
+
 
           <h1
             className="mt-6 text-white font-semibold tracking-[-0.03em] leading-[1.05] max-w-[20ch] drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)]"
