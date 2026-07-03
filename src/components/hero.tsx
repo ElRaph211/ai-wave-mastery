@@ -645,29 +645,19 @@ function TestimonialCard({
 
 function KeyFeaturesPixel() {
   return (
-    <div className="relative overflow-hidden border-t border-hairline bg-[#0a1120]">
-      {/* Painterly Hawaii full-bleed background */}
-      <img
-        src={heroImage}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none"
-        style={{ filter: "saturate(0.7) brightness(0.5)" }}
-      />
-      {/* Readability overlay */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(10,17,32,0.65) 0%, rgba(10,17,32,0.55) 50%, rgba(10,17,32,0.85) 100%)",
-        }}
-      />
+    <div
+      className="relative overflow-hidden border-t border-hairline"
+      style={{
+        background:
+          "radial-gradient(80% 60% at 50% 0%, #142544 0%, #0b1220 55%, #060a14 100%)",
+      }}
+    >
       {/* Bottom fade to white page */}
       <div
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent"
       />
+
 
 
       <div className="relative mx-auto max-w-[1400px] px-6 pt-24 md:pt-32 pb-16">
