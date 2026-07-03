@@ -1,53 +1,28 @@
 import { useState, useEffect } from "react";
 import founderPhoto from "@/assets/founder-raphael.jpg";
-import heroImage from "@/assets/hero-hawaii-painterly.jpg";
 
-const AI_PLATFORMS = [
-  {
-    name: "ChatGPT",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-[0.9em] h-[0.9em]" fill="#10a37f" aria-hidden="true">
-        <path d="M22.28 9.82a5.98 5.98 0 0 0-.52-4.91 6.05 6.05 0 0 0-6.52-2.9A6.06 6.06 0 0 0 4.98 4.18a5.98 5.98 0 0 0-4 2.9 6.05 6.05 0 0 0 .74 7.1 5.98 5.98 0 0 0 .52 4.91 6.05 6.05 0 0 0 6.52 2.9 5.98 5.98 0 0 0 4.51 2.01 6.05 6.05 0 0 0 5.77-4.2 5.98 5.98 0 0 0 4-2.9 6.05 6.05 0 0 0-.76-7.08zM13.26 21.5a4.49 4.49 0 0 1-2.88-1.04l.14-.08 4.78-2.76a.78.78 0 0 0 .39-.68v-6.74l2.02 1.17a.07.07 0 0 1 .04.05v5.58a4.5 4.5 0 0 1-4.49 4.5zM3.6 17.38a4.48 4.48 0 0 1-.54-3.03l.14.09 4.78 2.76a.78.78 0 0 0 .78 0l5.84-3.37v2.33a.08.08 0 0 1-.03.06L9.74 19a4.5 4.5 0 0 1-6.14-1.65zM2.34 7.9a4.48 4.48 0 0 1 2.36-1.98v5.68a.77.77 0 0 0 .39.68l5.82 3.36-2.02 1.17a.08.08 0 0 1-.07 0L3.98 14a4.5 4.5 0 0 1-1.64-6.1zm16.6 3.86L13.1 8.38l2.02-1.16a.08.08 0 0 1 .07 0l4.83 2.79a4.5 4.5 0 0 1-.68 8.1v-5.68a.78.78 0 0 0-.4-.67zm2.01-3.02-.14-.09-4.77-2.78a.78.78 0 0 0-.79 0L9.4 9.24V6.9a.07.07 0 0 1 .03-.06l4.83-2.78a4.5 4.5 0 0 1 6.68 4.66zM8.3 12.87l-2.02-1.17a.07.07 0 0 1-.04-.05V6.07a4.5 4.5 0 0 1 7.38-3.46l-.14.08L8.7 5.46a.78.78 0 0 0-.39.68zm1.1-2.37L12 8.99l2.6 1.5v3l-2.6 1.5-2.6-1.5z"/>
+/* Minimal wordmark: product name + a small abstract wave mark */
+function Wordmark({ tone = "dark" }: { tone?: "dark" | "light" }) {
+  const stroke = tone === "dark" ? "#0a0a0a" : "#ffffff";
+  const text = tone === "dark" ? "text-ink" : "text-white";
+  return (
+    <span className="flex items-center gap-2">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path
+          d="M2 14c2.5 0 2.5-4 5-4s2.5 4 5 4 2.5-4 5-4 2.5 4 5 4"
+          stroke={stroke}
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </svg>
-    ),
-    color: "#10a37f",
-  },
-  {
-    name: "Gemini",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-[0.9em] h-[0.9em]" aria-hidden="true">
-        <defs>
-          <linearGradient id="gem-grad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#4796E3" />
-            <stop offset="50%" stopColor="#8F6FE8" />
-            <stop offset="100%" stopColor="#E8624D" />
-          </linearGradient>
-        </defs>
-        <path fill="url(#gem-grad)" d="M12 0c.7 5.5 4.5 9.3 10 10-5.5.7-9.3 4.5-10 10-.7-5.5-4.5-9.3-10-10 5.5-.7 9.3-4.5 10-10z"/>
-      </svg>
-    ),
-    color: "#4796E3",
-  },
-  {
-    name: "Perplexity",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-[0.9em] h-[0.9em]" fill="none" stroke="#20808D" strokeWidth="1.6" aria-hidden="true">
-        <path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/>
-      </svg>
-    ),
-    color: "#20808D",
-  },
-  {
-    name: "Claude",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-[0.9em] h-[0.9em]" fill="#D97757" aria-hidden="true">
-        <path d="M12 2v6M12 16v6M2 12h6M16 12h6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M4.9 19.1l4.2-4.2M14.9 9.1l4.2-4.2"/>
-        <circle cx="12" cy="12" r="2.2"/>
-      </svg>
-    ),
-    color: "#D97757",
-  },
-];
+      <span className={`text-[17px] font-semibold tracking-tight ${text}`}>{"{{PRODUCT_NAME}}"}</span>
+    </span>
+  );
+}
+
+
+const AI_PLATFORMS = ["ChatGPT", "Gemini", "Perplexity", "Claude"];
 
 function RotatingPlatform() {
   const [index, setIndex] = useState(0);
@@ -55,38 +30,27 @@ function RotatingPlatform() {
     const id = setInterval(() => setIndex((i) => (i + 1) % AI_PLATFORMS.length), 3000);
     return () => clearInterval(id);
   }, []);
-  const p = AI_PLATFORMS[index];
+  const name = AI_PLATFORMS[index];
   return (
     <span
-      key={p.name}
-      className="inline-flex items-center gap-[0.25em] align-baseline animate-[fadeInUp_0.5s_ease-out]"
+      key={name}
+      className="inline-block align-baseline animate-[fadeInUp_0.5s_ease-out] font-semibold"
     >
-      <span className="inline-flex items-center justify-center">{p.icon}</span>
-      <span>{p.name}</span>
+      {name}
     </span>
   );
 }
 
 
+
 export function Hero() {
   return (
     <section className="relative bg-white">
-      {/* Pre-sale banner — dark, founding access style */}
+      {/* Evergreen top strip */}
       <div className="w-full bg-[#0b1220] text-white">
-        <div className="mx-auto max-w-[1400px] px-6 h-11 flex items-center justify-between gap-4 text-[13px]">
-          <div className="flex items-center gap-2 font-medium">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-            </span>
-            Founding cohort open
-          </div>
-          <div className="hidden md:block text-neutral-400">
-            First 50 founders get lifetime pricing. No enterprise sales call, no annual contract.
-          </div>
-          <a href="#" className="font-medium underline underline-offset-4 decoration-neutral-500 hover:decoration-white transition-colors whitespace-nowrap">
-            Claim a spot →
-          </a>
+        <div className="mx-auto max-w-[1400px] px-6 h-11 flex items-center justify-center gap-3 text-[13px] text-neutral-300">
+          <span className="inline-flex h-1.5 w-1.5 rounded-full bg-cta" />
+          The clean way to see how AI is surfacing your SaaS.
         </div>
       </div>
 
@@ -95,8 +59,7 @@ export function Hero() {
       <header className="border-b border-hairline bg-white">
         <div className="relative mx-auto max-w-[1400px] px-6 h-16 flex items-center justify-between">
           <a href="/" className="flex items-center gap-2">
-            <span className="inline-block h-5 w-5 rounded-[4px] bg-ink" />
-            <span className="text-[17px] font-semibold tracking-tight text-ink">{"{{PRODUCT_NAME}}"}</span>
+            <Wordmark />
           </a>
           <nav className="hidden md:flex items-center gap-8 text-[14px] font-medium text-ink absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <a href="#" className="hover:text-ink-muted transition-colors">Features</a>
@@ -115,7 +78,7 @@ export function Hero() {
               href="#"
               className="inline-flex items-center gap-2 h-10 px-5 rounded-full bg-cta text-cta-foreground text-[14px] font-medium hover:bg-cta/90 transition-colors shadow-[0_1px_3px_rgba(0,0,0,0.08)]"
             >
-              Book a demo
+              Start now
               <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -123,39 +86,22 @@ export function Hero() {
       </header>
 
 
-      {/* Hero — centered stack over a subtle painterly Hawaii background */}
-      <div className="relative overflow-hidden bg-[#1a1410]">
-        {/* Painterly full-bleed background */}
-        <img
-          src={heroImage}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none scale-105 blur-[1px]"
-          style={{ filter: "saturate(0.75) brightness(0.75)" }}
-        />
-        {/* Readability overlay — darker at edges, lighter behind text */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(60% 55% at 50% 42%, rgba(10,15,25,0.15) 0%, rgba(10,15,25,0.55) 65%, rgba(10,15,25,0.85) 100%)",
-          }}
-        />
+      {/* Hero — centered stack over a deep navy gradient */}
+      <div
+        className="relative overflow-hidden"
+        style={{
+          background:
+            "radial-gradient(80% 60% at 50% 0%, #142544 0%, #0b1220 55%, #060a14 100%)",
+        }}
+      >
         {/* Bottom fade into next section */}
         <div
           aria-hidden="true"
           className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent"
         />
 
-        <div className="relative mx-auto max-w-[880px] px-6 pt-16 md:pt-24 pb-24 md:pb-32 text-center flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 h-8 px-3.5 rounded-full border border-white/15 bg-white/10 backdrop-blur-md text-[12px] font-medium text-white shadow-[0_1px_2px_rgba(0,0,0,0.15)]">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75 animate-ping" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
-            </span>
-            Founding cohort · 50 spots
-          </div>
+        <div className="relative mx-auto max-w-[880px] px-6 pt-20 md:pt-28 pb-24 md:pb-32 text-center flex flex-col items-center">
+
 
           <h1
             className="mt-6 text-white font-semibold tracking-[-0.03em] leading-[1.05] max-w-[20ch] drop-shadow-[0_2px_20px_rgba(0,0,0,0.35)]"
@@ -240,11 +186,11 @@ export function Hero() {
               ))}
             </div>
             <p className="text-[12.5px] md:text-[13px] font-medium text-white min-w-0">
-              Built with founders in the beta cohort. Not for enterprise SEO teams.
+              Built for indie SaaS founders. Not for enterprise SEO teams.
             </p>
           </div>
 
-          {/* Honest pre-launch proof line */}
+          {/* Neutral proof line */}
           <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 text-[12.5px] text-white/70">
             <span className="flex items-center gap-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
@@ -252,9 +198,8 @@ export function Hero() {
             </span>
             <span className="hidden sm:inline text-white/30">·</span>
             <span>Built in public by a solo founder</span>
-            <span className="hidden sm:inline text-white/30">·</span>
-            <span>Founding price locked for life</span>
           </div>
+
         </div>
       </div>
 
@@ -272,7 +217,7 @@ export function Hero() {
       <div className="border-t border-hairline bg-white">
         <div className="mx-auto max-w-[1400px] px-6 py-16">
           <p className="text-center text-[14px] text-neutral-500">
-            Founding SaaS shipping with {"{{PRODUCT_NAME}}"} instead of guessing at AI rankings
+            Indie SaaS teams shipping with {"{{PRODUCT_NAME}}"} instead of guessing at AI rankings
           </p>
 
           <div className="mt-10">
@@ -430,8 +375,9 @@ export function Hero() {
               FAQs
             </h2>
             <p className="mt-4 text-[17px] md:text-[19px] leading-[1.5] text-neutral-500">
-              What founders ask us before they claim a founding spot in
+              What founders ask us before they start with
               <br className="hidden md:block" /> {"{{PRODUCT_NAME}}"}.
+
             </p>
           </div>
           <div className="mt-14">
@@ -449,16 +395,12 @@ export function Hero() {
 function Pricing() {
   const [yearly, setYearly] = useState(true);
   const monthlyBase = 79;
-  const discounted = 55; // 79 * 0.7 ≈ 55.30 → 55
-  const yearlyPrice = discounted * 10; // 2 months free
+  const yearlyPerMonth = Math.round((monthlyBase * 10) / 12); // 66
+  const yearlyPrice = monthlyBase * 10; // 2 months free
   const yearlySavings = monthlyBase * 12 - yearlyPrice;
-  const monthlySavings = monthlyBase - discounted;
 
-  const price = yearly ? yearlyPrice : discounted;
-  const suffix = yearly ? "/year" : "/month";
-  const savingsLabel = yearly
-    ? `You save €${yearlySavings}/year vs monthly at €${monthlyBase}`
-    : `You save €${monthlySavings}/month`;
+  const price = yearly ? yearlyPerMonth : monthlyBase;
+  const suffix = "/month";
 
   return (
     <section className="relative bg-[#f7f8fa] border-y border-hairline bg-grid">
@@ -468,23 +410,22 @@ function Pricing() {
             <span className="h-px w-8 bg-sky-500" /> Pricing
           </div>
           <h2 className="mt-6 text-ink font-semibold tracking-[-0.03em]" style={{ fontSize: "clamp(2rem, 4.8vw, 3.5rem)", lineHeight: 1.05 }}>
-            Priced for a founder's stack, <em className="not-italic text-sky-500 italic font-semibold">locked forever</em> for the first 50.
+            Priced for a founder's stack, <em className="not-italic text-sky-500 italic font-semibold">not an enterprise seat</em>.
           </h2>
         </div>
 
         <div className="mt-14 mx-auto max-w-[560px] rounded-[24px] bg-white shadow-[0_20px_60px_-20px_rgba(15,45,82,0.18)] border border-hairline p-8 md:p-10 relative">
-          <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-            <span className="inline-flex items-center rounded-full bg-sky-500 text-white px-4 py-1.5 text-[11px] font-bold tracking-[0.18em] uppercase">
-              Founding member · –30%
-            </span>
-          </div>
-
-          <div className="mt-4 text-center">
+          <div className="text-center">
             <div className="flex items-baseline justify-center gap-3">
-              <span className="text-neutral-400 line-through text-[22px] font-medium">€{yearly ? monthlyBase * 12 : monthlyBase}</span>
+              {yearly && (
+                <span className="text-neutral-400 line-through text-[22px] font-medium">€{monthlyBase}</span>
+              )}
               <span className="text-ink font-semibold" style={{ fontSize: "clamp(3rem, 7vw, 4.5rem)", lineHeight: 1 }}>€{price}</span>
               <span className="text-neutral-500 text-[18px]">{suffix}</span>
             </div>
+            <p className="mt-2 text-[13px] text-neutral-500">
+              {yearly ? `Billed €${yearlyPrice}/year · save €${yearlySavings}` : "Billed monthly · cancel anytime"}
+            </p>
 
             <div className="mt-5 flex items-center justify-center gap-3">
               <div className="relative inline-flex items-center p-1 rounded-full bg-neutral-100 border border-hairline w-[260px]">
@@ -511,16 +452,10 @@ function Pricing() {
                 2 months free
               </span>
             </div>
-
-
-
-            <div className="mt-5 inline-flex items-center rounded-full bg-sky-50 text-sky-700 px-4 py-1.5 text-[13px] font-semibold">
-              Pre-launch offer · {savingsLabel}
-            </div>
           </div>
 
           <div className="mt-8 rounded-2xl bg-sky-50/70 border border-sky-100 p-5 text-center text-[14.5px] text-ink/80 leading-relaxed">
-            One SaaS, tracked across every model that matters. Founding price is locked for life. After launch, this plan goes back to €{monthlyBase}/month.
+            One SaaS, tracked across every model that matters. No seats, no annual contract.
           </div>
 
           <div className="mt-8 min-h-[140px]" aria-hidden="true" />
@@ -529,7 +464,7 @@ function Pricing() {
             type="button"
             className="mt-2 w-full rounded-2xl bg-sky-500 hover:bg-sky-600 transition-colors text-white font-semibold py-4 text-[16px]"
           >
-            Claim your founding spot →
+            Start now →
           </button>
           <p className="mt-4 text-center text-[13px] text-neutral-500">
             Cancel from the dashboard in one click. No calls, no annual contract.
@@ -539,6 +474,7 @@ function Pricing() {
     </section>
   );
 }
+
 
 
 function Testimonials() {
@@ -700,29 +636,19 @@ function TestimonialCard({
 
 function KeyFeaturesPixel() {
   return (
-    <div className="relative overflow-hidden border-t border-hairline bg-[#0a1120]">
-      {/* Painterly Hawaii full-bleed background */}
-      <img
-        src={heroImage}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none"
-        style={{ filter: "saturate(0.7) brightness(0.5)" }}
-      />
-      {/* Readability overlay */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(10,17,32,0.65) 0%, rgba(10,17,32,0.55) 50%, rgba(10,17,32,0.85) 100%)",
-        }}
-      />
+    <div
+      className="relative overflow-hidden border-t border-hairline"
+      style={{
+        background:
+          "radial-gradient(80% 60% at 50% 0%, #142544 0%, #0b1220 55%, #060a14 100%)",
+      }}
+    >
       {/* Bottom fade to white page */}
       <div
         aria-hidden="true"
         className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent"
       />
+
 
 
       <div className="relative mx-auto max-w-[1400px] px-6 pt-24 md:pt-32 pb-16">
@@ -1034,7 +960,7 @@ function BigCta() {
               <span className="text-white/70">about your SaaS.</span>
             </h2>
             <p className="mt-6 text-white/70 text-[16px] md:text-[17px] leading-[1.6] max-w-[520px]">
-              A score is where every other tool stops. That's where {"{{PRODUCT_NAME}}"} starts.
+              A score is where every other tool stops. That's where {"{{PRODUCT_NAME}}"} surfaces the fix.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-3">
               <a
@@ -1079,30 +1005,19 @@ function SiteFooter() {
     { title: "Comparison", links: ["{{PRODUCT_NAME}} vs Peec AI", "{{PRODUCT_NAME}} vs Otterly", "{{PRODUCT_NAME}} vs Profound", "{{PRODUCT_NAME}} vs Ahrefs"] },
   ];
   return (
-    <footer className="relative overflow-hidden bg-[#0a0a0a] text-white">
-      <img
-        src={heroImage}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none"
-        style={{ filter: "saturate(0.6) brightness(0.4)" }}
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(to bottom, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.92) 60%, rgba(10,10,10,0.98) 100%)",
-        }}
-      />
+    <footer
+      className="relative overflow-hidden text-white"
+      style={{
+        background:
+          "linear-gradient(180deg, #060a14 0%, #05080f 60%, #04060c 100%)",
+      }}
+    >
       <div className="relative mx-auto max-w-[1400px] px-6 pt-24 pb-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2">
-              <span className="inline-block h-5 w-5 rounded-[4px] bg-cta" />
-              <span className="text-[17px] font-semibold tracking-tight text-white">{"{{PRODUCT_NAME}}"}</span>
-            </div>
+            <Wordmark tone="light" />
+
             <p className="mt-6 text-[22px] md:text-[24px] font-semibold leading-[1.2] tracking-[-0.02em] text-white/90">
               AI visibility
               <br />
@@ -1234,7 +1149,7 @@ function FaqList() {
     { q: "Can I segment visibility by model, region, or buyer persona?", a: "Yes. Every tracked prompt breaks down by AI model, geography, and buying stage, so you can see where you rank when a US CTO asks Claude vs when a European founder asks Perplexity." },
     { q: "How often is the data refreshed?", a: "Prompts refresh daily by default. Your top 5 can be set to hourly, and you get a Slack or email ping the moment your ranking drops or a competitor jumps you." },
     { q: "What's the difference between brand visibility and source visibility?", a: "Brand visibility = how often the model names your product in its answer. Source visibility = how often your own pages are the citation behind that answer. Both matter, and we track them separately with a fix attached to each." },
-    { q: "Why is this priced for founders instead of enterprise?", a: "Because the founder building at $2K MRR shouldn't have to book a sales call to find out if AI is ignoring them. Founding members lock €55/mo forever. Public pricing after launch is €79/mo. Still no seats, no annual contract, no sales rep." },
+    { q: "Why is this priced for founders instead of enterprise?", a: "Because the founder building at $2K MRR shouldn't have to book a sales call to find out if AI is ignoring them. €79/month, monthly or yearly (two months free). No seats, no annual contract, no sales rep." },
     { q: "How does {{PRODUCT_NAME}} plug into my stack?", a: "Slack alerts, weekly email digest, CSV export, and a REST API. Push metrics into Notion, Linear, or a spreadsheet. No BI tool required." },
   ];
   return (
