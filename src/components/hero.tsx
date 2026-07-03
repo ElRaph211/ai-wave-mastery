@@ -1,6 +1,26 @@
 import { useState, useEffect } from "react";
 import founderPhoto from "@/assets/founder-raphael.jpg";
-import heroImage from "@/assets/hero-hawaii-painterly.jpg";
+
+/* Minimal wordmark: product name + a small abstract wave mark */
+function Wordmark({ tone = "dark" }: { tone?: "dark" | "light" }) {
+  const stroke = tone === "dark" ? "#0a0a0a" : "#ffffff";
+  const text = tone === "dark" ? "text-ink" : "text-white";
+  return (
+    <span className="flex items-center gap-2">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path
+          d="M2 14c2.5 0 2.5-4 5-4s2.5 4 5 4 2.5-4 5-4 2.5 4 5 4"
+          stroke={stroke}
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+      <span className={`text-[17px] font-semibold tracking-tight ${text}`}>{"{{PRODUCT_NAME}}"}</span>
+    </span>
+  );
+}
+
 
 const AI_PLATFORMS = [
   {
