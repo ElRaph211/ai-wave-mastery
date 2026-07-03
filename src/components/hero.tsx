@@ -960,7 +960,7 @@ function BigCta() {
               <span className="text-white/70">about your SaaS.</span>
             </h2>
             <p className="mt-6 text-white/70 text-[16px] md:text-[17px] leading-[1.6] max-w-[520px]">
-              A score is where every other tool stops. That's where {"{{PRODUCT_NAME}}"} starts.
+              A score is where every other tool stops. That's where {"{{PRODUCT_NAME}}"} surfaces the fix.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-3">
               <a
