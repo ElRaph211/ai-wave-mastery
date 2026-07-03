@@ -1149,7 +1149,7 @@ function FaqList() {
     { q: "Can I segment visibility by model, region, or buyer persona?", a: "Yes. Every tracked prompt breaks down by AI model, geography, and buying stage, so you can see where you rank when a US CTO asks Claude vs when a European founder asks Perplexity." },
     { q: "How often is the data refreshed?", a: "Prompts refresh daily by default. Your top 5 can be set to hourly, and you get a Slack or email ping the moment your ranking drops or a competitor jumps you." },
     { q: "What's the difference between brand visibility and source visibility?", a: "Brand visibility = how often the model names your product in its answer. Source visibility = how often your own pages are the citation behind that answer. Both matter, and we track them separately with a fix attached to each." },
-    { q: "Why is this priced for founders instead of enterprise?", a: "Because the founder building at $2K MRR shouldn't have to book a sales call to find out if AI is ignoring them. Founding members lock €55/mo forever. Public pricing after launch is €79/mo. Still no seats, no annual contract, no sales rep." },
+    { q: "Why is this priced for founders instead of enterprise?", a: "Because the founder building at $2K MRR shouldn't have to book a sales call to find out if AI is ignoring them. €79/month, monthly or yearly (two months free). No seats, no annual contract, no sales rep." },
     { q: "How does {{PRODUCT_NAME}} plug into my stack?", a: "Slack alerts, weekly email digest, CSV export, and a REST API. Push metrics into Notion, Linear, or a spreadsheet. No BI tool required." },
   ];
   return (
