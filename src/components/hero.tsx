@@ -505,29 +505,32 @@ function Pricing() {
               <span className="text-neutral-500 text-[18px]">{suffix}</span>
             </div>
 
-            <div className="mt-5 flex items-center justify-center">
-              <div className="relative inline-flex items-center p-1 rounded-full bg-neutral-100 border border-hairline">
+            <div className="mt-5 flex items-center justify-center gap-3">
+              <div className="relative inline-flex items-center p-1 rounded-full bg-neutral-100 border border-hairline w-[260px]">
                 <span
                   aria-hidden="true"
-                  className={`absolute top-1 bottom-1 w-[calc(50%-4px)] rounded-full bg-ink shadow-sm transition-transform duration-200 ease-out ${yearly ? "translate-x-full" : "translate-x-0"}`}
-                  style={{ left: 4 }}
+                  className={`absolute top-1 bottom-1 left-1 w-[calc(50%-4px)] rounded-full bg-ink shadow-sm transition-transform duration-200 ease-out ${yearly ? "translate-x-full" : "translate-x-0"}`}
                 />
                 <button
                   type="button"
                   onClick={() => setYearly(false)}
-                  className={`relative z-10 h-9 px-5 rounded-full text-[13px] font-medium transition-colors ${!yearly ? "text-white" : "text-neutral-600 hover:text-ink"}`}
+                  className={`relative z-10 flex-1 h-9 rounded-full text-[13px] font-medium transition-colors ${!yearly ? "text-white" : "text-neutral-600 hover:text-ink"}`}
                 >
                   Monthly
                 </button>
                 <button
                   type="button"
                   onClick={() => setYearly(true)}
-                  className={`relative z-10 h-9 px-5 rounded-full text-[13px] font-medium transition-colors ${yearly ? "text-white" : "text-neutral-600 hover:text-ink"}`}
+                  className={`relative z-10 flex-1 h-9 rounded-full text-[13px] font-medium transition-colors ${yearly ? "text-white" : "text-neutral-600 hover:text-ink"}`}
                 >
-                  Yearly <span className={yearly ? "text-emerald-300" : "text-emerald-600"}>· 2 months free</span>
+                  Yearly
                 </button>
               </div>
+              <span className="inline-flex items-center h-7 px-2.5 rounded-full bg-emerald-50 text-emerald-700 text-[11.5px] font-semibold whitespace-nowrap">
+                2 months free
+              </span>
             </div>
+
 
 
             <div className="mt-5 inline-flex items-center rounded-full bg-sky-50 text-sky-700 px-4 py-1.5 text-[13px] font-semibold">
