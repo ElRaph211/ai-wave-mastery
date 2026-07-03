@@ -1104,8 +1104,23 @@ function SiteFooter() {
     { title: "Comparison", links: ["{{PRODUCT_NAME}} vs Peec AI", "{{PRODUCT_NAME}} vs Otterly", "{{PRODUCT_NAME}} vs Profound", "{{PRODUCT_NAME}} vs Ahrefs"] },
   ];
   return (
-    <footer className="bg-[#0a0a0a] text-white">
-      <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-10">
+    <footer className="relative overflow-hidden bg-[#0a0a0a] text-white">
+      <img
+        src={heroImage}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-center select-none pointer-events-none"
+        style={{ filter: "saturate(0.6) brightness(0.4)" }}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.92) 60%, rgba(10,10,10,0.98) 100%)",
+        }}
+      />
+      <div className="relative mx-auto max-w-[1400px] px-6 pt-24 pb-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
