@@ -217,7 +217,7 @@ export function Hero() {
       <div className="border-t border-hairline bg-white">
         <div className="mx-auto max-w-[1400px] px-6 py-16">
           <p className="text-center text-[14px] text-neutral-500">
-            Founding SaaS shipping with {"{{PRODUCT_NAME}}"} instead of guessing at AI rankings
+            Indie SaaS teams shipping with {"{{PRODUCT_NAME}}"} instead of guessing at AI rankings
           </p>
 
           <div className="mt-10">
