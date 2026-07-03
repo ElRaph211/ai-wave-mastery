@@ -169,7 +169,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 max-w-[620px] text-[15px] md:text-[17px] leading-[1.55] text-white/85 drop-shadow-[0_1px_10px_rgba(0,0,0,0.3)]">
-            Track your <Chip icon={<EyeIcon />}>Visibility</Chip>, <Chip icon={<PositionIcon />}>Position</Chip>, and <Chip icon={<SmileIcon />}>Sentiment</Chip> across the AI models that matter — then fix the gaps that cost you signups.
+            Track your <Chip icon={<EyeIcon />}>Visibility</Chip>, <Chip icon={<PositionIcon />}>Position</Chip>, and <Chip icon={<SmileIcon />}>Sentiment</Chip> across the AI models that matter. Then fix the gaps costing you signups.
           </p>
 
           {/* URL audit */}
@@ -240,7 +240,7 @@ export function Hero() {
               ))}
             </div>
             <p className="text-[12.5px] md:text-[13px] font-medium text-white min-w-0">
-              Built with founders in the beta cohort — not for enterprise SEO teams
+              Built with founders in the beta cohort. Not for enterprise SEO teams.
             </p>
           </div>
 
@@ -310,12 +310,12 @@ export function Hero() {
                 accent
                 icon={<EyeIcon />}
                 title="Visibility"
-                body="What share of buyer questions in your category name your product at all. If it's under 20%, you're invisible — and we tell you which prompts to go earn first."
+                body="What share of buyer questions in your category name your product at all. If it's under 20%, you're invisible. We tell you which prompts to go earn first."
               />
               <MetricCard
                 icon={<PositionIcon />}
                 title="Position"
-                body="When you do show up, where in the answer — first, buried at #7, or an afterthought. Position is what turns a mention into a signup."
+                body="When you do show up, where in the answer: first, buried at #7, or an afterthought. Position is what turns a mention into a signup."
               />
               <MetricCard
                 accent
@@ -347,7 +347,7 @@ export function Hero() {
                       <span className="text-[14px] font-semibold text-ink">Peec AI</span>
                     </div>
                     <p className="text-[14px] leading-[1.65] text-ink">
-                      Peec gives you a <mark className="bg-emerald-100 text-ink px-1 rounded">clean dashboard across ChatGPT, Claude and Perplexity</mark> and <mark className="bg-emerald-100 text-ink px-1 rounded">daily refresh out of the box</mark>. Downside: it <mark className="bg-red-100 text-ink px-1 rounded">stops at the score — no guidance on what to actually ship next</mark>.
+                      Peec gives you a <mark className="bg-emerald-100 text-ink px-1 rounded">clean dashboard across ChatGPT, Claude and Perplexity</mark> and <mark className="bg-emerald-100 text-ink px-1 rounded">daily refresh out of the box</mark>. Downside: it <mark className="bg-red-100 text-ink px-1 rounded">stops at the score. No guidance on what to actually ship next</mark>.
                     </p>
                   </div>
 
@@ -370,7 +370,7 @@ export function Hero() {
                     </div>
                     <div className="relative">
                       <p className="text-[14px] leading-[1.65] text-ink">
-                        Built specifically for indie SaaS founders. Every missed prompt comes with <mark className="bg-emerald-100 text-ink px-1 rounded">an exact next action — a Reddit thread to answer, a listicle to pitch, a page to rewrite</mark>. Priced for a bootstrapped stack, not an enterprise seat.
+                        Built specifically for indie SaaS founders. Every missed prompt comes with <mark className="bg-emerald-100 text-ink px-1 rounded">an exact next action: a Reddit thread to answer, a listicle to pitch, a page to rewrite</mark>. Priced for a bootstrapped stack, not an enterprise seat.
                       </p>
 
                       {/* Sentiment tooltip */}
@@ -520,7 +520,7 @@ function Pricing() {
           </div>
 
           <div className="mt-8 rounded-2xl bg-sky-50/70 border border-sky-100 p-5 text-center text-[14.5px] text-ink/80 leading-relaxed">
-            One SaaS, tracked across every model that matters. Founding price is locked for life — after launch, this plan goes back to €{monthlyBase}/month.
+            One SaaS, tracked across every model that matters. Founding price is locked for life. After launch, this plan goes back to €{monthlyBase}/month.
           </div>
 
           <div className="mt-8 min-h-[140px]" aria-hidden="true" />
@@ -748,17 +748,17 @@ function KeyFeaturesPixel() {
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-6">
           <FeaturePixelCard
             title="Track the prompts that matter"
-            body="Paste your product or auto-import the buyer questions in your category — start seeing your rank in ChatGPT, Claude, Gemini and Perplexity within 24h."
+            body="Paste your product or auto-import the buyer questions in your category. Start seeing your rank in ChatGPT, Claude, Gemini and Perplexity within 24h."
             mock={<TrackedPromptsMock />}
           />
           <FeaturePixelCard
             title="Get suggested prompts, ranked by volume"
-            body="Stop guessing what to track. We surface the queries buyers in your niche actually ask, sorted by traffic potential — so you only write content that could move signups."
+            body="Stop guessing what to track. We surface the queries buyers in your niche actually ask, sorted by traffic potential, so you only write content that could move signups."
             mock={<SuggestedPromptsMock />}
           />
           <FeaturePixelCard
             title="See exactly who's beating you"
-            body="Drop in your top 3 competitors and watch head-to-head rankings shift model by model. Know when a competitor launches content that steals a query — and copy the play."
+            body="Drop in your top 3 competitors and watch head-to-head rankings shift model by model. Know when a competitor launches content that steals a query, then copy the play."
             mock={<AddBrandsMock />}
           />
           <FeaturePixelCard
@@ -768,7 +768,7 @@ function KeyFeaturesPixel() {
           />
           <FeaturePixelCard
             title="See which sources feed the answer"
-            body="Every AI response is stitched together from a handful of sources — Reddit threads, listicles, docs. We show you which ones so you know exactly where to plant your next post."
+            body="Every AI response is stitched together from a handful of sources: Reddit threads, listicles, docs. We show you which ones so you know exactly where to plant your next post."
             mock={<KeySourcesMock />}
           />
           <FeaturePixelCard
@@ -980,8 +980,8 @@ function KeySourcesMock() {
 function ActOnInsightsMock() {
   const insights = [
     { t: "r/SaaS thread ranks for your top query", s: "Reply with a founder story in the next 48h.", dark: false },
-    { t: "Indie Hackers milestone post gets cited daily", s: "Post your MRR update this week — high citation odds.", dark: true },
-    { t: "A comparison listicle is missing you", s: "Email the author with a 3-line pitch — template inside.", dark: false },
+    { t: "Indie Hackers milestone post gets cited daily", s: "Post your MRR update this week. High citation odds.", dark: true },
+    { t: "A comparison listicle is missing you", s: "Email the author with a 3-line pitch. Template inside.", dark: false },
   ];
   return (
     <div className="relative -mb-6 space-y-3 pt-2">
@@ -1140,7 +1140,7 @@ function SiteFooter() {
         </div>
 
         <div className="mt-20 border-t border-white/10 pt-8 text-[14px] text-white/60">
-          {"{{PRODUCT_NAME}}"} is built in public by a solo founder for solo founders — follow the build on X.
+          {"{{PRODUCT_NAME}}"} is built in public by a solo founder for solo founders. Follow the build on X.
         </div>
         <div className="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[13px] text-white/50">
           <div>© {new Date().getFullYear()} {"{{PRODUCT_NAME}}"}. All rights reserved.</div>
@@ -1231,10 +1231,10 @@ function PromptsMarquee() {
 function FaqList() {
   const faqs = [
     { q: "How do I get started?", a: "Drop your URL, get a free AI visibility score in under 30 seconds. If it's not embarrassing enough to fix, close the tab. If it is, connect your prompts and we'll start tracking across ChatGPT, Claude, Gemini and Perplexity within 24 hours." },
-    { q: "Can I segment visibility by model, region, or buyer persona?", a: "Yes. Every tracked prompt breaks down by AI model, geography, and buying stage — so you can see where you rank when a US CTO asks Claude vs when a European founder asks Perplexity." },
+    { q: "Can I segment visibility by model, region, or buyer persona?", a: "Yes. Every tracked prompt breaks down by AI model, geography, and buying stage, so you can see where you rank when a US CTO asks Claude vs when a European founder asks Perplexity." },
     { q: "How often is the data refreshed?", a: "Prompts refresh daily by default. Your top 5 can be set to hourly, and you get a Slack or email ping the moment your ranking drops or a competitor jumps you." },
     { q: "What's the difference between brand visibility and source visibility?", a: "Brand visibility = how often the model names your product in its answer. Source visibility = how often your own pages are the citation behind that answer. Both matter, and we track them separately with a fix attached to each." },
-    { q: "Why is this priced for founders instead of enterprise?", a: "Because the founder building at $2K MRR shouldn't have to book a sales call to find out if AI is ignoring them. Founding members lock €55/mo forever — public pricing after launch is €79/mo. Still no seats, no annual contract, no sales rep." },
+    { q: "Why is this priced for founders instead of enterprise?", a: "Because the founder building at $2K MRR shouldn't have to book a sales call to find out if AI is ignoring them. Founding members lock €55/mo forever. Public pricing after launch is €79/mo. Still no seats, no annual contract, no sales rep." },
     { q: "How does {{PRODUCT_NAME}} plug into my stack?", a: "Slack alerts, weekly email digest, CSV export, and a REST API. Push metrics into Notion, Linear, or a spreadsheet. No BI tool required." },
   ];
   return (
