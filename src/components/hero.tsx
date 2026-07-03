@@ -22,52 +22,7 @@ function Wordmark({ tone = "dark" }: { tone?: "dark" | "light" }) {
 }
 
 
-const AI_PLATFORMS = [
-  {
-    name: "ChatGPT",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-[0.9em] h-[0.9em]" fill="#10a37f" aria-hidden="true">
-        <path d="M22.28 9.82a5.98 5.98 0 0 0-.52-4.91 6.05 6.05 0 0 0-6.52-2.9A6.06 6.06 0 0 0 4.98 4.18a5.98 5.98 0 0 0-4 2.9 6.05 6.05 0 0 0 .74 7.1 5.98 5.98 0 0 0 .52 4.91 6.05 6.05 0 0 0 6.52 2.9 5.98 5.98 0 0 0 4.51 2.01 6.05 6.05 0 0 0 5.77-4.2 5.98 5.98 0 0 0 4-2.9 6.05 6.05 0 0 0-.76-7.08zM13.26 21.5a4.49 4.49 0 0 1-2.88-1.04l.14-.08 4.78-2.76a.78.78 0 0 0 .39-.68v-6.74l2.02 1.17a.07.07 0 0 1 .04.05v5.58a4.5 4.5 0 0 1-4.49 4.5zM3.6 17.38a4.48 4.48 0 0 1-.54-3.03l.14.09 4.78 2.76a.78.78 0 0 0 .78 0l5.84-3.37v2.33a.08.08 0 0 1-.03.06L9.74 19a4.5 4.5 0 0 1-6.14-1.65zM2.34 7.9a4.48 4.48 0 0 1 2.36-1.98v5.68a.77.77 0 0 0 .39.68l5.82 3.36-2.02 1.17a.08.08 0 0 1-.07 0L3.98 14a4.5 4.5 0 0 1-1.64-6.1zm16.6 3.86L13.1 8.38l2.02-1.16a.08.08 0 0 1 .07 0l4.83 2.79a4.5 4.5 0 0 1-.68 8.1v-5.68a.78.78 0 0 0-.4-.67zm2.01-3.02-.14-.09-4.77-2.78a.78.78 0 0 0-.79 0L9.4 9.24V6.9a.07.07 0 0 1 .03-.06l4.83-2.78a4.5 4.5 0 0 1 6.68 4.66zM8.3 12.87l-2.02-1.17a.07.07 0 0 1-.04-.05V6.07a4.5 4.5 0 0 1 7.38-3.46l-.14.08L8.7 5.46a.78.78 0 0 0-.39.68zm1.1-2.37L12 8.99l2.6 1.5v3l-2.6 1.5-2.6-1.5z"/>
-      </svg>
-    ),
-    color: "#10a37f",
-  },
-  {
-    name: "Gemini",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-[0.9em] h-[0.9em]" aria-hidden="true">
-        <defs>
-          <linearGradient id="gem-grad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#4796E3" />
-            <stop offset="50%" stopColor="#8F6FE8" />
-            <stop offset="100%" stopColor="#E8624D" />
-          </linearGradient>
-        </defs>
-        <path fill="url(#gem-grad)" d="M12 0c.7 5.5 4.5 9.3 10 10-5.5.7-9.3 4.5-10 10-.7-5.5-4.5-9.3-10-10 5.5-.7 9.3-4.5 10-10z"/>
-      </svg>
-    ),
-    color: "#4796E3",
-  },
-  {
-    name: "Perplexity",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-[0.9em] h-[0.9em]" fill="none" stroke="#20808D" strokeWidth="1.6" aria-hidden="true">
-        <path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19"/>
-      </svg>
-    ),
-    color: "#20808D",
-  },
-  {
-    name: "Claude",
-    icon: (
-      <svg viewBox="0 0 24 24" className="w-[0.9em] h-[0.9em]" fill="#D97757" aria-hidden="true">
-        <path d="M12 2v6M12 16v6M2 12h6M16 12h6M4.9 4.9l4.2 4.2M14.9 14.9l4.2 4.2M4.9 19.1l4.2-4.2M14.9 9.1l4.2-4.2"/>
-        <circle cx="12" cy="12" r="2.2"/>
-      </svg>
-    ),
-    color: "#D97757",
-  },
-];
+const AI_PLATFORMS = ["ChatGPT", "Gemini", "Perplexity", "Claude"];
 
 function RotatingPlatform() {
   const [index, setIndex] = useState(0);
@@ -75,17 +30,17 @@ function RotatingPlatform() {
     const id = setInterval(() => setIndex((i) => (i + 1) % AI_PLATFORMS.length), 3000);
     return () => clearInterval(id);
   }, []);
-  const p = AI_PLATFORMS[index];
+  const name = AI_PLATFORMS[index];
   return (
     <span
-      key={p.name}
-      className="inline-flex items-center gap-[0.25em] align-baseline animate-[fadeInUp_0.5s_ease-out]"
+      key={name}
+      className="inline-block align-baseline animate-[fadeInUp_0.5s_ease-out] font-semibold"
     >
-      <span className="inline-flex items-center justify-center">{p.icon}</span>
-      <span>{p.name}</span>
+      {name}
     </span>
   );
 }
+
 
 
 export function Hero() {
