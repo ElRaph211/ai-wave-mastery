@@ -394,16 +394,12 @@ export function Hero() {
 function Pricing() {
   const [yearly, setYearly] = useState(true);
   const monthlyBase = 79;
-  const discounted = 55; // 79 * 0.7 ≈ 55.30 → 55
-  const yearlyPrice = discounted * 10; // 2 months free
+  const yearlyPerMonth = Math.round((monthlyBase * 10) / 12); // 66
+  const yearlyPrice = monthlyBase * 10; // 2 months free
   const yearlySavings = monthlyBase * 12 - yearlyPrice;
-  const monthlySavings = monthlyBase - discounted;
 
-  const price = yearly ? yearlyPrice : discounted;
-  const suffix = yearly ? "/year" : "/month";
-  const savingsLabel = yearly
-    ? `You save €${yearlySavings}/year vs monthly at €${monthlyBase}`
-    : `You save €${monthlySavings}/month`;
+  const price = yearly ? yearlyPerMonth : monthlyBase;
+  const suffix = "/month";
 
   return (
     <section className="relative bg-[#f7f8fa] border-y border-hairline bg-grid">
@@ -413,23 +409,22 @@ function Pricing() {
             <span className="h-px w-8 bg-sky-500" /> Pricing
           </div>
           <h2 className="mt-6 text-ink font-semibold tracking-[-0.03em]" style={{ fontSize: "clamp(2rem, 4.8vw, 3.5rem)", lineHeight: 1.05 }}>
-            Priced for a founder's stack, <em className="not-italic text-sky-500 italic font-semibold">locked forever</em> for the first 50.
+            Priced for a founder's stack, <em className="not-italic text-sky-500 italic font-semibold">not an enterprise seat</em>.
           </h2>
         </div>
 
         <div className="mt-14 mx-auto max-w-[560px] rounded-[24px] bg-white shadow-[0_20px_60px_-20px_rgba(15,45,82,0.18)] border border-hairline p-8 md:p-10 relative">
-          <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-            <span className="inline-flex items-center rounded-full bg-sky-500 text-white px-4 py-1.5 text-[11px] font-bold tracking-[0.18em] uppercase">
-              Founding member · –30%
-            </span>
-          </div>
-
-          <div className="mt-4 text-center">
+          <div className="text-center">
             <div className="flex items-baseline justify-center gap-3">
-              <span className="text-neutral-400 line-through text-[22px] font-medium">€{yearly ? monthlyBase * 12 : monthlyBase}</span>
+              {yearly && (
+                <span className="text-neutral-400 line-through text-[22px] font-medium">€{monthlyBase}</span>
+              )}
               <span className="text-ink font-semibold" style={{ fontSize: "clamp(3rem, 7vw, 4.5rem)", lineHeight: 1 }}>€{price}</span>
               <span className="text-neutral-500 text-[18px]">{suffix}</span>
             </div>
+            <p className="mt-2 text-[13px] text-neutral-500">
+              {yearly ? `Billed €${yearlyPrice}/year · save €${yearlySavings}` : "Billed monthly · cancel anytime"}
+            </p>
 
             <div className="mt-5 flex items-center justify-center gap-3">
               <div className="relative inline-flex items-center p-1 rounded-full bg-neutral-100 border border-hairline w-[260px]">
@@ -456,16 +451,10 @@ function Pricing() {
                 2 months free
               </span>
             </div>
-
-
-
-            <div className="mt-5 inline-flex items-center rounded-full bg-sky-50 text-sky-700 px-4 py-1.5 text-[13px] font-semibold">
-              Pre-launch offer · {savingsLabel}
-            </div>
           </div>
 
           <div className="mt-8 rounded-2xl bg-sky-50/70 border border-sky-100 p-5 text-center text-[14.5px] text-ink/80 leading-relaxed">
-            One SaaS, tracked across every model that matters. Founding price is locked for life. After launch, this plan goes back to €{monthlyBase}/month.
+            One SaaS, tracked across every model that matters. No seats, no annual contract.
           </div>
 
           <div className="mt-8 min-h-[140px]" aria-hidden="true" />
@@ -474,7 +463,7 @@ function Pricing() {
             type="button"
             className="mt-2 w-full rounded-2xl bg-sky-500 hover:bg-sky-600 transition-colors text-white font-semibold py-4 text-[16px]"
           >
-            Claim your founding spot →
+            Start now →
           </button>
           <p className="mt-4 text-center text-[13px] text-neutral-500">
             Cancel from the dashboard in one click. No calls, no annual contract.
@@ -484,6 +473,7 @@ function Pricing() {
     </section>
   );
 }
+
 
 
 function Testimonials() {
