@@ -375,8 +375,9 @@ export function Hero() {
               FAQs
             </h2>
             <p className="mt-4 text-[17px] md:text-[19px] leading-[1.5] text-neutral-500">
-              What founders ask us before they claim a founding spot in
+              What founders ask us before they start with
               <br className="hidden md:block" /> {"{{PRODUCT_NAME}}"}.
+
             </p>
           </div>
           <div className="mt-14">
