@@ -751,25 +751,32 @@ function TestimonialCard({
 
 function KeyFeaturesPixel() {
   return (
-    <div className="relative overflow-hidden border-t border-hairline bg-[#e8895a]">
-      <img
-        src={featuresPixel}
-        alt="Painterly Hawaiian sunset with cliff, waterfall and hibiscus"
-        width={1024}
-        height={1408}
-        loading="lazy"
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
-      />
-      {/* Warm dark overlay so white type stays crisp */}
+    <div className="relative overflow-hidden border-t border-hairline bg-gradient-to-b from-[#0a1120] via-[#0d1830] to-[#0a1120]">
+      {/* Subtle grid */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/45 to-black/60"
+        className="absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.6) 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
+        }}
       />
-      {/* Bottom fade to cream page */}
+      {/* Ambient corner glows */}
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#faf5ec] to-transparent"
+        className="absolute -top-40 -left-40 h-[560px] w-[560px] rounded-full"
+        style={{ background: "radial-gradient(circle, rgba(56,189,248,0.22), transparent 65%)" }}
+      />
+      <div
+        aria-hidden="true"
+        className="absolute -bottom-40 -right-40 h-[560px] w-[560px] rounded-full"
+        style={{ background: "radial-gradient(circle, rgba(56,189,248,0.15), transparent 65%)" }}
+      />
+      {/* Bottom fade to white page */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent"
       />
 
       <div className="relative mx-auto max-w-[1400px] px-6 pt-24 md:pt-32 pb-16">
